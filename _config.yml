@@ -3,5 +3,5 @@ title: Is the Enemy of my Enemy my Friend ?
 description: Data story for P3, ADAnalysts
 show_downloads: True
 navigation:
-  - title: Datastory in one page
-    url: datastory
+  - title: Datastory
+    url: storydata
