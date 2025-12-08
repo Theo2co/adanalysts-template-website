@@ -1,16 +1,17 @@
 /* --------- Variables simples --------- */
 :root {
-  --bg: #05070c;
-  --bg-elevated: #0f141e;
-  --accent: #ffb347;      /* orange neutre pour les liens / accents */
-  --accent-soft: rgba(255, 179, 71, 0.12);
-  --text: #f5f5f7;
-  --text-muted: #9da3b4;
-  --border-soft: #232839;
+  --bg: #f5f5f7;          /* fond global très clair */
+  --bg-elevated: #ffffff; /* cartes blanches */
+  --accent: #d97706;      /* orange discret pour les liens / surlignage */
+  --accent-soft: rgba(217, 119, 6, 0.08);
+  --text: #111827;        /* texte principal presque noir */
+  --text-muted: #6b7280;  /* texte secondaire gris */
+  --border-soft: #e5e7eb; /* bordures légères */
   --max-width: 960px;
   --sidebar-width: 260px;
   --radius-xl: 18px;
 }
+
 
 /* Reset léger */
 *,
