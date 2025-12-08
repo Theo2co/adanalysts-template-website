@@ -75,6 +75,30 @@ body {
   color: rgba(255,255,255,0.85);
 }
 
+/* Nav horizontale dans le hero */
+.hero-nav-links {
+  display: flex;
+  gap: 3rem; /* espace entre les liens */
+}
+
+.hero-nav-links a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  color: rgba(249, 250, 251, 0.9);
+  text-decoration: none !important;
+  padding: 0.4rem 0.75rem;   /* zone cliquable plus grande */
+  border-radius: 999px;      /* pastille arrondie */
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.hero-nav-links a:hover {
+  background: rgba(15, 23, 42, 0.45);
+  border-color: rgba(249, 250, 251, 0.6);
+  cursor: pointer;
+}
 
 
 
@@ -182,10 +206,6 @@ body {
     padding: 1.25rem 1.5rem 3rem;
   }
 
-  .hero-nav-links ul {
-    gap: 1.2rem;
-  }
-
   .page-shell {
     margin-top: 2.5rem;
   }
@@ -202,7 +222,7 @@ body {
     gap: 0.8rem;
   }
 
-  .hero-nav-links ul {
+  .hero-nav-links {
     flex-wrap: wrap;
     gap: 0.9rem;
   }
@@ -211,3 +231,4 @@ body {
     padding: 1.6rem 1.25rem;
   }
 }
+
