@@ -9,15 +9,15 @@ hero_subtitle: A data story on alliances, rivalries and fragile friendships
 
 ...
 
-# I/ Economy {#dataset}
+# I/ Dataset {#dataset}
 
 ...
 
-# II/ Structural balance and triads {#theory}
+# II/ Hidden hostilities {#theory}
 
 ...
 
-# III/ Results {#results}
+# III/ Co-attack analysis {#results}
 
 ...
 
