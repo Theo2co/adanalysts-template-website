@@ -22,35 +22,38 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   </head>
 
-  <body>
-    <!-- Bandeau plein écran avec image de réseau -->
+    <body>
+    <!-- FULLSCREEN HERO WITH NAV -->
     <header class="hero"
             style="background-image: url('{{ "/assets/img/network-hero.jpg" | relative_url }}');">
       <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <h1>{{ page.hero_title | default: "Is the Enemy of my Enemy my Friend?" }}</h1>
-        <p class="hero-subtitle">
-          {{ page.hero_subtitle | default: "A data story on alliances, rivalries and fragile friendships" }}
-        </p>
+
+      <div class="hero-inner">
+        <!-- Top navigation bar -->
+        <div class="hero-nav">
+          <div class="hero-logo">ADAnalysts</div>
+          <nav id="toc" class="hero-nav-links">
+            <!-- filled by toc.js -->
+          </nav>
+        </div>
+
+        <!-- Centered title -->
+        <div class="hero-content">
+          <h1>{{ page.hero_title | default: "Is the Enemy of my Enemy my Friend?" }}</h1>
+          <p class="hero-subtitle">
+            {{ page.hero_subtitle | default: "A data story on alliances, rivalries and fragile friendships" }}
+          </p>
+        </div>
       </div>
     </header>
 
-    <!-- Layout principal : contenu + index à droite -->
+    <!-- MAIN CONTENT -->
     <div class="page-shell">
       <main class="page-main">
         <article class="page-content js-content">
           {{ content }}
         </article>
       </main>
-
-      <aside class="page-sidebar">
-        <div class="sidebar-box">
-          <div class="sidebar-title">On this page</div>
-          <nav id="toc" class="sidebar-nav">
-            <!-- rempli dynamiquement par toc.js -->
-          </nav>
-        </div>
-      </aside>
     </div>
 
     <footer class="page-footer">
@@ -60,10 +63,7 @@
       </p>
     </footer>
 
-    <!-- JS GitHub Pages standard -->
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
-
-    <!-- JS pour construire le sommaire à droite -->
     <script src="{{ '/assets/js/toc.js' | relative_url }}"></script>
 
     {% if site.google_analytics %}
@@ -78,3 +78,4 @@
     {% endif %}
   </body>
 </html>
+
