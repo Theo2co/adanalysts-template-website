@@ -75,30 +75,7 @@ body {
   color: rgba(255,255,255,0.85);
 }
 
-/* Nav horizontale avec liens espacés */
-.hero-nav-links {
-  display: flex;
-  gap: 3rem; /* espace entre les liens */
-}
 
-.hero-nav-links a {
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-transform: none;
-  letter-spacing: 0;
-  color: rgba(249, 250, 251, 0.9);
-  text-decoration: none;
-  padding: 0.4rem 0.75rem;   /* zone cliquable plus grande */
-  border-radius: 999px;      /* pastille arrondie */
-  background: transparent;
-  border: 1px solid transparent;
-}
-
-.hero-nav-links a:hover {
-  background: rgba(15, 23, 42, 0.45);
-  border-color: rgba(249, 250, 251, 0.6);
-  cursor: pointer;
-}
 
 
 /* Titre centré dans le hero */
