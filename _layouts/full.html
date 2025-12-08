@@ -13,31 +13,30 @@
     <link rel="icon" type="image/png"
           href="{{ '/assets/img/favicon.png?v=' | append: site.github.build_revision | relative_url }}">
 
-    <!-- CSS principal de la datastory -->
+    <!-- CSS de la datastory -->
     <link rel="stylesheet"
           href="{{ '/assets/css/storydata.css?v=' | append: site.github.build_revision | relative_url }}">
 
-
-    <!-- Tu peux garder Plotly ici si tu as des figures interactives -->
+    <!-- Plotly si tu en as besoin -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   </head>
 
-    <body>
-    <!-- FULLSCREEN HERO WITH NAV -->
+  <body>
+    <!-- HERO PLEIN ÉCRAN AVEC NAV -->
     <header class="hero"
             style="background-image: url('{{ "/assets/img/network-hero.jpg" | relative_url }}');">
       <div class="hero-overlay"></div>
 
       <div class="hero-inner">
-        <!-- Top navigation bar -->
+        <!-- Barre de navigation en haut -->
         <div class="hero-nav">
           <div class="hero-logo">ADAnalysts</div>
           <nav id="toc" class="hero-nav-links">
-            <!-- filled by toc.js -->
+            <!-- rempli par toc.js -->
           </nav>
         </div>
 
-        <!-- Centered title -->
+        <!-- Titre centré -->
         <div class="hero-content">
           <h1>{{ page.hero_title | default: "Is the Enemy of my Enemy my Friend?" }}</h1>
           <p class="hero-subtitle">
@@ -47,7 +46,7 @@
       </div>
     </header>
 
-    <!-- MAIN CONTENT -->
+    <!-- CONTENU PRINCIPAL -->
     <div class="page-shell">
       <main class="page-main">
         <article class="page-content js-content">
@@ -78,4 +77,3 @@
     {% endif %}
   </body>
 </html>
-
