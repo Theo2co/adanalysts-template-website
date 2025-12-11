@@ -125,9 +125,10 @@ body {
 
 .hero-content {
   margin: 0 auto;
-  margin-top: 6rem;
+  margin-top: 7rem;   /* au lieu de 6rem si tu veux */
   text-align: left;
 }
+
 
 .hero-bbt-logo {
   text-transform: uppercase;
@@ -148,19 +149,21 @@ body {
 
 /* Mot noir comme "BIG" */
 .hero-bbt-big {
-  font-size: clamp(2.6rem, 5vw, 3.4rem);
+  font-size: clamp(3.2rem, 7vw, 4.8rem);   /* plus gros */
   font-weight: 900;
   color: var(--black);
 }
 
+
 /* Bloc blanc sur fond noir/orange comme "BANG" */
 .hero-bbt-bang {
-  font-size: clamp(2.6rem, 4.8vw, 3.2rem);
+  font-size: clamp(3.2rem, 6.5vw, 4.4rem); /* plus gros aussi */
   font-weight: 900;
-  padding: 0.15rem 0.6rem;
+  padding: 0.2rem 0.9rem;
   background: var(--black);
   color: var(--white);
 }
+
 
 /* Ligne "theory" en dessous */
 .hero-bbt-theory {
