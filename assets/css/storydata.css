@@ -1,20 +1,24 @@
-/* ---------- Palette Big Bang Style ---------- */
-:root {
-  /* Couleurs principales façon logo : rouge / jaune / bleu */
-  --bbt-red: #e11d48;
-  --bbt-yellow: #fde047;
-  --bbt-blue: #0ea5e9;
 
-  --bg: #020617;            /* fond très sombre (slate) */
+/* ---------- Palette Big Bang Theory ---------- */
+:root {
+  /* Couleurs inspirées de l'affiche : orange, rouge, crème, noir */
+  --bbt-orange-light: #f97316;
+  --bbt-orange: #ea580c;
+  --bbt-red: #b91c1c;
+  --bbt-cream: #fef3c7;
+  --bbt-dark: #111827;
+
+  --bg: #0b1120;
   --bg-elevated: #020617;
   --accent: var(--bbt-red);
-  --accent-soft: rgba(225, 29, 72, 0.12);
-  --text: #e5e7eb;
-  --text-muted: #9ca3af;
+  --accent-soft: rgba(185, 28, 28, 0.14);
+  --text: #f9fafb;
+  --text-muted: #e5e7eb;
   --border-soft: #1f2937;
   --max-width: 960px;
   --radius-xl: 18px;
 }
+
 
 /* ---------- Reset léger ---------- */
 *,
