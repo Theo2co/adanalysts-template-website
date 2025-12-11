@@ -6,10 +6,20 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 ---
 
 
-# Pilot – Cold open {#intro}
-
-> **INT. APARTMENT 4A – NIGHT**  
-> Leonard’s whiteboard is covered in equations and a huge messy graph.
+<div class="narrator-block">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p>
+      INT. APARTMENT 4A – NIGHT. Leonard’s whiteboard is covered in equations
+      and one huge messy graph. Our four data nerds are about to turn a proverb
+      into something you can actually test with Reddit.
+    </p>
+  </div>
+</div>
 
 <figure class="scene-figure scene-figure-intro">
   <img src="{{ '/assets/img/scene-int-4a.png' | relative_url }}"
@@ -62,19 +72,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 </div>
 
-
-**LEONARD** (network nerd):  
-> “Okay, serious scientific question: if two subreddits bully the same subreddit… are they basically best friends now?”
-
-**SHELDON** (theorist, takes everything too seriously):  
-> “Of course. I shall now formally name this principle *The Enemy of my Enemy is my Friend Theory*. It is mine. Dibs.”
-
-**RAJ** (NLP geek):  
-> “Yeah, because no one in human history ever thought of that before…”
-
-**PENNY** (outsider, from literally not STEM):  
-> “Wait, you can test that with *data*? I thought that was just something villains say in movies.”
-
 **SHELDON:**  
 > “We can, provided the universe offers us three essential components:  
 > 1. A large population of semi-cooperative agents.  
@@ -85,6 +82,21 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 > “Good news, Sheldon. We have Reddit and your social life.”
 
 ---
+
+<div class="narrator-block">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p>
+      Behind the joke, Leonard has just proposed a testable hypothesis:
+      if two communities attack the same target, their future interactions
+      might become friendlier. Next step: turn that into data.
+    </p>
+  </div>
+</div>
 
 # Scene 1 – Building the “social collider” (the data) {#dataset}
 
