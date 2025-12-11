@@ -16,9 +16,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
        alt="Leonard's whiteboard covered in equations and a huge messy graph, in Apartment 4A at night.">
 </figure>
 
-
-# Pilot – Cold open {#intro}
-
 <div class="chat-thread">
 
   <div class="chat-msg chat-msg-left chat-leonard">
