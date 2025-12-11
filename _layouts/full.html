@@ -23,11 +23,9 @@
 
   <body>
     <!-- HERO PLEIN ÉCRAN STYLE BIG BANG THEORY -->
-    <header class="hero"
-            style="background-image: url('{{ "/assets/img/network-hero.jpg" | relative_url }}');">
-      <div class="hero-overlay"></div>
-
+    <header class="hero">
       <div class="hero-inner">
+
         <!-- Barre de nav fixe façon générique de série -->
         <div class="hero-nav">
           <div class="hero-logo">
@@ -46,16 +44,31 @@
 
         <!-- Titre centré façon logo Big Bang Theory -->
         <div class="hero-content">
-          <div class="hero-bbt-orbit">
-            <div class="hero-bbt-circle"></div>
-            <h1 class="hero-title">
-              {{ page.hero_title | default: "The Enemy of my Enemy is my Friend Theory" }}
-            </h1>
+          <div class="hero-bbt-wrapper">
+            <div class="hero-bbt-atom"></div>
+
+            <div class="hero-bbt-logo">
+              <span class="hero-bbt-the">the</span>
+
+              <span class="hero-bbt-block hero-bbt-block-red">
+                ENEMY OF MY
+              </span>
+
+              <span class="hero-bbt-block hero-bbt-block-black">
+                ENEMY
+              </span>
+
+              <span class="hero-bbt-theory">
+                is my friend theory
+              </span>
+            </div>
           </div>
+
           <p class="hero-subtitle">
             {{ page.hero_subtitle | default: "A sitcom-style journey through alliances and rivalries on Reddit" }}
           </p>
         </div>
+
       </div>
     </header>
 
