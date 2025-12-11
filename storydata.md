@@ -17,6 +17,55 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 </figure>
 
 
+# Pilot – Cold open {#intro}
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · network nerd</div>
+      <p>Okay, serious scientific question: if two subreddits bully the same subreddit… are they basically best friends now?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · theorist</div>
+      <p>Of course. I shall now formally name this principle <em>The Enemy of my Enemy is my Friend Theory</em>. It is mine. Dibs.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP geek</div>
+      <p>Yeah, because no one in human history ever thought of that before…</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · definitely not STEM</div>
+      <p>Wait, you can test that with <em>data</em>? I thought that was just something villains say in movies.</p>
+    </div>
+  </div>
+
+  <!-- Continue the rest of the dialog like this... -->
+
+</div>
+
+
 **LEONARD** (network nerd):  
 > “Okay, serious scientific question: if two subreddits bully the same subreddit… are they basically best friends now?”
 
