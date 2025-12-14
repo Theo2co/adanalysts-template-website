@@ -290,7 +290,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 </div>
 
-# Scene 2 – Hidden hostilities: The Case of the Smiling Enemy {#triads}
+# Scene 2 – Test Hidden hostilities: The Case of the Smiling Enemy {#triads}
 
 <div class="narrator-block">
   <div class="narrator-avatar">
