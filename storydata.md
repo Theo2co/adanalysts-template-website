@@ -410,18 +410,20 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <div class="narrator-card">
         <div class="narrator-card-title">Flip delay</div>
         <p class="narrator-card-text">
-          For each flip, measure <strong>Δt</strong>: time until the next interaction with the opposite sentiment.
+          For each flip, measure <strong>\(\Delta t\)</strong>: time until the next interaction with the opposite sentiment.
         </p>
       </div>
     </div>
 
     <div class="narrator-math">
-      $$s_{\text{flip}}=\exp\!\left(-\frac{\Delta t}{\text{Median Interval}}\right)$$
+      \[
+        s_{\text{flip}}=\exp\!\left(-\frac{\Delta t}{\text{Median Interval}}\right)
+      \]
     </div>
 
     <ul class="narrator-points">
-      <li><strong>Fast reversal</strong> ⇒ Δt small ⇒ <strong>s<sub>flip</sub> ≈ 1</strong></li>
-      <li><strong>Slow reversal</strong> ⇒ Δt large ⇒ <strong>s<sub>flip</sub> → 0</strong></li>
+      <li><strong>Fast reversal</strong> ⇒ \(\Delta t\) small ⇒ <strong>\(s_{\text{flip}}\approx 1\)</strong></li>
+      <li><strong>Slow reversal</strong> ⇒ \(\Delta t\) large ⇒ <strong>\(s_{\text{flip}}\to 0\)</strong></li>
     </ul>
 
     <p class="narrator-footer">
@@ -429,6 +431,14 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </p>
   </div>
 </div>
+
+<div class="narrator-figure narrator-figure--wide">
+  <img
+    src="{{ '/assets/img/flip_score.png' | relative_url }}"
+    alt="Example of abnormal sentiment reversal over time"
+  >
+</div>
+
 
 <div class="chat-thread">
 
