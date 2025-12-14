@@ -764,17 +764,12 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-
-<!-- ========================= -->
-<!-- Graph placeholder: “zones” -->
-<!-- ========================= -->
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/flagging_zones.png' | relative_url }}"
-       alt="Decision zones for flagging: certainty zone (high probability), corroboration zone (medium-high probability + high flip score), and safe zone.">
-  <figcaption>
-    Decision zones: text certainty vs temporal corroboration.
-  </figcaption>
-</figure>
+<div class="narrator-figure narrator-figure--wide">
+  <img
+    src="{{ '/assets/img/flagging_zones.png' | relative_url }}"
+    alt="Decision zones for flagging: certainty zone (high probability), corroboration zone (medium-high probability + high flip score), and safe zone.">
+  >
+</div>
 
 
 <!-- ========================= -->
