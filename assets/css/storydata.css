@@ -559,6 +559,11 @@ body {
   line-height: 1.7;
 }
 
+.narrator-figure--wide img {
+  width: 100%;
+  border-radius: 14px;
+}
+
 
 
 /*Test 2*/
