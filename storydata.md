@@ -387,47 +387,45 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 </div>
 
-<div class="narrator-block">
+<div class="narrator-block narrator-block--clean">
   <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Narrator">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
   </div>
+
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
 
-    <p>
-      After taking a step back, Raj formulates a simple but powerful score.
-      For each pair, he first computes a reference timescale:
-      the median interval between consecutive interactions.
+    <p class="narrator-lead">
+      Raj steps back and defines a simple timing score to catch suspicious sentiment flips.
     </p>
 
-    <p>
-      Then, for every sentiment flip, he measures Δt — the time elapsed
-      until the next interaction with the opposite sentiment.
-    </p>
+    <div class="narrator-grid">
+      <div class="narrator-card">
+        <div class="narrator-card-title">Reference pace (per pair)</div>
+        <p class="narrator-card-text">
+          Compute the <strong>median interval</strong> between consecutive interactions.
+        </p>
+      </div>
 
-    <p>
-      This delay is converted into a score:
-    </p>
+      <div class="narrator-card">
+        <div class="narrator-card-title">Flip delay</div>
+        <p class="narrator-card-text">
+          For each flip, measure <strong>Δt</strong>: time until the next interaction with the opposite sentiment.
+        </p>
+      </div>
+    </div>
 
-    <p>
-      <strong>s<sub>flip</sub> = exp(− Δt / Median Interval)</strong>
-    </p>
+    <div class="narrator-math">
+      $$s_{\text{flip}}=\exp\!\left(-\frac{\Delta t}{\text{Median Interval}}\right)$$
+    </div>
 
-    <p>
-      The exponential bounds the score between 0 and 1 and emphasizes
-      unusually fast reversals.
-      If a sentiment flips much faster than what is typical for that pair,
-      Δt is small and the score is close to 1.
-    </p>
+    <ul class="narrator-points">
+      <li><strong>Fast reversal</strong> ⇒ Δt small ⇒ <strong>s<sub>flip</sub> ≈ 1</strong></li>
+      <li><strong>Slow reversal</strong> ⇒ Δt large ⇒ <strong>s<sub>flip</sub> → 0</strong></li>
+    </ul>
 
-    <p>
-      If the reversal happens slowly or after a long delay,
-      the score rapidly decays toward 0.
-    </p>
-
-    <p>
-      In this way, s<sub>flip</sub> quantifies how surprising a sentiment
-      reversal is relative to the pair’s normal interaction rhythm.
+    <p class="narrator-footer">
+      This makes the score comparable across pairs with very different activity rhythms.
     </p>
   </div>
 </div>
