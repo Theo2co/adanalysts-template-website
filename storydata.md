@@ -421,10 +421,10 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       \]
     </div>
 
-    <ul class="narrator-points">
-      <li><strong>Fast reversal</strong> ⇒ \(\Delta t\) small ⇒ <strong>\(s_{\text{flip}}\approx 1\)</strong></li>
-      <li><strong>Slow reversal</strong> ⇒ \(\Delta t\) large ⇒ <strong>\(s_{\text{flip}}\to 0\)</strong></li>
-    </ul>
+  <ul class="narrator-points">
+    <li><strong>Fast reversal</strong> ⇒ \(\Delta t\) small ⇒ <strong>\(s_{\text{flip}}\approx 1\)</strong></li>
+    <li><strong>Slow reversal</strong> ⇒ \(\Delta t\) large ⇒ <strong>\(s_{\text{flip}}\to 0\)</strong></li>
+  </ul>
 
     <p class="narrator-footer">
       This makes the score comparable across pairs with very different activity rhythms.
