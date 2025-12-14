@@ -292,74 +292,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 # Scene 2 – Test Hidden hostilities: The Case of the Smiling Enemy {#triads}
 
-<div class="narrator-block">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
-  </div>
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
-    <p><strong>INT. APARTMENT 4A – WHITEBOARD CORNER.</strong> Three timelines are drawn, with
-    red and blue arrows marking sentiment between pairs of subreddits.</p>
-    <p>Phase one of the theory is all about debugging the labels before making causal claims.</p>
-  </div>
-</div>
-
-<div class="chat-thread">
-
-  <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON · THEORIST</div>
-      <p>Phase one of The Enemy of my Enemy is my Friend Theory:
-      <em>Thou shalt not build causal claims on mislabeled insults.</em></p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-left chat-leonard">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">LEONARD · NETWORK NERD</div>
-      <p>Translation: step 1 = find the fake smiles.</p>
-    </div>
-  </div>
-
-</div>
-
-<div class="narrator-block">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
-  </div>
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
-    <p>They attack the problem from three angles: <strong>time</strong>, <strong>language</strong>,
-    and <strong>context</strong>.</p>
-  </div>
-</div>
-
-## 2.1 Time – Mood swings that make no sense
-
-<div class="narrator-block">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
-  </div>
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
-    <p>For each ordered pair (A, B), Leonard looks at the sequence of interactions
-    A → B over time:</p>
-    <ul>
-      <li>mostly <strong>negative</strong> edges (red),</li>
-      <li>and occasionally a single <strong>non-negative</strong> edge (blue) squeezed between reds.</li>
-    </ul>
-  </div>
-</div>
-
 <div class="chat-thread">
 
   <div class="chat-msg chat-msg-left chat-leonard">
@@ -368,69 +300,12 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">LEONARD · NETWORK NERD</div>
-      <p>If two subreddits scream at each other for months, and suddenly we get one “non-negative” message <em>exactly</em> between two fights… I’m not buying the instant reconciliation arc.</p>
+      <p>
+        Let’s ignore text for now. Just look at interactions over time.
+        For a pair of subreddits, we have a sequence of sentiments.
+      </p>
     </div>
   </div>
-
-</div>
-
-<div class="narrator-block">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
-  </div>
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
-    <p>They compute the typical delay between sentiment switches for each pair,
-    and compare it to the actual delays around suspicious non-negative edges.</p>
-    <p>When a flip from negative → non-negative → negative happens <strong>much faster</strong>
-    than usual for that pair, the middle edge becomes a <strong>temporal suspect</strong>.</p>
-  </div>
-</div>
-
-<div class="chat-thread">
-
-  <div class="chat-msg chat-msg-right chat-penny">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>So if someone says “no offence, but…” right between two insults, you assume it’s not a real hug?</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON · THEORIST</div>
-      <p>Yes. We call that the <em>Law of Sarcasm Conservation</em>.</p>
-    </div>
-  </div>
-
-</div>
-
-## 2.2 Language – When “non-negative” swears a lot
-
-<div class="narrator-block">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
-  </div>
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
-    <p>Raj turns to the text itself. For each post, he computes:</p>
-    <ul>
-      <li>a <strong>VADER compound</strong> sentiment score,</li>
-      <li>LIWC-style features: <em>Anger</em>, <em>Swear</em>, <em>Dissent</em>, <em>You/They</em> pronouns.</li>
-    </ul>
-    <p>He then compares the distributions for posts labelled negative vs. non-negative.</p>
-  </div>
-</div>
-
-<div class="chat-thread">
 
   <div class="chat-msg chat-msg-left chat-raj">
     <div class="chat-avatar">
@@ -438,28 +313,9 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">RAJ · NLP GEEK</div>
-      <p>Check this out. The model saw “you idiots” and thought: “seems neutral”.</p>
+      <p>Right. Some pairs fight constantly. Others are mostly neutral.</p>
     </div>
   </div>
-
-</div>
-
-<div class="narrator-block">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
-  </div>
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
-    <p>A small tail of “non-negative” posts looks linguistically just as angry as
-    negative ones. These become <strong>language suspects</strong>, especially when
-    they overlap with temporal suspects.</p>
-  </div>
-</div>
-
-## 2.3 Context – Hostility in embedding space
-
-<div class="chat-thread">
 
   <div class="chat-msg chat-msg-right chat-sheldon">
     <div class="chat-avatar">
@@ -467,7 +323,65 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON · THEORIST</div>
-      <p>Hostility is relational. Two similar communities can tease each other nicely. Distant ones are more likely to declare war.</p>
+      <p>So what would look strange?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>A sudden mood swing?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>
+        What if we measure how fast sentiment flips back?
+        For each interaction, we look at the next one where
+        the sentiment changes sign.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>That gives us a delay between the two.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>But “fast” depends on the pair, right?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>
+        Exactly. Some pairs interact every hour, others once a month.
+        But if we normalize, we can have a score that captures
+        how abnormal the timing is.
+      </p>
     </div>
   </div>
 
@@ -475,20 +389,46 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 <div class="narrator-block">
   <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Narrator">
   </div>
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
-    <p>Using subreddit embeddings, they compute cosine similarity between the
-    source and target of each interaction.</p>
-    <ul>
-      <li>Negative interactions tend to occur between <strong>less similar</strong> communities.</li>
-      <li>Non-negative interactions are more common between <strong>similar</strong> ones.</li>
-    </ul>
-    <p>When a “non-negative” edge looks linguistically hostile, appears in a hostile
-    temporal context, and connects distant embeddings, it becomes a strong
-    <strong>hidden hostility candidate</strong>.</p>
+
+    <p>
+      After taking a step back, Raj formulates a simple but powerful score.
+      For each pair, he first computes a reference timescale:
+      the median interval between consecutive interactions.
+    </p>
+
+    <p>
+      Then, for every sentiment flip, he measures Δt — the time elapsed
+      until the next interaction with the opposite sentiment.
+    </p>
+
+    <p>
+      This delay is converted into a score:
+    </p>
+
+    <p>
+      <strong>s<sub>flip</sub> = exp(− Δt / Median Interval)</strong>
+    </p>
+
+    <p>
+      The exponential bounds the score between 0 and 1 and emphasizes
+      unusually fast reversals.
+      If a sentiment flips much faster than what is typical for that pair,
+      Δt is small and the score is close to 1.
+    </p>
+
+    <p>
+      If the reversal happens slowly or after a long delay,
+      the score rapidly decays toward 0.
+    </p>
+
+    <p>
+      In this way, s<sub>flip</sub> quantifies how surprising a sentiment
+      reversal is relative to the pair’s normal interaction rhythm.
+    </p>
   </div>
 </div>
 
@@ -500,7 +440,25 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">LEONARD · NETWORK NERD</div>
-      <p>If it quacks like an insult, swears like an insult, and flies between enemy camps, it’s probably… an insult.</p>
+      <p>
+        Raj, you’re a genius! The histogram says it clearly.
+        Most flips behave normally, but there’s a long tail.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>
+        Right! We’ve got 22,261 flips sitting above 0.6.
+        Which is roughly exp(−1/2).
+        Those flips happen at least twice as fast
+        as the median interaction interval.
+      </p>
     </div>
   </div>
 
@@ -510,31 +468,19 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>Is that how science works? You should put that on your grant proposals.</p>
+      <p>So almost ten percent?</p>
     </div>
   </div>
 
-</div>
-
-## 2.4 Outcome – A cleaner map of grudges
-
-<div class="narrator-block">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>8.7%, to be exact. That’s not random variation. That’s a real tail.</p>
+    </div>
   </div>
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
-    <p>They don’t manually relabel the entire dataset, but they:</p>
-    <ul>
-      <li>identify a non-trivial share of “non-negative” edges that behave like negative ones,</li>
-      <li>understand where the classifier tends to fail,</li>
-      <li>and rerun analyses with and without these suspects to check robustness.</li>
-    </ul>
-  </div>
-</div>
-
-<div class="chat-thread">
 
   <div class="chat-msg chat-msg-right chat-sheldon">
     <div class="chat-avatar">
@@ -542,7 +488,10 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON · THEORIST</div>
-      <p>We have now debugged our enemies. The Enemy of my Enemy is my Friend Theory may proceed to Phase Two: measuring alliances.</p>
+      <p>
+        Agreed. These are temporally abnormal events.
+        Not necessarily wrong, but statistically suspicious.
+      </p>
     </div>
   </div>
 
@@ -552,11 +501,48 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>So phase one was: “trust issues”. Phase two is: “dating drama”?</p>
+      <p>Suspicious enough to investigate.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>
+        Exactly. Timing alone doesn’t prove mislabeling,
+        but it gives us a strong prior.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>If a flip is both fast and semantically inconsistent, that’s a red flag.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>
+        So now let’s bring the text back in and do a joint model.
+        Temporal surprise plus linguistic evidence.
+      </p>
     </div>
   </div>
 
 </div>
+
 
 # Scene 3 – The Experiment: Testing The Enemy of my Enemy is my Friend Theory {#results}
 
