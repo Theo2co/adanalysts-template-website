@@ -552,6 +552,379 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 </div>
 
 
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>Ideally, we want a model that outputs the probability that a message is genuinely hostile based on its text.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>A logistic regression fits perfectly. It directly outputs a probability. In inputs we could choose a small set of strong LIWC and VADER features.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>Yes, plus the cosine similarity between the source and target subreddit embeddings, to capture interaction context.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>Okay, so the model gives us a probability, but how do we actually decide what gets flagged?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>If the probability is high enough, the message gets flagged right away. We could then use the flip score to handle cases where the probability is unclear.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>So the logic is: suspicious text + very high flip score equals a valid flag.</p>
+      <p>Let me work on this tonight and I’ll come with a model tomorrow !</p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+
+
+<div class="narrator-block">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p>
+      After a very long night of work — the kind fueled by cold coffee, overconfidence,
+      and mild despair — Raj finally pins down a model that is simple but robust.
+    </p>
+  </div>
+</div>
+
+
+<!-- ========================= -->
+<!-- Step 1 -->
+<!-- ========================= -->
+<div class="narrator-block narrator-block--clean">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
+  </div>
+
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+
+    <p class="narrator-lead"><strong>Step 1 — Selecting truly discriminative textual features</strong></p>
+
+    <p>
+      The goal is simple: keep only the textual signals that consistently distinguish
+      hostile (−1) from non-hostile (+1) links, without overfitting.
+    </p>
+
+    <ul>
+      <li>
+        Each LIWC and VADER feature is evaluated independently using repeated out-of-fold AUC,
+        after standardizing within each source subreddit to remove writing-style bias.
+      </li>
+      <li>
+        Features are ranked by their median AUC across repeats, penalized if their rank is unstable
+        or if their effect direction flips.
+      </li>
+      <li>
+        Only features that score high on test AUC, remain stable across repetitions,
+        generalize to later time periods, and are not redundant are kept.
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ========================= -->
+<!-- Step 2 -->
+<!-- ========================= -->
+<div class="narrator-block narrator-block--clean">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
+  </div>
+
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+
+    <p class="narrator-lead"><strong>Step 2 — A probabilistic hostility model</strong></p>
+
+    <p>
+      These selected features are fed into a logistic regression with L1 regularization.
+    </p>
+
+    <div class="narrator-grid">
+      <div class="narrator-card">
+        <div class="narrator-card-title">Inputs</div>
+        <div class="narrator-card-text">
+          <ul>
+            <li>Selected LIWC features</li>
+            <li>Selected VADER features</li>
+            <li>Cosine similarity between source and target subreddit embeddings</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="narrator-card">
+        <div class="narrator-card-title">Output</div>
+        <p class="narrator-card-text"><code>p_true_hostile ∈ [0, 1]</code></p>
+      </div>
+    </div>
+
+    <p>
+      It answers the question: <em>Is this message hostile compared to the norm of this relationship?</em>
+    </p>
+
+    <ul>
+      <li>L1 regularization enforces sparsity and prevents the model from relying on weak or redundant signals.</li>
+      <li>Liblinear keeps the optimization stable with a small number of features.</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ========================= -->
+<!-- Step 3 -->
+<!-- ========================= -->
+<div class="narrator-block narrator-block--clean">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
+  </div>
+
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+
+    <p class="narrator-lead"><strong>Step 3 — Decision logic with temporal corroboration</strong></p>
+
+    <p>The probability alone is not blindly trusted. Two explicit rules are applied.</p>
+
+    <div class="narrator-grid">
+      <div class="narrator-card">
+        <div class="narrator-card-title">Certainty Rule</div>
+        <p class="narrator-card-text">
+          If <code>p_true_hostile ≥ 0.99</code>, the message is flagged immediately.
+          At this level, the text is almost certainly toxic. No external evidence is needed.
+        </p>
+      </div>
+
+      <div class="narrator-card">
+        <div class="narrator-card-title">Corroboration Rule</div>
+        <p class="narrator-card-text">
+          If <code>p_true_hostile ≥ 0.85</code>, the model is already confident — but not absolute.
+          In this case, we require temporal confirmation using <code>s_flip</code>.
+          Only flips in the top 5% closest to 1 (fastest reversals relative to the pair’s normal rhythm) are accepted.
+        </p>
+      </div>
+    </div>
+
+    <div class="narrator-math">
+      \[
+        \text{Flag} =
+        \begin{cases}
+          1 & \text{if } p_{\text{true\_hostile}} \ge 0.99 \\
+          1 & \text{if } p_{\text{true\_hostile}} \ge 0.85 \ \text{and } s_{\text{flip}} \ge q_{0.95}(s_{\text{flip}}) \\
+          0 & \text{otherwise}
+        \end{cases}
+      \]
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ========================= -->
+<!-- Graph placeholder: “zones” -->
+<!-- ========================= -->
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/flagging_zones.png' | relative_url }}"
+       alt="Decision zones for flagging: certainty zone (high probability), corroboration zone (medium-high probability + high flip score), and safe zone.">
+  <figcaption>
+    Decision zones: text certainty vs temporal corroboration.
+  </figcaption>
+</figure>
+
+
+<!-- ========================= -->
+<!-- Morning results dialog -->
+<!-- ========================= -->
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>Good morning. I bring results, statistics… and the comforting news that my laptop survived the night. Barely.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>That’s already a win.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>First, feature selection. Out of all LIWC and VADER signals, only five consistently matter: <code>LIWC_Negemo</code>, <code>LIWC_Anger</code>, <code>LIWC_Affect</code>, <code>VADER_neg</code>, <code>VADER_compound</code>.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>Okay, first—please admire this graph. Each feature on its own already separates friendly from hostile interactions.</p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+
+
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/feature_auc_plot.png' | relative_url }}"
+       alt="Plot showing single-feature AUC distributions for selected LIWC and VADER features.">
+  <figcaption>
+    Single-feature discrimination (repeated out-of-fold AUC).
+  </figcaption>
+</figure>
+
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>
+        Now, the model results.
+        Using those features, plus subreddit embedding similarity—and ignoring pairs with fewer than five interactions—the model flags <strong>12,079</strong> additional links.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>Twelve thousand?! That’s… a lot.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>Context, Penny. There are <strong>858,488</strong> interactions total.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>Still, those hidden cases add nearly 15% on top of the visible hostility.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>Thank you, Sheldon.</p>
+      <p>
+        After relabeling, hidden hostility makes up <strong>12.8%</strong> of all hostile interactions.
+        And the best part? The hidden hostility boxplots of linguistic features almost perfectly overlap with the explicit hostile ones.
+      </p>
+    </div>
+  </div>
+
+  <figure class="scene-figure scene-figure-wide">
+    <img src="{{ '/assets/img/feature_auc_plot.png' | relative_url }}"
+       alt="Plot showing single-feature AUC distributions for selected LIWC and VADER features.">
+    <figcaption>
+      Single-feature discrimination (repeated out-of-fold AUC).
+    </figcaption>
+  </figure>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>So if we’d missed that…</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>Our entire analysis would’ve been quietly wrong.</p>
+    </div>
+  </div>
+
+</div>
+
+
+
 # Scene 3 – The Experiment: Testing The Enemy of my Enemy is my Friend Theory {#results}
 
 <div class="narrator-block">
