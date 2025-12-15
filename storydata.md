@@ -1218,8 +1218,8 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON</div>
-      <p>For each month, we compute total interactions:<br>
-      <code>count = n(A→B) + n(B→A)</code>.</p>
+      <p>For each month, we compute total interactions:
+      count = n(A→B) + n(B→A).</p>
     </div>
   </div>
 
@@ -1339,6 +1339,1084 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <div class="chat-name">PENNY</div>
       <p>So the histogram figure shows the distribution,<br>
       and the dashed lines show where “enemy” and “friend” start.</p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+<div class="narrator-block">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p><strong>INT. APARTMENT 4A – LATER.</strong></p>
+    <p>Now they define “co-attack” in a strict way.</p>
+  </div>
+</div>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD</div>
+      <p>Now we finally define a co-attack.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>For each month and each target C:<br>
+      collect attackers A such that A→C has at least one negative link.</p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+
+<!-- (show figure) -->
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/attacks_per_attacker_month_log.png' | relative_url }}"
+       alt="Distribution of attacks per attacker per month on a log scale.">
+  <figcaption>
+    Distribution of attacks per attacker per month (log scale).
+  </figcaption>
+</figure>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY</div>
+      <p>But are we sure monthly bins make sense?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>That’s why we plot the distribution of attacks per attacker per month,<br>
+      on a log scale.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>The takeaway: even monthly, most attacker-target months have 0 or 1 attack.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD</div>
+      <p>So weekly bins would become too sparse and we’d miss co-attacks.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>And multi-month bins would be too loose:<br>
+      two attacks months apart would look “coordinated” when they aren’t.</p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+
+<div class="narrator-block">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p><strong>INT. APARTMENT 4A – NIGHT.</strong></p>
+    <p>They tighten the definition again.</p>
+  </div>
+</div>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD</div>
+      <p>Important: not every shared target is a real conflict.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>So we keep only months where:<br>
+      1. A and B both attacked C in the same month (counts &gt; 0),<br>
+      2. A is an Enemy of C and B is an Enemy of C that month.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY</div>
+      <p>Cool. But what are we testing now?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD</div>
+      <p>Now we test the main idea: if two subreddits co-attack the same target, do they later become friends?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY</div>
+      <p>How do we define “friends”?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>We use the monthly Friendship Score between (A,B), and we call them friends when it passes the friend threshold.</p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+
+<!-- (show plot) -->
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/coattack_to_friendship_timeline.png' | relative_url }}"
+       alt="Timeline plot: for each attacker pair (A,B) against a target C, a red dot marks co-attack start and a green dot marks friendship start.">
+  <figcaption>
+    Timeline of co-attack start (red) and friendship start (green) for attacker pairs (A,B) targeting C.
+  </figcaption>
+</figure>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>In this timeline, each line is an attacker pair (A,B) for one target C.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD</div>
+      <p>The big takeaway: friendship can happen quickly, but sometimes it happens years later.</p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+<div class="narrator-block">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p><strong>INT. APARTMENT 4A – CONTINUOUS.</strong></p>
+    <p>They argue about “what counts” as conflict-caused.</p>
+  </div>
+</div>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>If friendship happens 2 years later, it’s harder to link it to the conflict.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>So we only count “new friendship” if it happens inside:<br>
+      [conflict start, conflict end + 1 month].</p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+
+<!-- (show plot) -->
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/friendship_windows_near_far.png' | relative_url }}"
+       alt="Co-Attacking Pair Friendship Outcomes">
+  <figcaption>
+    Co-Attacking Pair Friendship Outcomes
+  </figcaption>
+</figure>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD</div>
+      <p>Now the outcomes:</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>
+        • New friendship near conflict: 0.693%<br>
+        • Friendship far after conflict: 1.861%<br>
+        • Never became friends: 92.483%<br>
+        • Already friends before conflict: 4.963%
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY</div>
+      <p>So it’s rare, but it exists.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD</div>
+      <p>And separating “near” vs “far” matters, because “near” is the one that could plausibly be related to the co-attack.</p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+
+<!-- (show plot) -->
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/coattack_timeline_with_conflict_end.png' | relative_url }}"
+       alt="Timeline plot showing co-attack start (red), conflict end (orange), and friendship start (green) for attacker pairs over time.">
+  <figcaption>
+    Timeline with co-attack start, conflict end, and friendship start.
+  </figcaption>
+</figure>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>This last timeline adds conflict end (orange dot), so you can see whether friendship starts during or right after the conflict window.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>So we observe some “enemy-of-my-enemy” friendship formation — now the next step is testing whether it’s causal, not just correlation.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY</div>
+      <p>So what’s the “treatment” here?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>Treatment = a strong co-attack event: A and B co-attack the same target C in the same month, while both are enemies with C.</p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+<div class="narrator-block">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p><strong>INT. APARTMENT 4A – NEXT DAY.</strong> Now the team switches from “pattern” to “causality”.</p>
+  </div>
+</div>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>
+        Treated pairs (A,B): they ever strongly co-attacked someone, and we use the month of the first
+        strong co-attack as the event time. Also, we remove pairs that were already friends before the
+        event.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD</div>
+      <p>
+        And we only evaluate friendship inside a realistic window:
+        [conflict_start, conflict_end + 1], because friendships far after are less likely caused by the
+        conflict.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>
+        Control pairs: pairs that never co-attacked any common target (not weak, not strong).
+        Then we give them a pseudo conflict window by sampling start times and durations from the
+        treated distribution, and we also ensure they’re not friends before the pseudo start.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>
+        Outcome is binary:
+        1 if a strict friendship appears within the conflict window, otherwise 0.
+      </p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+<!-- (show figure) -->
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/dag_confounders.png' | relative_url }}"
+       alt="DAG showing confounders (similarity, activity, aggressiveness, prior hostility) affecting both treatment (co-attack) and outcome (friendship).">
+  <figcaption>
+    DAG: why we must control for confounders before estimating the causal effect of co-attacking on friendship.
+  </figcaption>
+</figure>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD</div>
+      <p>Now look at the DAG figure. It shows why we must control for confounders: similarity, activity, aggressiveness, and prior hostility can affect both co-attacking and friendship.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY</div>
+      <p>Meaning: even without co-attacking, similar or highly active subs might become friends anyway.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>Exactly — that’s why we compute these confounders before matching:<br>
+      • Activity (how much A and B post/link overall before the event)<br>
+      • Aggressiveness (how negative each subreddit tends to be)<br>
+      • Topical similarity (cosine similarity of embeddings)<br>
+      • Pre-conflict hostility between A and B (negative links exchanged before event time)</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>So now we have treated + control pairs with the same structure, an outcome, and confounders</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD</div>
+      <p>Now we need a fair comparison. So we estimate propensity scores: “How likely is a pair (A,B) to be treated, based only on pre-conflict confounders?”</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY</div>
+      <p>What do we feed into that model?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>We merge treated and control pairs, and keep only the confounders: activity, aggressiveness, similarity, hostility_pre.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>Before modeling, we standardize each confounder (mean 0, std 1). This prevents one variable from dominating just because it has bigger numbers.</p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+<div class="narrator-block">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p><strong>INT. APARTMENT 4A – SCREEN VIEW.</strong></p>
+    <p>They estimate “chance of being treated” from confounders.</p>
+  </div>
+</div>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>Then we fit a logistic regression that outputs a probability</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD</div>
+      <p>That probability is the propensity score, stored as <code>pscore</code> for every pair.</p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+
+<!-- (show pair) -->
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/pscore_pair_example.png' | relative_url }}"
+       alt="Example view showing treated/control pairs with their estimated propensity score (pscore).">
+  <figcaption>
+    Each pair gets a propensity score (pscore): the predicted probability of being treated given pre-conflict confounders.
+  </figcaption>
+</figure>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY</div>
+      <p>What does this coefficient bar plot tell us?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>Since inputs are standardized, each bar shows how a one–standard-deviation increase changes the log-odds of being treated.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>Here, aggressiveness and activity push treatment probability up, while hostility_pre and similarity push it down. Important: these are not causal effects—just how treatment is assigned in the data.</p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+
+<!-- (show figure) -->
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/propensity_logreg_coefficients.png' | relative_url }}"
+       alt="Coefficient bar plot from standardized logistic regression used for propensity scoring (activity, aggressiveness, similarity, hostility_pre).">
+  <figcaption>
+    Logistic regression coefficients (standardized inputs): which confounders predict treatment assignment.
+  </figcaption>
+</figure>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD</div>
+      <p>The ROC curve checks if the model can separate treated vs control.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>We get AUC = 0.820, which means treatment is strongly related to pre-conflict characteristics—so confounding is real, and matching is justified.</p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+
+<!-- (show figure) -->
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/propensity_roc_auc.png' | relative_url }}"
+       alt="ROC curve for propensity score model with AUC = 0.820.">
+  <figcaption>
+    ROC curve for propensity score model (AUC = 0.820).
+  </figcaption>
+</figure>
+<div class="narrator-block">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p><strong>INT. APARTMENT 4A – QUICK CHECK.</strong></p>
+    <p>Before matching, groups differ, but overlap exists—so matching is feasible.</p>
+  </div>
+</div>
+
+<!-- (show 5 plots) -->
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/boxplot_activity_before_matching.png' | relative_url }}"
+       alt="Boxplot of activity: treated vs control (before matching).">
+  <figcaption>Activity — Treated vs Control (Before Matching)</figcaption>
+</figure>
+
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/boxplot_aggressiveness_before_matching.png' | relative_url }}"
+       alt="Boxplot of aggressiveness: treated vs control (before matching).">
+  <figcaption>Aggressiveness — Treated vs Control (Before Matching)</figcaption>
+</figure>
+
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/boxplot_similarity_before_matching.png' | relative_url }}"
+       alt="Boxplot of similarity: treated vs control (before matching).">
+  <figcaption>Similarity — Treated vs Control (Before Matching)</figcaption>
+</figure>
+
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/boxplot_hostility_pre_before_matching.png' | relative_url }}"
+       alt="Boxplot of hostility_pre: treated vs control (before matching).">
+  <figcaption>Hostility_pre — Treated vs Control (Before Matching)</figcaption>
+</figure>
+
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/pscore_density_before_matching.png' | relative_url }}"
+       alt="Propensity score density: treated vs control (before matching).">
+  <figcaption>Propensity Score Distributions — Treated vs Control</figcaption>
+</figure>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>Before matching, we show boxplots of confounders and the propensity score distributions, to check overlap.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>The treated and control distributions are different… but the key point is: they overlap, so matching is feasible (each treated pair can find a similar control).</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD</div>
+      <p>Now we do propensity score matching so treated pairs are only compared to truly similar control pairs.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY</div>
+      <p>So we’re basically making the comparison “fair”?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>Exactly. We apply common support, then do 1:1 nearest-neighbor matching (with replacement).</p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+<div class="narrator-block">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p><strong>INT. APARTMENT 4A – LATER.</strong></p>
+    <p>They match treated pairs to similar controls by propensity score.</p>
+  </div>
+</div>
+
+<!-- (show plot) -->
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/matching_distance_hist.png' | relative_url }}"
+       alt="Histogram of matching distance (absolute propensity score difference) after propensity score matching.">
+  <figcaption>
+    Matching distance histogram (|pscore_treated − pscore_control|).
+  </figcaption>
+</figure>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>This histogram shows the matching distance.<br>
+      Most values are very close to zero → matches are high quality.</p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+
+<!-- (show plot) -->
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/matched_pairs_pscore_scatter.png' | relative_url }}"
+       alt="Scatter plot of propensity scores for each matched pair showing treated and control dots close together.">
+  <figcaption>
+    Propensity scores within matched pairs (treated vs control).
+  </figcaption>
+</figure>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>This scatter plot shows the treated and control propensity scores inside each matched pair.<br>
+      The two dots sit close vertically → treated and control in each pair had nearly the same treatment probability.</p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+
+<!-- (show 5 plots same as before but after matching) -->
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/boxplot_activity_after_matching.png' | relative_url }}"
+       alt="Boxplot of activity: treated vs control (after matching).">
+  <figcaption>Activity — Treated vs Control (After Matching)</figcaption>
+</figure>
+
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/boxplot_aggressiveness_after_matching.png' | relative_url }}"
+       alt="Boxplot of aggressiveness: treated vs control (after matching).">
+  <figcaption>Aggressiveness — Treated vs Control (After Matching)</figcaption>
+</figure>
+
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/boxplot_similarity_after_matching.png' | relative_url }}"
+       alt="Boxplot of similarity: treated vs control (after matching).">
+  <figcaption>Similarity — Treated vs Control (After Matching)</figcaption>
+</figure>
+
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/boxplot_hostility_pre_after_matching.png' | relative_url }}"
+       alt="Boxplot of hostility_pre: treated vs control (after matching).">
+  <figcaption>Hostility_pre — Treated vs Control (After Matching)</figcaption>
+</figure>
+
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/pscore_density_after_matching.png' | relative_url }}"
+       alt="Propensity score density: treated vs control (after matching) showing strong overlap.">
+  <figcaption>Propensity Score Distributions — Treated vs Control (After Matching)</figcaption>
+</figure>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD</div>
+      <p>Now we check balance directly using boxplots, after matching.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY</div>
+      <p>So these boxplots are basically “proof” the confounders got balanced.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>This density plot shows treated vs control propensity score distributions after matching.<br>
+      The overlap is strong → common support + matching worked.</p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+
+<div class="narrator-block">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p><strong>INT. APARTMENT 4A – RESULTS SLIDE.</strong></p>
+    <p>They summarize outcomes after matching.</p>
+  </div>
+</div>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD</div>
+      <p>Now we define the outcome the same way for both groups:</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>
+        Y = 1 if a new strict friendship starts inside
+        [conflict_start, conflict_end + 1].
+        Otherwise Y = 0.
+      </p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+
+<!-- (show plot) -->
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/outcome_counts_heatmap.png' | relative_url }}"
+       alt="Heatmap of raw counts for Y=0 and Y=1 for treated vs control after matching.">
+  <figcaption>
+    Raw counts of outcomes (Y=0 vs Y=1) for treated and control pairs after matching.
+  </figcaption>
+</figure>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>This heatmap shows the raw counts of Y=0 and Y=1 for treated vs control after matching.</p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+
+<!-- (show plot) -->
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/outcome_proportions_heatmap.png' | relative_url }}"
+       alt="Heatmap of row-wise proportions (friendship rates) for Y=0 and Y=1 for treated vs control after matching.">
+  <figcaption>
+    Row-wise proportions: friendship rates (Y=1) for treated vs control after matching.
+  </figcaption>
+</figure>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>Same matrix, but as row-wise proportions (friendship rates). Here, controls have about 1.8% friendship, treated about 0.6% — which suggests treated pairs are less likely to become friends in this window (after matching).</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD</div>
+      <p>Now that we’ve matched treated and control pairs, we can finally estimate the causal effect: the ATT (Average Treatment Effect on the Treated).</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY</div>
+      <p>What does ATT mean here, in plain words?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>It’s the average difference in outcomes inside each matched pair, it’s a difference in friendship probabilities, in percentage points.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>We have 84,409 matched pairs, and the estimated ATT is −1.13 percentage points.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD</div>
+      <p>So among strong co-attackers, friendship is actually 1.13 pp less likely than similar non-co-attacking pairs.</p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+<div class="narrator-block">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p><strong>INT. APARTMENT 4A – FINAL CALC.</strong></p>
+    <p>Now they compute ATT: average (Y<sub>T</sub> − Y<sub>C</sub>) across matched pairs.</p>
+  </div>
+</div>
+
+<!-- (show figure) -->
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/att_bootstrap_hist.png' | relative_url }}"
+       alt="Bootstrap distribution of ATT with null boundary at 0, observed ATT line, and shaded 95% confidence interval.">
+  <figcaption>
+    Bootstrap distribution of ATT with null boundary (ATT = 0), observed ATT, and 95% CI.
+  </figcaption>
+</figure>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY</div>
+      <p>But how sure are we about that number?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>That’s what the bootstrap plot shows: we resample matched pairs many times to see how ATT varies.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>On the histogram:<br>
+      • dashed vertical line = ATT = 0 (null boundary)<br>
+      • solid line = observed ATT<br>
+      • shaded region = 95% CI</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>Results: SE ≈ 0.05 pp, 95% CI = [−1.23, −1.03] pp, and the one-sided p-value for “ATT &gt; 0” is ≈ 1.0.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD</div>
+      <p>So overall, the data does not support “enemy of my enemy is my friend.” If anything, co-attacking is associated with a small but consistent decrease in friendship formation under our strict definitions.</p>
     </div>
   </div>
 
