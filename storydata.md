@@ -1177,6 +1177,173 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </p>
   </div>
 </div>
+<div class="narrator-block">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p><strong>INT. APARTMENT 4A – NIGHT.</strong></p>
+    <p>Now they define relationship strength between any two subreddits.</p>
+  </div>
+</div>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD</div>
+      <p>Now we need a clean way to define: friend / neutral / enemy.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>So we build a monthly table for each unordered pair (A,B).<br>
+      Meaning A and B together, regardless of direction.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>For each month, we compute total interactions:<br>
+      <code>count = n(A→B) + n(B→A)</code>.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>And the sentiment sum: positives are +1, negatives are −1.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD</div>
+      <p>From there we get the sentiment balance as a Ratio.<br>
+      So Ratio is −1 if everything is negative, +1 if everything is positive.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY</div>
+      <p>But what if they only interact once? That seems unreliable.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>Exactly why we weight by volume.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-chat-bubble chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>We define the Friendship Score, so frequent interaction carries more weight.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD</div>
+      <p>Now the key: we don’t pick thresholds randomly.</p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+
+<!-- (show plot) -->
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/friendship_score_hist_kmeans.png' | relative_url }}"
+       alt="Histogram of monthly Friendship Scores with dashed threshold lines separating enemy-like, neutral, and friend-like regions.">
+  <figcaption>
+    Histogram of monthly Friendship Scores. Dashed lines indicate the learned thresholds.
+  </figcaption>
+</figure>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>We pool all monthly Friendship Scores<br>
+      and run K-means with 3 clusters: enemy-like, neutral, friend-like.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>Then thresholds are the midpoints between cluster centers.<br>
+      Learned once, used everywhere.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>In our run, we got:<br>
+      Enemy threshold ≈ −0.015<br>
+      Friend threshold ≈ 0.988.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY</div>
+      <p>So the histogram figure shows the distribution,<br>
+      and the dashed lines show where “enemy” and “friend” start.</p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+
 
 
 ## 3.1 Descriptive evidence – Before and after the feud
