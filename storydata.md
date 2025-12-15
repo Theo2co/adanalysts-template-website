@@ -1120,7 +1120,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 </div>
 
 <figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/plotA.png' | relative_url }}"
+  <img src="{{ '/assets/img/PlotA.png' | relative_url }}"
        alt="Plot A: Monthly fraction of targets attacked by at least 2 distinct attackers.">
   <figcaption>
     <strong>Plot A.</strong> Monthly fraction of targets attacked by at least 2 distinct attackers.
