@@ -1528,7 +1528,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   <img src="{{ '/assets/img/coattack_to_friendship_timeline.png' | relative_url }}"
        alt="Timeline plot: for each attacker pair (A,B) against a target C, a red dot marks co-attack start and a green dot marks friendship start.">
   <figcaption>
-    Timeline of co-attack start (red) and friendship start (green) for attacker pairs (A,B) targeting C.
+    Timeline of co-attack start and friendship start for attacker pairs (A,B) targeting C.
   </figcaption>
 </figure>
 
