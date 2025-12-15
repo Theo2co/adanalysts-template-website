@@ -929,20 +929,23 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
-    <p><strong>INT. APARTMENT 4A – EVEN MORE WHITEBOARD.</strong> The board now shows triangles:
-    A, B, C with arrows pointing to C, and little hearts between A and B.</p>
+    <p>
+      <strong>INT. APARTMENT 4A – NIGHT.</strong> Leonard’s whiteboard is full of arrows between subreddits and one
+      giant question:
+      <em>“Does a shared enemy create friendship?”</em>
+    </p>
   </div>
 </div>
 
 <div class="chat-thread">
 
-  <div class="chat-msg chat-msg-right chat-penny">
+  <div class="chat-msg chat-msg-left chat-leonard">
     <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>Okay, Professor Crazy, remind me what exactly you’re trying to prove.</p>
+      <div class="chat-name">LEONARD</div>
+      <p>Okay—real question. If two subreddits attack the same target… do they later become friends?</p>
     </div>
   </div>
 
@@ -951,21 +954,45 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON · THEORIST</div>
-      <p>Formal statement: for communities A, B, C, if A and B both attack C, does that increase the probability that A and B later interact positively with each other?</p>
+      <div class="chat-name">SHELDON</div>
+      <p>A classic proverb. But now we test it as a causal claim, not a vibe.</p>
     </div>
   </div>
 
-  <div class="chat-msg chat-msg-left chat-leonard">
+  <div class="chat-msg chat-msg-left chat-raj">
     <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">LEONARD · NETWORK NERD</div>
-      <p>In human terms: co-attack → friendship boost?</p>
+      <div class="chat-name">RAJ</div>
+      <p>Meaning we need: time, interactions, and a clean definition of “enemy” and “friend”.</p>
     </div>
   </div>
 
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY</div>
+      <p>So… we’re turning drama into math. Great.</p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+
+<div class="narrator-block">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p>
+      To test the proverb, the team builds a full pipeline: define relationships, define co-attacks,
+      measure friendship after conflict, then test causality with matching and sensitivity analysis.
+    </p>
+  </div>
 </div>
 
 ## 3.1 Descriptive evidence – Before and after the feud
