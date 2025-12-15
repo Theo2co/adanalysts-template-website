@@ -994,6 +994,190 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </p>
   </div>
 </div>
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD</div>
+      <p>Okay, for this part, we first organize everything in time.<br>
+      We use months as our time unit.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY</div>
+      <p>Why months? Why not weeks?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>Because we need consistency.<br>
+      So we create a clean month format and a month index from 1 to 41.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>That way, later we can define “before” and “after” a conflict,<br>
+      and make sure two attacks happened in the same time bin.</p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+
+<div class="narrator-block narrator-block--clean">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p class="narrator-lead"><strong>Part 1 — Monthly summaries (setup)</strong></p>
+    <p>
+      Before anyone can talk about “co-attacks” or “friendship after conflict,” the team needs a timeline
+      that’s clean enough to measure cause and effect. So they compress Reddit into 41 monthly snapshots.
+    </p>
+  </div>
+</div>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD</div>
+      <p>Next, we build two monthly summary tables.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>First: <code>pair_month</code>. For every (SOURCE → TARGET) in a month,<br>
+      we count positive links and negative links.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>Second: <code>sub_month</code>. For each SOURCE subreddit in a month,<br>
+      we summarize its outgoing activity and negativity.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY</div>
+      <p>So one table is “pair behavior”, and one is “subreddit behavior”.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>Exactly. Later these are used for co-attacks and confounders.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+  <div class="chat-avatar">
+    <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+  </div>
+  <div class="chat-bubble">
+    <div class="chat-name">LEONARD</div>
+    <p>Now we show Plot A.</p>
+  </div>
+</div>
+
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/plotA.png' | relative_url }}"
+       alt="Plot A: Monthly fraction of targets attacked by at least 2 distinct attackers.">
+  <figcaption>
+    <strong>Plot A.</strong> Monthly fraction of targets attacked by at least 2 distinct attackers.
+  </figcaption>
+</figure>
+
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>We compute: in each month,<br>
+      what fraction of targets got attacked by at least 2 different attackers.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY</div>
+      <p>And if that fraction is big?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>Then shared antagonism isn’t rare noise.<br>
+      It’s a structural pattern on Reddit.</p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+
+<div class="narrator-block">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p>
+      Plot A is their first reality check: before we even talk about “friendship,” we verify that
+      <em>co-attacking the same target</em> happens often enough to study.
+      If multiple attackers keep converging on the same targets month after month, then “shared enemies”
+      aren’t edge cases — they’re part of the ecosystem.
+    </p>
+  </div>
+</div>
+
 
 ## 3.1 Descriptive evidence – Before and after the feud
 
