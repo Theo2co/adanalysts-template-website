@@ -2891,8 +2891,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
-    <p><strong>FADE OUT.</strong><br>
-    Sometimes, the strongest robustness check is the simplest one:<br>
+    <p>Sometimes, the strongest robustness check is the simplest one:<br>
     the direction of the data itself.</p>
   </div>
 </div>
