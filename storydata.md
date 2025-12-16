@@ -2412,7 +2412,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 
 </div> <!-- end .chat-thread -->
-# Scene — Sensitivity Analysis (Updated Results)
+# Scene — Sensitivity Analysis
 
 <div class="narrator-block">
   <div class="narrator-avatar">
@@ -2482,9 +2482,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     and <code>Y = 1</code> if strict friendship appears in the (pseudo-)conflict window.</p>
   </div>
 </div>
-
-# Scene — The “win / lose” idea
-
 <div class="narrator-block">
   <div class="narrator-avatar">
     <img src="{{ '/assets/img/narrator.png' | relative_url }}"
@@ -2535,9 +2532,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 
 </div> <!-- end .chat-thread -->
-
-# Scene — Updated results (the big twist)
-
 <div class="narrator-block">
   <div class="narrator-avatar">
     <img src="{{ '/assets/img/narrator.png' | relative_url }}"
@@ -2626,9 +2620,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 
 </div> <!-- end .chat-thread -->
-
-# Scene — The sign test (why p0 = 1)
-
 <div class="narrator-block">
   <div class="narrator-avatar">
     <img src="{{ '/assets/img/narrator.png' | relative_url }}"
@@ -2685,8 +2676,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 
 </div> <!-- end .chat-thread -->
-
-# Scene — What Γ means (but now it can’t save a positive story)
 
 <div class="narrator-block">
   <div class="narrator-avatar">
@@ -2745,17 +2734,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 
 </div> <!-- end .chat-thread -->
-
-# Scene — The bounds table (flat at 1.0)
-
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/rosenbaum_bounds_table.png' | relative_url }}"
-       alt="Rosenbaum bounds table showing Gamma vs p_upper staying at 1.0 across the grid.">
-  <figcaption>
-    Rosenbaum bounds: p_upper(Γ) stays at 1.0 from Γ = 1 to Γ = 6.
-  </figcaption>
-</figure>
-
 <div class="narrator-block narrator-block--clean">
   <div class="narrator-avatar">
     <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
@@ -2801,9 +2779,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 
 </div> <!-- end .chat-thread -->
-
-# Scene — The sensitivity curve plot (why it’s flat)
-
 <figure class="scene-figure scene-figure-wide">
   <img src="{{ '/assets/img/rosenbaum_sensitivity_curve.png' | relative_url }}"
        alt="Sensitivity curve plot showing p_upper(Gamma) flat at 1.0 with a horizontal alpha=0.05 line below.">
@@ -2858,7 +2833,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 </div> <!-- end .chat-thread -->
 
-# Scene — Final takeaway
+# Finale – The Enemy of my Enemy is my Friend Theory, evaluated {#conclusion}
 
 <div class="narrator-block">
   <div class="narrator-avatar">
@@ -2920,375 +2895,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     Sometimes, the strongest robustness check is the simplest one:<br>
     the direction of the data itself.</p>
   </div>
-</div>
-
-
-
-## 3.1 Descriptive evidence – Before and after the feud
-
-<div class="narrator-block">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
-  </div>
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
-    <p>For each month and each target C, Leonard counts negative interactions
-    A → C and B → C. If both A and B attack C in the same month, they
-    <strong>co-attack</strong> C. The first such month is recorded as <code>conflict_start</code>.</p>
-    <p>For each pair (A, B), they track mutual positive interactions A ↔ B in a
-    window before and after <code>conflict_start</code>.</p>
-  </div>
-</div>
-
-<div class="chat-thread">
-
-  <div class="chat-msg chat-msg-left chat-raj">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">RAJ · NLP GEEK</div>
-      <p>See this curve? Before the shared conflict, most pairs interact positively almost never. After they start co-attacking… the positive links clearly tick up.</p>
-    </div>
-  </div>
-
-</div>
-
-<div class="narrator-block">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
-  </div>
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
-    <p>Compared to random pairs of subreddits that never co-attack, co-attacking
-    pairs show a noticeably larger increase in mutual positive interactions
-    after conflict.</p>
-  </div>
-</div>
-
-<div class="chat-thread">
-
-  <div class="chat-msg chat-msg-right chat-penny">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>So basically, online version of: “we bonded over making fun of the same person”.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-left chat-leonard">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">LEONARD · NETWORK NERD</div>
-      <p>Exactly. But Sheldon is about to say “confounding variables”.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON · THEORIST</div>
-      <p>Confounding variables.</p>
-    </div>
-  </div>
-
-</div>
-
-## 3.2 Causal design – Treated vs control pairs
-
-<div class="narrator-block">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
-  </div>
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
-    <p>They define:</p>
-    <ul>
-      <li><strong>Treated pairs</strong>: subreddit pairs (A, B) that co-attack at least one C and were not friends before <code>conflict_start</code>.</li>
-      <li><strong>Control pairs</strong>: similar pairs that never co-attack anyone and also had no prior friendship.</li>
-    </ul>
-    <p>To make them comparable, they match on three confounders:</p>
-    <ol>
-      <li><strong>Topical similarity</strong> — cosine similarity between embeddings of A and B.</li>
-      <li><strong>Activity level</strong> — log of total outgoing interactions.</li>
-      <li><strong>Aggressiveness</strong> — ratio of negative to total outgoing interactions.</li>
-    </ol>
-  </div>
-</div>
-
-<div class="chat-thread">
-
-  <div class="chat-msg chat-msg-left chat-leonard">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">LEONARD · NETWORK NERD</div>
-      <p>So each treated pair gets a twin: same theme, same activity, same tendency to fight… but no shared enemy.</p>
-    </div>
-  </div>
-
-</div>
-
-<div class="narrator-block">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
-  </div>
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
-    <p>They estimate a <strong>propensity score</strong> for each pair — probability of
-    co-attacking given the confounders — and use nearest-neighbour matching.
-    After matching, treated and control groups look almost identical on those
-    three features.</p>
-  </div>
-</div>
-
-<div class="chat-thread">
-
-  <div class="chat-msg chat-msg-left chat-raj">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">RAJ · NLP GEEK</div>
-      <p>After matching, the treated and control groups look almost identical on those three features. Which is exactly what we want.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-penny">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>So if there’s still more friendship after co-attack, we’re running out of excuses not to blame the co-attack itself.</p>
-    </div>
-  </div>
-
-</div>
-
-## 3.3 Measuring the “friendship boost”
-
-<div class="narrator-block">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
-  </div>
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
-    <p>For each pair (treated or control), they compute:</p>
-    <ul>
-      <li>mutual positive interactions before conflict,</li>
-      <li>mutual positive interactions after conflict,</li>
-      <li>and the change Δfriendship = after − before.</li>
-    </ul>
-    <p>They then compare average Δfriendship across groups.</p>
-  </div>
-</div>
-
-<div class="chat-thread">
-
-  <div class="chat-msg chat-msg-left chat-leonard">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">LEONARD · NETWORK NERD</div>
-      <p>Here’s the punchline: treated pairs show a significantly larger friendship increase than their matched controls.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-penny">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>So your theory is: “we roast the same subreddit, we become buddies”.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON · THEORIST</div>
-      <p>A crude but acceptable paraphrase. Empirically, shared enemies <em>do</em> seem to foster alliances, even after controlling for similarity, activity, and aggressiveness.</p>
-    </div>
-  </div>
-
-</div>
-
-## 3.4 Sensitivity analysis – How strong is the theory?
-
-<div class="chat-thread">
-
-  <div class="chat-msg chat-msg-right chat-penny">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>But what if there’s some totally invisible factor? Like, I don’t know, charismatic mods playing puppet-masters?</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON · THEORIST</div>
-      <p>Enter Rosenbaum’s sensitivity analysis. It answers the question: <em>how strong would an unmeasured bias have to be to erase the observed effect?</em></p>
-    </div>
-  </div>
-
-</div>
-
-<div class="narrator-block">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
-  </div>
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
-    <p>They introduce parameter Γ (Gamma):</p>
-    <ul>
-      <li>Γ = 1 → no hidden bias, matching assumptions hold perfectly.</li>
-      <li>Γ &gt; 1 → treated and control pairs may differ in their odds of treatment due to some unseen factor.</li>
-    </ul>
-    <p>For each Γ, they recompute upper and lower bounds on the p-value of the
-    treatment effect, and see up to which Γ the effect remains statistically
-    significant. If Γ is high, the proverb looks robust. If Γ is low, the
-    theory is charming but fragile.</p>
-  </div>
-</div>
-
-<div class="chat-thread">
-
-  <div class="chat-msg chat-msg-left chat-raj">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">RAJ · NLP GEEK</div>
-      <p>So the theory survives… unless the universe secretly rigs the matchmaking.</p>
-    </div>
-  </div>
-
-</div>
-
-# Finale – The Enemy of my Enemy is my Friend Theory, evaluated {#conclusion}
-
-<div class="narrator-block">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
-  </div>
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
-    <p><strong>INT. APARTMENT 4A – NIGHT, LATER.</strong> The whiteboard is full, everyone has
-    pizza. Sheldon looks like he’s about to present a Nobel lecture.</p>
-  </div>
-</div>
-
-<div class="chat-thread">
-
-  <div class="chat-msg chat-msg-right chat-penny">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>Okay, Doctor Doom, what’s the verdict? Is your grand theory real or just Reddit fan-fiction?</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON · THEORIST</div>
-      <p>Allow me to summarise.</p>
-    </div>
-  </div>
-
-</div>
-
-<div class="narrator-block">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
-  </div>
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
-    <ol>
-      <li><strong>Hidden hostilities are real.</strong>  
-          A noticeable fraction of interactions labelled “non-negative” behave like genuine insults when we look at their temporal patterns, linguistic features and embedding context.
-          These hidden hostilities distort the map of conflicts if we ignore them.</li>
-      <li><strong>Shared enemies do foster alliances – on average.</strong>  
-          Pairs of subreddits that co-attack the same target show a larger increase in mutual positive interactions than comparable pairs that never share an enemy. After matching on similarity, activity and aggressiveness, the pattern is consistent with a <em>causal</em> effect of co-attack on later friendship.</li>
-      <li><strong>But the theory is probabilistic, not a law of physics.</strong>  
-          Sensitivity analysis shows how strong an unobserved bias would need to be to erase the effect. The proverb does not apply deterministically to every trio A, B, C, but across Reddit as a whole, it captures a real tendency:
-          <strong>shared conflicts often bring communities closer.</strong></li>
-    </ol>
-  </div>
-</div>
-
-<div class="chat-thread">
-
-  <div class="chat-msg chat-msg-left chat-raj">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">RAJ · NLP GEEK</div>
-      <p>So The Enemy of my Enemy is my Friend Theory passes peer review… with a big asterisk.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-left chat-leonard">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">LEONARD · NETWORK NERD</div>
-      <p>And season 2 can look at when those new friendships fall apart again.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-penny">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>Let me guess. You’re going to call it “The Ex-Friend of my Friend is my Enemy Theory”.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON · THEORIST</div>
-      <p>Obviously.</p>
-    </div>
-  </div>
-
 </div>
 
 > **FADE OUT.**
