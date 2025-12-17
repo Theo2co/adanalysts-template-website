@@ -564,6 +564,35 @@ body {
   border-radius: 14px;
 }
 
+/* ---------- FOR THE CLUSTER MAP ---------- */
+
+.viz-block{
+  margin: 24px 0;
+  padding: 16px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.10);
+}
+
+.viz-title{
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.viz-iframe{
+  width: 100%;
+  height: 620px;
+  border: 0;
+  border-radius: 12px;
+  background: #0b0d12; /* match plotly_dark */
+}
+
+.viz-caption{
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.35;
+}
 
 
 /*Test 2*/
