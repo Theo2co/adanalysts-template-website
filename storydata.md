@@ -248,25 +248,53 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
-    <p>To go beyond pure graph structure, Raj introduces <strong>embeddings</strong>:</p>
+    <p>
+      To go beyond the raw link network, Raj introduces <strong>subreddit embeddings</strong>:
+      each community becomes a point in a 300-dimensional space capturing audience & topic similarity.
+    </p>
     <ul>
-      <li>each subreddit → a 300-dimensional vector capturing user-base and topical similarity,</li>
-      <li>projected into 2D, they form clear clusters: politics, gaming, memes, lifestyle…</li>
+      <li>We project this space into <strong>3D</strong> using <strong>UMAP</strong>, creating a “galaxy map” of Reddit.</li>
+      <li>Colors come from <strong>KMeans (k=8)</strong>: they reveal <em>neighborhoods</em> of naturally similar communities.</li>
+      <li>Distance matters: close subreddits are “already similar” — a key confounder for enemy-of-my-enemy.</li>
     </ul>
   </div>
 </div>
 
+
+<div class="viz-block">
+  <div class="viz-title">Embedding “Galaxy Map” — UMAP 3D + KMeans</div>
+
+  <iframe
+    class="viz-iframe"
+    src="{{ '/assets/interactive/umap_kmeans_3d.html' | relative_url }}"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+
+  <div class="viz-caption">
+    Each dot is a subreddit represented by a 300-D embedding (user-base/topical similarity).  
+    We project them into 3D with UMAP and color clusters with KMeans (k=8).  
+    Clusters are “neighborhoods”: communities close in this space tend to share audience and topics.
+  </div>
+</div>
+
+
 <div class="chat-thread">
 
   <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON · THEORIST</div>
-      <p>Excellent. These embeddings will serve as our <em>social metric tensor</em> — they tell us which communities were naturally close <em>before</em> we even mention enemies.</p>
-    </div>
+  <div class="chat-avatar">
+    <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
   </div>
+  <div class="chat-bubble">
+    <div class="chat-name">SHELDON · THEORIST</div>
+    <p>
+      Excellent. This embedding space is our <em>baseline geometry</em>: 
+      it tells us who was close <strong>before</strong> we introduce enemies — 
+      so we don’t confuse “same tribe” with “new alliance”.
+    </p>
+  </div>
+</div>
+
 
   <div class="chat-msg chat-msg-left chat-raj">
     <div class="chat-avatar">
