@@ -278,11 +278,11 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 </div>
 
 <div class="chat-thread">
+
   <div class="chat-msg chat-msg-right chat-sheldon">
     <div class="chat-avatar">
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
-
     <div class="chat-bubble">
       <div class="chat-name">SHELDON · THEORIST</div>
       <p>
@@ -292,9 +292,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       </p>
     </div>
   </div>
-</div>
-
-
 
   <div class="chat-msg chat-msg-left chat-raj">
     <div class="chat-avatar">
@@ -317,6 +314,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 
 </div>
+
 
 # Scene 2 – Test Hidden hostilities: The Case of the Smiling Enemy {#triads}
 
