@@ -256,6 +256,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <li>We project this space into <strong>3D</strong> using <strong>UMAP</strong>, creating a “galaxy map” of Reddit.</li>
       <li>Colors come from <strong>KMeans (k=8)</strong>: they reveal <em>neighborhoods</em> of naturally similar communities.</li>
       <li>Distance matters: close subreddits are “already similar” — a key confounder for enemy-of-my-enemy.</li>
+      <li>UMAP+KMeans clusters are used for visualization (to create neighborhoods).For analysis, we rely on cosine similarity in the original             embedding space as the quantitative measure.
     </ul>
   </div>
 </div>
@@ -270,13 +271,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     loading="lazy"
     allowfullscreen>
   </iframe>
-
-  <div class="viz-caption">
-    Each dot is a subreddit represented by a 300-D embedding (user-base/topical similarity).  
-    We project them into 3D with UMAP and color clusters with KMeans (k=8).  
-    Clusters are “neighborhoods”: communities close in this space tend to share audience and topics.
-  </div>
-</div>
 
 
 <div class="chat-thread">
