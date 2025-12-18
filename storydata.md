@@ -217,6 +217,17 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
+<div class="viz-embed">
+  <iframe
+    src="{{ '/assets/interactive/sentiment_map.html' | relative_url }}"
+    width="100%"
+    height="820"
+    style="border:0; border-radius: 14px;"
+    loading="lazy"
+  ></iframe>
+</div>
+
+
 <div class="chat-thread">
 
   <div class="chat-msg chat-msg-right chat-penny">
