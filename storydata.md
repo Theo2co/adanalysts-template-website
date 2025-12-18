@@ -221,7 +221,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   <iframe
     src="{{ '/assets/interactive/sentiment_map.html' | relative_url }}"
     width="100%"
-    height="820"
+    height="900"
     style="border:0; border-radius: 14px;"
     loading="lazy"
   ></iframe>
