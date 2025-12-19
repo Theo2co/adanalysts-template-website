@@ -1151,7 +1151,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   <iframe
     src="{{ '/assets/interactive/comprehensive_target_analysis.html' | relative_url }}"
     width="100%"
-    height="650"
+    height="800"
     style="border:0; border-radius: 14px;"
     loading="lazy"
   ></iframe>
