@@ -318,6 +318,11 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 # Scene 2 – Hidden hostilities: The Case of the Smiling Enemy {#triads}
 
+# Scene 2 – Hidden hostilities: The Case of the Smiling Enemy {#triads}
+
+<!-- ========================= -->
+<!-- Chat 1 -->
+<!-- ========================= -->
 <div class="chat-thread">
 
   <div class="chat-msg chat-msg-left chat-leonard">
@@ -412,7 +417,12 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 
 </div>
+<!-- end Chat 1 -->
 
+
+<!-- ========================= -->
+<!-- Narrator 1 -->
+<!-- ========================= -->
 <div class="narrator-block narrator-block--clean">
   <div class="narrator-avatar">
     <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
@@ -447,10 +457,10 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       \]
     </div>
 
-  <ul class="narrator-points">
-    <li><strong>Fast reversal</strong> ⇒ \(\Delta t\) small ⇒ <strong>\(s_{\text{flip}}\approx 1\)</strong></li>
-    <li><strong>Slow reversal</strong> ⇒ \(\Delta t\) large ⇒ <strong>\(s_{\text{flip}}\to 0\)</strong></li>
-  </ul>
+    <ul class="narrator-points">
+      <li><strong>Fast reversal</strong> ⇒ \(\Delta t\) small ⇒ <strong>\(s_{\text{flip}}\approx 1\)</strong></li>
+      <li><strong>Slow reversal</strong> ⇒ \(\Delta t\) large ⇒ <strong>\(s_{\text{flip}}\to 0\)</strong></li>
+    </ul>
 
     <p class="narrator-footer">
       This makes the score comparable across pairs with very different activity rhythms.
@@ -458,6 +468,10 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
+
+<!-- ========================= -->
+<!-- Figure (outside chat) -->
+<!-- ========================= -->
 <div class="narrator-figure narrator-figure--wide">
   <img
     src="{{ '/assets/img/flip_score.png' | relative_url }}"
@@ -466,6 +480,9 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 </div>
 
 
+<!-- ========================= -->
+<!-- Chat 2 -->
+<!-- ========================= -->
 <div class="chat-thread">
 
   <div class="chat-msg chat-msg-left chat-leonard">
@@ -576,8 +593,12 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 
 </div>
+<!-- end Chat 2 -->
 
 
+<!-- ========================= -->
+<!-- Chat 3 -->
+<!-- ========================= -->
 <div class="chat-thread">
 
   <div class="chat-msg chat-msg-left chat-raj">
@@ -588,6 +609,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <div class="chat-name">RAJ · NLP GEEK</div>
       <p>Ideally, we want a model that outputs the probability that a message is genuinely hostile based on its text.</p>
     </div>
+  </div>
 
   <div class="chat-msg chat-msg-right chat-sheldon">
     <div class="chat-avatar">
@@ -640,26 +662,12 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
   </div>
 
-</div> <!-- end .chat-thread -->
-
-
-<div class="narrator-block">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
-  </div>
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
-    <p>
-      After a very long night of work — the kind fueled by cold coffee, overconfidence,
-      and mild despair — Raj finally pins down a model that is simple but robust.
-    </p>
-  </div>
 </div>
+<!-- end Chat 3 -->
 
 
 <!-- ========================= -->
-<!-- Step 1 -->
+<!-- Narrator 2+3+4 (merged) -->
 <!-- ========================= -->
 <div class="narrator-block narrator-block--clean">
   <div class="narrator-avatar">
@@ -669,13 +677,16 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
 
-    <p class="narrator-lead"><strong>Step 1 — Selecting truly discriminative textual features</strong></p>
+    <p>
+      After a very long night of work — the kind fueled by cold coffee, overconfidence,
+      and mild despair — Raj finally pins down a model that is simple but robust.
+    </p>
 
+    <p class="narrator-lead"><strong>Step 1 — Selecting truly discriminative textual features</strong></p>
     <p>
       The goal is simple: keep only the textual signals that consistently distinguish
       hostile (−1) from non-hostile (+1) links, without overfitting.
     </p>
-
     <ul>
       <li>
         Each LIWC and VADER feature is evaluated independently using repeated out-of-fold AUC,
@@ -690,26 +701,9 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
         generalize to later time periods, and are not redundant are kept.
       </li>
     </ul>
-  </div>
-</div>
-
-
-<!-- ========================= -->
-<!-- Step 2 -->
-<!-- ========================= -->
-<div class="narrator-block narrator-block--clean">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
-  </div>
-
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
 
     <p class="narrator-lead"><strong>Step 2 — A probabilistic hostility model</strong></p>
-
-    <p>
-      These selected features are fed into a logistic regression with L1 regularization.
-    </p>
+    <p>These selected features are fed into a logistic regression with L1 regularization.</p>
 
     <div class="narrator-grid">
       <div class="narrator-card">
@@ -737,23 +731,8 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <li>L1 regularization enforces sparsity and prevents the model from relying on weak or redundant signals.</li>
       <li>Liblinear keeps the optimization stable with a small number of features.</li>
     </ul>
-  </div>
-</div>
-
-
-<!-- ========================= -->
-<!-- Step 3 -->
-<!-- ========================= -->
-<div class="narrator-block narrator-block--clean">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
-  </div>
-
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
 
     <p class="narrator-lead"><strong>Step 3 — Decision logic with temporal corroboration</strong></p>
-
     <p>The probability alone is not blindly trusted. Two explicit rules are applied.</p>
 
     <div class="narrator-grid">
@@ -791,7 +770,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 
 <!-- ========================= -->
-<!-- Morning results dialog -->
+<!-- Chat 4 (Morning results) -->
 <!-- ========================= -->
 <div class="chat-thread">
 
@@ -835,20 +814,27 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
   </div>
 
-</div> <!-- end .chat-thread -->
+</div>
+<!-- end Chat 4 -->
 
 
+<!-- ========================= -->
+<!-- Plot 1 (outside chat) -->
+<!-- ========================= -->
 <div class="viz-embed">
   <iframe
-      src="{{ '/assets/interactive/friends_vs_explicit.html' | relative_url }}"
-      width="100%"
-      height="900"
-      style="border:0; border-radius: 14px;"
-      loading="lazy"
-    ></iframe>
-  </div>
+    src="{{ '/assets/interactive/friends_vs_explicit.html' | relative_url }}"
+    width="100%"
+    height="900"
+    style="border:0; border-radius: 14px;"
+    loading="lazy"
+  ></iframe>
+</div>
 
 
+<!-- ========================= -->
+<!-- Chat 5 -->
+<!-- ========================= -->
 <div class="chat-thread">
 
   <div class="chat-msg chat-msg-left chat-raj">
@@ -907,19 +893,30 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       </p>
     </div>
   </div>
+
+</div>
+<!-- end Chat 5 -->
+
+
+<!-- ========================= -->
+<!-- Plot 2 (outside chat) -->
+<!-- ========================= -->
+<div class="viz-embed">
+  <iframe
+    src="{{ '/assets/interactive/friends_vs_explicit_vs_hidden.html' | relative_url }}"
+    width="100%"
+    height="900"
+    style="border:0; border-radius: 14px;"
+    loading="lazy"
+  ></iframe>
 </div>
 
-  <div class="viz-embed">
-    <iframe
-      src="{{ '/assets/interactive/friends_vs_explicit_vs_hidden.html' | relative_url }}"
-      width="100%"
-      height="900"
-      style="border:0; border-radius: 14px;"
-      loading="lazy"
-    ></iframe>
-  </div>
 
+<!-- ========================= -->
+<!-- Chat 6 (your added dialogue) -->
+<!-- ========================= -->
 <div class="chat-thread">
+
   <div class="chat-msg chat-msg-right chat-penny">
     <div class="chat-avatar">
       <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
@@ -1154,17 +1151,28 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
   </div>
 
+</div>
+<!-- end Chat 6 -->
 
-  <div class="viz-embed">
-    <iframe
-      src="{{ '/assets/interactive/comprehensive_target_analysis.html' | relative_url }}"
-      width="100%"
-      height="900"
-      style="border:0; border-radius: 14px;"
-      loading="lazy"
-    ></iframe>
-  </div>
 
+<!-- ========================= -->
+<!-- Plot 3 (outside chat) -->
+<!-- ========================= -->
+<div class="viz-embed">
+  <iframe
+    src="{{ '/assets/interactive/comprehensive_target_analysis.html' | relative_url }}"
+    width="100%"
+    height="900"
+    style="border:0; border-radius: 14px;"
+    loading="lazy"
+  ></iframe>
+</div>
+
+
+<!-- ========================= -->
+<!-- Chat 7 (final punchline) -->
+<!-- ========================= -->
+<div class="chat-thread">
   <div class="chat-msg chat-msg-right chat-sheldon">
     <div class="chat-avatar">
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
@@ -1174,8 +1182,9 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <p>You’re the Goat !</p>
     </div>
   </div>
-
 </div>
+<!-- end Chat 7 -->
+
 
 # Scene 3 – The Experiment: Testing The Enemy of my Enemy is my Friend Theory {#results}
 
