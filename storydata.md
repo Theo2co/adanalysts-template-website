@@ -588,7 +588,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <div class="chat-name">RAJ · NLP GEEK</div>
       <p>Ideally, we want a model that outputs the probability that a message is genuinely hostile based on its text.</p>
     </div>
-  </div>
 
   <div class="chat-msg chat-msg-right chat-sheldon">
     <div class="chat-avatar">
@@ -840,7 +839,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 
 <div class="viz-embed">
-    <iframe
+  <iframe
       src="{{ '/assets/interactive/friends_vs_explicit.html' | relative_url }}"
       width="100%"
       height="900"
@@ -908,6 +907,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       </p>
     </div>
   </div>
+</div>
 
   <div class="viz-embed">
     <iframe
@@ -919,6 +919,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     ></iframe>
   </div>
 
+<div class="chat-thread">
   <div class="chat-msg chat-msg-right chat-penny">
     <div class="chat-avatar">
       <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
@@ -938,10 +939,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <p>Our entire analysis would’ve been quietly wrong.</p>
     </div>
   </div>
-
-</div>
-
-<div class="chat-thread">
 
   <div class="chat-msg chat-msg-left chat-leonard">
     <div class="chat-avatar">
