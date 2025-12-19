@@ -318,8 +318,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 # Scene 2 – Hidden hostilities: The Case of the Smiling Enemy {#triads}
 
-# Scene 2 – Hidden hostilities: The Case of the Smiling Enemy {#triads}
-
 <!-- ========================= -->
 <!-- Chat 1 -->
 <!-- ========================= -->
@@ -591,15 +589,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       </p>
     </div>
   </div>
-
-</div>
-<!-- end Chat 2 -->
-
-
-<!-- ========================= -->
-<!-- Chat 3 -->
-<!-- ========================= -->
-<div class="chat-thread">
 
   <div class="chat-msg chat-msg-left chat-raj">
     <div class="chat-avatar">
