@@ -839,13 +839,15 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 </div> <!-- end .chat-thread -->
 
 
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/feature_auc_plot.png' | relative_url }}"
-       alt="Plot showing single-feature AUC distributions for selected LIWC and VADER features.">
-  <figcaption>
-    Single-feature discrimination (repeated out-of-fold AUC).
-  </figcaption>
-</figure>
+<div class="viz-embed">
+    <iframe
+      src="{{ '/assets/interactive/friends_vs_explicit.html' | relative_url }}"
+      width="100%"
+      height="900"
+      style="border:0; border-radius: 14px;"
+      loading="lazy"
+    ></iframe>
+  </div>
 
 
 <div class="chat-thread">
@@ -907,13 +909,15 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
   </div>
 
-  <figure class="scene-figure scene-figure-wide">
-    <img src="{{ '/assets/img/feature_auc_plot.png' | relative_url }}"
-       alt="Plot showing single-feature AUC distributions for selected LIWC and VADER features.">
-    <figcaption>
-      Single-feature discrimination (repeated out-of-fold AUC).
-    </figcaption>
-  </figure>
+  <div class="viz-embed">
+    <iframe
+      src="{{ '/assets/interactive/friends_vs_explicit_vs_hidden.html' | relative_url }}"
+      width="100%"
+      height="900"
+      style="border:0; border-radius: 14px;"
+      loading="lazy"
+    ></iframe>
+  </div>
 
   <div class="chat-msg chat-msg-right chat-penny">
     <div class="chat-avatar">
