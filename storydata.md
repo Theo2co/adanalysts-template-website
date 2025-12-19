@@ -948,7 +948,233 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 </div>
 
+<div class="chat-thread">
 
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>Before we move on, there’s one last check we could do.</p>
+      <p>We haven’t used mobilization labels anywhere.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>For what exactly?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>To see if everything we’ve built makes sense together.</p>
+      <p>
+        We can look at interactions that happen during mobilization and show very fast sentiment flips.
+        Behaviorally suspicious moments, even without reading the text.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>Correct. Not proof of hostility, but clear contextual tension.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>Then we ask a simple question:</p>
+      <p>
+        Is <code>p_true_hostile</code> higher in those situations than in normal positive interactions?
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>Actually… I already ran that test.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>And?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>Good news. Very good news.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>Define “good” quantitatively.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>Mann–Whitney test.</p>
+      <p>p-value: <code>2.38083e-04</code>.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>
+        So <code>p_true_hostile</code> is higher exactly where mobilization and fast flips indicate tension.
+      </p>
+      <p>Which means what we’ve built holds together.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>Beautiful. Nice work, guys.</p>
+      <p>So now we can finally move on.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>Yeah. Now it gets fun.</p>
+      <p>
+        We can actually test whether the <em>enemy of my enemy is my friend</em> holds… or completely fails.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>
+        At last. We are entering the core theoretical question.
+        But before that, it might still be worth looking at how the flagged hidden hostilities are distributed across communities.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>That sounds complicated.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>Not really. And it’s actually very satisfying to visualize.</p>
+      <p>Because—obviously—I already made the plot.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>Of course you did.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>Okay… now that I want to see.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>On the left, you see the most aggressive subreddits.</p>
+      <p>
+        When you click on one aggressor, the top-right panel shows its explicit hostile targets,
+        and the bottom-right shows its top implicitly hostile targets.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>You’re the Goat !</p>
+    </div>
+  </div>
+
+</div>
 
 # Scene 3 – The Experiment: Testing The Enemy of my Enemy is my Friend Theory {#results}
 
