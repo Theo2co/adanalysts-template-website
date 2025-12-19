@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.1.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-471a589fcb254c6d21a3cb03fca63f66"}, "facet": {"column": {"field": "Feature", "header": {"labelOrient": "bottom", "titleOrient": "bottom"}, "type": "nominal"}}, "spec": {"layer": [{"mark": {"type": "rule", "color": "#2b2d42"}, "encoding": {"x": {"axis": null, "field": "Category", "sort": ["Neutral Links", "Hidden Hostility", "Explicit Enemy"], "type": "nominal"}, "y": {"field": "min", "title": null, "type": "quantitative"}, "y2": {"field": "max"}}}, {"mark": {"type": "bar", "size": 40, "stroke": "#2b2d42"}, "encoding": {"fill": {"field": "Category", "legend": {"title": "Relationship Type"}, "scale": {"domain": ["Neutral Links", "Explicit Enemy", "Hidden Hostility"], "range": ["#2a9d8f", "#264653", "#7209b7"]}, "type": "nominal"}, "tooltip": [{"field": "Category", "title": "Group", "type": "nominal"}, {"field": "Feature", "title": "Feature", "type": "nominal"}, {"field": "max", "format": ".3f", "title": "95th Percentile", "type": "quantitative"}, {"field": "q3", "format": ".3f", "title": "Q3 (75th)", "type": "quantitative"}, {"field": "median", "format": ".3f", "title": "Median", "type": "quantitative"}, {"field": "q1", "format": ".3f", "title": "Q1 (25th)", "type": "quantitative"}, {"field": "min", "format": ".3f", "title": "5th Percentile", "type": "quantitative"}], "x": {"axis": null, "field": "Category", "sort": ["Neutral Links", "Hidden Hostility", "Explicit Enemy"], "type": "nominal"}, "y": {"field": "q1", "type": "quantitative"}, "y2": {"field": "q3"}}}, {"mark": {"type": "tick", "color": "white", "size": 40, "thickness": 2}, "encoding": {"x": {"axis": null, "field": "Category", "sort": ["Neutral Links", "Hidden Hostility", "Explicit Enemy"], "type": "nominal"}, "y": {"field": "median", "type": "quantitative"}}}], "height": 300, "width": 130}, "resolve": {"scale": {"y": "independent"}}, "title": "Linguistic Fingerprint: Neutral Links vs Explicit Enemies", "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json", "datasets": {"data-471a589fcb254c6d21a3cb03fca63f66": [{"Category": "Explicit Enemy", "Feature": "LIWC_Affect", "min": 0.0, "q1": 0.0434782608695652, "median": 0.0714285714285714, "q3": 0.1162790697674418, "max": 0.2}, {"Category": "Explicit Enemy", "Feature": "LIWC_Anger", "min": 0.0, "q1": 0.0, "median": 0.0294117647058823, "q3": 0.0625, "max": 0.1428571428571428}, {"Category": "Explicit Enemy", "Feature": "LIWC_Negemo", "min": 0.0, "q1": 0.025, "median": 0.05, "q3": 0.0869565217391304, "max": 0.1666666666666666}, {"Category": "Explicit Enemy", "Feature": "VADER_compound", "min": -0.9478, "q1": -0.7096, "median": -0.4767, "q3": 0.0, "max": 0.8369550000000002}, {"Category": "Explicit Enemy", "Feature": "VADER_neg", "min": 0.0, "q1": 0.098, "median": 0.177, "q3": 0.285, "max": 0.49}, {"Category": "Neutral Links", "Feature": "LIWC_Affect", "min": 0.0, "q1": 0.0, "median": 0.0240963855421686, "q3": 0.0625, "max": 0.1304347826086956}, {"Category": "Neutral Links", "Feature": "LIWC_Anger", "min": 0.0, "q1": 0.0, "median": 0.0, "q3": 0.0, "max": 0.0344827586206896}, {"Category": "Neutral Links", "Feature": "LIWC_Negemo", "min": 0.0, "q1": 0.0, "median": 0.0, "q3": 0.0087412587412587, "max": 0.0714285714285714}, {"Category": "Neutral Links", "Feature": "VADER_compound", "min": -0.7428, "q1": 0.0, "median": 0.0, "q3": 0.5106, "max": 0.9793}, {"Category": "Neutral Links", "Feature": "VADER_neg", "min": 0.0, "q1": 0.0, "median": 0.0, "q3": 0.067, "max": 0.266}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
