@@ -277,17 +277,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-<div class="viz-block">
-  <div class="viz-title">Embedding “Galaxy Map” — UMAP 3D + KMeans</div>
-
-  <iframe
-    class="viz-iframe"
-    src="{{ '/assets/interactive/umap_kmeans_3d.html' | relative_url }}"
-    loading="lazy"
-    allowfullscreen>
-  </iframe>
-</div>
-
 <div class="chat-thread">
 
   <div class="chat-msg chat-msg-right chat-sheldon">
