@@ -1158,22 +1158,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 </div>
 
 
-<!-- ========================= -->
-<!-- Chat 7 (final punchline) -->
-<!-- ========================= -->
-<div class="chat-thread">
-  <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON · THEORIST</div>
-      <p>You’re the Goat !</p>
-    </div>
-  </div>
-</div>
-<!-- end Chat 7 -->
-
 
 # Scene 3 – The Experiment: Testing The Enemy of my Enemy is my Friend Theory {#results}
 
