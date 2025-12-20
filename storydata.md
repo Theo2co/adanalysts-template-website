@@ -164,6 +164,69 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <img src="{{ '/assets/img/narrator.png' | relative_url }}"
          alt="Reddit-style narrator avatar">
   </div>
+
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p>
+      To go beyond the raw link network, Raj introduces <strong>subreddit embeddings</strong>:
+      each community becomes a point in a 300-dimensional space capturing audience &amp; topic similarity.
+    </p>
+
+    <ul>
+      <li>We project this space into <strong>3D</strong> using <strong>UMAP</strong>, creating a “galaxy map” of Reddit.</li>
+      <li>Colors come from <strong>KMeans (k=8)</strong>: they reveal <em>neighborhoods</em> of naturally similar communities.</li>
+      <li>Distance matters: close subreddits are “already similar”  -  a key confounder for enemy-of-my-enemy.</li>
+      <li>
+        UMAP+KMeans clusters are used for visualization (to create neighborhoods).
+        For analysis, we rely on cosine similarity in the original embedding space as the quantitative measure.
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>
+        Excellent. This embedding space is our <em>baseline geometry</em>:
+        it tells us who was close <strong>before</strong> we introduce enemies  - 
+        so we don’t confuse “same tribe” with “new alliance”.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>Hold that thought. If our labels are wrong, any “enemy-of-my-enemy” analysis becomes science fiction.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>So first you’re doing… what, therapy for your dataset?</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="narrator-block">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
     <p>The crew quickly bumps into the limits of their sentiment classifier:</p>
@@ -238,69 +301,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">LEONARD · NETWORK NERD</div>
       <p>Highly connected, highly hostile. Fandom communities are much bluer and more cozy internally.</p>
-    </div>
-  </div>
-
-</div>
-
-<div class="narrator-block">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
-  </div>
-
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
-    <p>
-      To go beyond the raw link network, Raj introduces <strong>subreddit embeddings</strong>:
-      each community becomes a point in a 300-dimensional space capturing audience &amp; topic similarity.
-    </p>
-
-    <ul>
-      <li>We project this space into <strong>3D</strong> using <strong>UMAP</strong>, creating a “galaxy map” of Reddit.</li>
-      <li>Colors come from <strong>KMeans (k=8)</strong>: they reveal <em>neighborhoods</em> of naturally similar communities.</li>
-      <li>Distance matters: close subreddits are “already similar”  -  a key confounder for enemy-of-my-enemy.</li>
-      <li>
-        UMAP+KMeans clusters are used for visualization (to create neighborhoods).
-        For analysis, we rely on cosine similarity in the original embedding space as the quantitative measure.
-      </li>
-    </ul>
-  </div>
-</div>
-
-<div class="chat-thread">
-
-  <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON · THEORIST</div>
-      <p>
-        Excellent. This embedding space is our <em>baseline geometry</em>:
-        it tells us who was close <strong>before</strong> we introduce enemies  - 
-        so we don’t confuse “same tribe” with “new alliance”.
-      </p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-left chat-raj">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">RAJ · NLP GEEK</div>
-      <p>Hold that thought. If our labels are wrong, any “enemy-of-my-enemy” analysis becomes science fiction.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-penny">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>So first you’re doing… what, therapy for your dataset?</p>
     </div>
   </div>
 
