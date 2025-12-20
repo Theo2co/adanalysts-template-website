@@ -1407,13 +1407,15 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/PlotA.png' | relative_url }}"
-       alt="Plot A: Monthly fraction of targets attacked by at least 2 distinct attackers.">
-  <figcaption>
-    Monthly fraction of targets attacked by at least 2 distinct attackers.
-  </figcaption>
-</figure>
+<div class="viz-embed">
+  <iframe
+    src="{{ '/assets/interactive/PlotA.html' | relative_url }}"
+    width="100%"
+    height="800"
+    style="border:0; border-radius:14px;"
+    loading="lazy"
+  ></iframe>
+</div>
 
 <div class="chat-thread">
 
@@ -1609,13 +1611,16 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/friendship_score_hist_kmeans.png' | relative_url }}"
-       alt="Histogram of monthly Friendship Scores with dashed threshold lines separating enemy-like, neutral, and friend-like regions.">
-  <figcaption>
-    Histogram of monthly Friendship Scores. Dashed lines indicate the learned thresholds.
-  </figcaption>
-</figure>
+<div class="viz-embed">
+  <iframe
+    src="{{ '/assets/interactive/friendship_score_distribution.html' | relative_url }}"
+    width="100%"
+    height="800"
+    style="border:0; border-radius:14px;"
+    loading="lazy"
+  ></iframe>
+</div>
+
 
 <div class="chat-thread">
 
@@ -1788,13 +1793,16 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/coattack_to_friendship_timeline.png' | relative_url }}"
-       alt="Timeline plot: for each attacker pair (A,B) against a target C, a red dot marks co-attack start and a green dot marks friendship start.">
-  <figcaption>
-    Timeline of co-attack start and friendship start for attacker pairs (A,B) targeting C.
-  </figcaption>
-</figure>
+<div class="viz-embed">
+  <iframe
+    src="{{ '/assets/interactive/COATTACK_TO_FRIENDSHIP_TIMELINE.html' | relative_url }}"
+    width="100%"
+    height="800"
+    style="border:0; border-radius:14px;"
+    loading="lazy"
+  ></iframe>
+</div>
+
 
 <div class="chat-thread">
 
@@ -2250,14 +2258,16 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-<!-- (show figure) -->
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/propensity_roc_auc.png' | relative_url }}"
-       alt="ROC curve for propensity score model with AUC = 0.820.">
-  <figcaption>
-    ROC curve for propensity score model (AUC = 0.820).
-  </figcaption>
-</figure>
+<div class="viz-embed">
+  <iframe
+    src="{{ '/assets/interactive/PROPENSITY_SCORE_AUC.html' | relative_url }}"
+    width="100%"
+    height="800"
+    style="border:0; border-radius:14px;"
+    loading="lazy"
+  ></iframe>
+</div>
+
 
 <div class="chat-thread">
 
@@ -2414,11 +2424,16 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 <!-- (show 5 plots) -->
 
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/pscore_density_before_matching.png' | relative_url }}"
-       alt="Propensity score density: treated vs control (before matching).">
-  <figcaption>Propensity Score Distributions  -  Treated vs Control</figcaption>
-</figure>
+<div class="viz-embed">
+  <iframe
+    src="{{ '/assets/interactive/PSCORE_DENSITY_BEFORE_MATCHING.html' | relative_url }}"
+    width="100%"
+    height="800"
+    style="border:0; border-radius:14px;"
+    loading="lazy"
+  ></iframe>
+</div>
+
 
 <div class="chat-thread">
 
@@ -2491,13 +2506,16 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 
   <!-- (show plot) -->
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/matching_distance_hist.png' | relative_url }}"
-       alt="Histogram of matching distance (absolute propensity score difference) after propensity score matching.">
-  <figcaption>
-    Matching distance histogram (|pscore_treated − pscore_control|).
-  </figcaption>
-</figure>
+<div class="viz-embed">
+  <iframe
+    src="{{ '/assets/interactive/MATCHING_DISTANCE_HIST.html' | relative_url }}"
+    width="100%"
+    height="800"
+    style="border:0; border-radius:14px;"
+    loading="lazy"
+  ></iframe>
+</div>
+
 
   <div class="chat-msg chat-msg-left chat-leonard">
     <div class="chat-avatar">
@@ -2538,11 +2556,16 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/pscore_density_after_matching.png' | relative_url }}"
-       alt="Propensity score density: treated vs control (after matching) showing strong overlap.">
-  <figcaption>Propensity Score Distributions  -  Treated vs Control (After Matching)</figcaption>
-</figure>
+<div class="viz-embed">
+  <iframe
+    src="{{ '/assets/interactive/PROPENSITY_SCORE_AFTER_MATCHING.html' | relative_url }}"
+    width="100%"
+    height="800"
+    style="border:0; border-radius:14px;"
+    loading="lazy"
+  ></iframe>
+</div>
+
 
 <div class="narrator-block narrator-block--clean">
   <div class="narrator-avatar">
@@ -2622,14 +2645,16 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 
 </div> <!-- end .chat-thread -->
-<!-- (show plot) -->
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/outcome_counts_heatmap.png' | relative_url }}"
-       alt="Heatmap of raw counts for Y=0 and Y=1 for treated vs control after matching.">
-  <figcaption>
-    Raw counts of outcomes (Y=0 vs Y=1) for treated and control pairs after matching.
-  </figcaption>
-</figure>
+<div class="viz-embed">
+  <iframe
+    src="{{ '/assets/interactive/OUTCOME_COUNTS_HEATMAP.html' | relative_url }}"
+    width="100%"
+    height="800"
+    style="border:0; border-radius:14px;"
+    loading="lazy"
+  ></iframe>
+</div>
+
 
 <div class="chat-thread">
 
@@ -2644,14 +2669,16 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 
 </div> <!-- end .chat-thread -->
-<!-- (show plot) -->
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/outcome_proportions_heatmap.png' | relative_url }}"
-       alt="Heatmap of row-wise proportions (friendship rates) for Y=0 and Y=1 for treated vs control after matching.">
-  <figcaption>
-    Row-wise proportions: friendship rates (Y=1) for treated vs control after matching.
-  </figcaption>
-</figure>
+<div class="viz-embed">
+  <iframe
+    src="{{ '/assets/interactive/OUTCOME_PROPORTIONS_HEATMAP.html' | relative_url }}"
+    width="100%"
+    height="800"
+    style="border:0; border-radius:14px;"
+    loading="lazy"
+  ></iframe>
+</div>
+
 
 <div class="chat-thread">
 
@@ -2739,14 +2766,16 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-<!-- (show figure) -->
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/att_bootstrap_hist.png' | relative_url }}"
-       alt="Bootstrap distribution of ATT with null boundary at 0, observed ATT line, and shaded 95% confidence interval.">
-  <figcaption>
-    Bootstrap distribution of ATT with null boundary (ATT = 0), observed ATT, and 95% CI.
-  </figcaption>
-</figure>
+<div class="viz-embed">
+  <iframe
+    src="{{ '/assets/interactive/ATT_BOOTSTRAP_HIST.html' | relative_url }}"
+    width="100%"
+    height="800"
+    style="border:0; border-radius:14px;"
+    loading="lazy"
+  ></iframe>
+</div>
+
 
 <div class="chat-thread">
 
@@ -3136,14 +3165,16 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/rosenbaum_sensitivity_curve.png' | relative_url }}"
-       alt="Sensitivity curve plot showing p_upper(Gamma) flat at 1.0 with a horizontal alpha=0.05 line below.">
-  <figcaption>
-    Sensitivity curve: p_upper(Γ) is flat at 1.0 (alpha = 0.05 line is far below).
-  </figcaption>
-</figure>
-<div class="chat-thread">
+<div class="viz-embed">
+  <iframe
+    src="{{ '/assets/interactive/ROSENBAUM_SENSITIVITY_CURVE.html' | relative_url }}"
+    width="100%"
+    height="800"
+    style="border:0; border-radius:14px;"
+    loading="lazy"
+  ></iframe>
+</div>
+
 
   <div class="chat-msg chat-msg-left chat-raj">
     <div class="chat-avatar">
@@ -3354,13 +3385,16 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/bootstrap_att_hidden.png' | relative_url }}"
-       alt="Bootstrap Distribution of ATT  -  dashed line at 0, red line observed ATT, shaded 95% CI">
-  <figcaption>
-    Bootstrap Distribution of ATT  -  dashed line at 0, red line observed ATT, shaded 95% CI
-  </figcaption>
-</figure>
+<div class="viz-embed">
+  <iframe
+    src="{{ '/assets/interactive/BOOTSTRAP_ATT_HIDDEN.html' | relative_url }}"
+    width="100%"
+    height="800"
+    style="border:0; border-radius:14px;"
+    loading="lazy"
+  ></iframe>
+</div>
+
 
 <div class="chat-thread">
 
@@ -3446,13 +3480,15 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 <!-- ========================= -->
 <!-- Sensitivity figure -->
 <!-- ========================= -->
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/sensitivity_hidden.png' | relative_url }}"
-       alt="Sensitivity curve / Rosenbaum bounds table for df_monthly_hidden (Gamma vs worst-case p-value).">
-  <figcaption>
-    Rosenbaum sensitivity analysis for <code>df_monthly_hidden</code>: worst-case p-values as hidden bias Γ increases.
-  </figcaption>
-</figure>
+<div class="viz-embed">
+  <iframe
+    src="{{ '/assets/interactive/SENSITIVITY_HIDDEN.html' | relative_url }}"
+    width="100%"
+    height="800"
+    style="border:0; border-radius:14px;"
+    loading="lazy"
+  ></iframe>
+</div>
 
 
 <div class="chat-thread">
