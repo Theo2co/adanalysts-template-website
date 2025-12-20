@@ -1143,6 +1143,19 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 </div>
 <!-- end Chat 6 -->
 
+<!-- ========================= -->
+<!-- Plot 3 (outside chat) -->
+<!-- ========================= -->
+<div class="viz-embed">
+  <iframe
+    src="{{ '/assets/interactive/comprehensive_target_analysis.html' | relative_url }}"
+    width="100%"
+    height="800"
+    style="border:0; border-radius: 14px;"
+    loading="lazy"
+  ></iframe>
+</div>
+
 <div class="narrator-block narrator-block--clean">
   <div class="narrator-avatar">
     <img src="{{ '/assets/img/narrator.png' | relative_url }}"
@@ -1158,21 +1171,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </p>
   </div>
 </div>
-
-<!-- ========================= -->
-<!-- Plot 3 (outside chat) -->
-<!-- ========================= -->
-<div class="viz-embed">
-  <iframe
-    src="{{ '/assets/interactive/comprehensive_target_analysis.html' | relative_url }}"
-    width="100%"
-    height="800"
-    style="border:0; border-radius: 14px;"
-    loading="lazy"
-  ></iframe>
-</div>
-
-
 
 # Scene 3 – The Experiment: Testing The Enemy of my Enemy is my Friend Theory {#results}
 
