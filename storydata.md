@@ -2119,7 +2119,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
         </p>
         <div class="narrator-math">
           \[
-            \text{aggr}(X) = \frac{\sum_m \text{out\_neg}(X,m)}{\text{total\_out}(X)}
+            \text{aggr}(X) = \frac{\sum_m \text{out_neg}(X,m)}{\text{total_out}(X)}
           \]
         </div>
       </div>
