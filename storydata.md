@@ -1196,7 +1196,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
       <p>Okay-real question. If two subreddits attack the same target… do they later become friends?</p>
     </div>
   </div>
@@ -1206,7 +1206,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
+      <div class="chat-name">SHELDON · THEORIST</div>
       <p>A classic proverb. But now we test it as a causal claim, not a vibe.</p>
     </div>
   </div>
@@ -1216,7 +1216,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
+      <div class="chat-name">RAJ · NLP GEEK</div>
       <p>Meaning we need: time, interactions, and a clean definition of “enemy” and “friend”.</p>
     </div>
   </div>
@@ -1226,7 +1226,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">PENNY</div>
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
       <p>So… we’re turning drama into math. Great.</p>
     </div>
   </div>
@@ -1246,6 +1246,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </p>
   </div>
 </div>
+
 <div class="chat-thread">
 
   <div class="chat-msg chat-msg-left chat-leonard">
@@ -1253,7 +1254,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
       <p>Okay, for this part, we first organize everything in time.<br>
       We use months as our time unit.</p>
     </div>
@@ -1264,7 +1265,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">PENNY</div>
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
       <p>Why months? Why not weeks?</p>
     </div>
   </div>
@@ -1274,7 +1275,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
+      <div class="chat-name">SHELDON · THEORIST</div>
       <p>Because we need consistency.<br>
       So we create a clean month format and a month index from 1 to 41 since our dataset spans 41 months of Reddit activity.</p>
     </div>
@@ -1285,7 +1286,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
+      <div class="chat-name">RAJ · NLP GEEK</div>
       <p>That way, later we can define “before” and “after” a conflict,<br>
       and make sure two attacks happened in the same time bin.</p>
     </div>
@@ -1314,7 +1315,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
       <p>Next, we build two monthly summary tables.</p>
     </div>
   </div>
@@ -1324,7 +1325,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
+      <div class="chat-name">RAJ · NLP GEEK</div>
       <p>First: <code>pair_month</code>. For every (SOURCE → TARGET) in a month,<br>
       we count positive links and negative links.</p>
     </div>
@@ -1335,7 +1336,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
+      <div class="chat-name">RAJ · NLP GEEK</div>
       <p>Second: <code>sub_month</code>. For each SOURCE subreddit in a month,<br>
       we summarize its outgoing activity and negativity.</p>
     </div>
@@ -1346,7 +1347,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">PENNY</div>
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
       <p>So one table is “pair behavior”, and one is “subreddit behavior”.</p>
     </div>
   </div>
@@ -1356,26 +1357,27 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
+      <div class="chat-name">SHELDON · THEORIST</div>
       <p>Exactly. Later these are used for co-attacks and confounders.</p>
     </div>
   </div>
 
   <div class="chat-msg chat-msg-left chat-leonard">
-  <div class="chat-avatar">
-    <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>Let’s visualize the fraction of subreddits that get attacked by at least 2 distinct attackers in every month.</p>
+    </div>
   </div>
-  <div class="chat-bubble">
-    <div class="chat-name">LEONARD</div>
-    <p>Let’s visualize the fraction of subreddits that get attacked by at least 2 distinct attackers in every month.</p>
-  </div>
-</div>
+
   <div class="chat-msg chat-msg-right chat-penny">
     <div class="chat-avatar">
       <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">PENNY</div>
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
       <p>And if that fraction is consistently big?</p>
     </div>
   </div>
@@ -1385,12 +1387,13 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
+      <div class="chat-name">SHELDON · THEORIST</div>
       <p>Then the data we have involves shared antagonism, and it is suitable for your study.</p>
     </div>
   </div>
 
 </div> <!-- end .chat-thread -->
+
 <div class="narrator-block narrator-block--clean">
   <div class="narrator-avatar">
     <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
@@ -1403,6 +1406,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </p>
   </div>
 </div>
+
 <figure class="scene-figure scene-figure-wide">
   <img src="{{ '/assets/img/PlotA.png' | relative_url }}"
        alt="Plot A: Monthly fraction of targets attacked by at least 2 distinct attackers.">
@@ -1410,6 +1414,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     Monthly fraction of targets attacked by at least 2 distinct attackers.
   </figcaption>
 </figure>
+
 <div class="chat-thread">
 
   <div class="chat-msg chat-msg-left chat-leonard">
@@ -1417,7 +1422,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
       <p>We see indeed that every month, about 35% of the targeted subreddits are attacked by at least 2 distinct attackers.</p>
     </div>
   </div>
@@ -1427,7 +1432,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
+      <div class="chat-name">RAJ · NLP GEEK</div>
       <p>Shared antagonism isn’t rare noise.<br>
       It seems to be a structural pattern on Reddit.</p>
     </div>
@@ -1454,7 +1459,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
+      <div class="chat-name">SHELDON · THEORIST</div>
       <p>
         For each month, we compute the total interaction count between each pair (A,B),
         equal to the number of links sent by A to B, and from B to A.
@@ -1467,7 +1472,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
+      <div class="chat-name">RAJ · NLP GEEK</div>
       <p>Let’s also define a Sentiment Balance between A and B based on their monthly interactions:</p>
       <div class="chat-math">
         \[
@@ -1487,7 +1492,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
       <p>
         Great idea, that way we can have an idea about their sentiment status by weighting in both their positive and negative interactions.
       </p>
@@ -1499,7 +1504,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
+      <div class="chat-name">RAJ · NLP GEEK</div>
       <p>
         Exactly! This ratio is −1 if all interactions between A and B are negative during that month,
         +1 if all interactions are positive.
@@ -1512,7 +1517,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">PENNY</div>
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
       <p>But what if they only interact once? That seems unreliable.</p>
     </div>
   </div>
@@ -1522,7 +1527,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
+      <div class="chat-name">SHELDON · THEORIST</div>
       <p>
         I’m afraid Penny is right, we need to weight this ratio by the volume of the pair’s interactions.
       </p>
@@ -1534,7 +1539,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
+      <div class="chat-name">RAJ · NLP GEEK</div>
       <p>Okay, let’s define a friendship score:</p>
       <div class="chat-math">
         \[
@@ -1553,7 +1558,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
       <p>We can now use these friendship scores to classify the monthly relationship status of each pair of subreddits: friends, neutral, or enemies.</p>
     </div>
   </div>
@@ -1563,7 +1568,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
+      <div class="chat-name">RAJ · NLP GEEK</div>
       <p>Let’s run K-means on friendship scores with 3 clusters, each corresponding to one of the statuses.</p>
     </div>
   </div>
@@ -1573,12 +1578,13 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
+      <div class="chat-name">SHELDON · THEORIST</div>
       <p>Now we can define the thresholds on friendship scores for ennemy or friendship categorization as the midpoints between cluster centers.</p>
     </div>
   </div>
 
 </div> <!-- end .chat-thread -->
+
 <div class="narrator-block narrator-block--clean">
   <div class="narrator-avatar">
     <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
@@ -1589,7 +1595,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-<!-- (show plot) -->
 <figure class="scene-figure scene-figure-wide">
   <img src="{{ '/assets/img/friendship_score_hist_kmeans.png' | relative_url }}"
        alt="Histogram of monthly Friendship Scores with dashed threshold lines separating enemy-like, neutral, and friend-like regions.">
@@ -1605,7 +1610,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">PENNY</div>
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
       <p>So based on where the friendship score falls relative to these thresholds we identify the realtionship status between the pair?</p>
     </div>
   </div>
@@ -1615,7 +1620,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
       <p>Exactly, if the score is lower than the ennemy threshold, then the subreddits are ennemies, if its greater than the friendship threshold, then they are friends, and if its in between, they’re neutral.</p>
     </div>
   </div>
@@ -1625,7 +1630,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
+      <div class="chat-name">RAJ · NLP GEEK</div>
       <p>Great, now we need to identify for each target subreddit, which are its common attackers.</p>
     </div>
   </div>
@@ -1635,7 +1640,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
+      <div class="chat-name">SHELDON · THEORIST</div>
       <p>We can’t.</p>
     </div>
   </div>
@@ -1645,7 +1650,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
       <p>Why so? We can look at the negative interactions…</p>
     </div>
   </div>
@@ -1655,7 +1660,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
+      <div class="chat-name">SHELDON · THEORIST</div>
       <p>Sheldon. It’s my bed time</p>
     </div>
   </div>
@@ -1681,7 +1686,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
       <p>So I was thinking about our goal, and we’re not just interested in studying the pairs of subreddits who attacked a same target.</p>
     </div>
   </div>
@@ -1691,7 +1696,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">PENNY</div>
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
       <p>I don’t get where you’re headed.</p>
     </div>
   </div>
@@ -1701,7 +1706,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
+      <div class="chat-name">SHELDON · THEORIST</div>
       <p>
         See Penny it’s simple, we want to study whether the enemy of my enemy is my friend.
         If we consider 2 subreddits A and B who both attacked a same target C but 2 years apart,
@@ -1716,7 +1721,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
+      <div class="chat-name">RAJ · NLP GEEK</div>
       <p>exactly, so we are interested in pairs that satisfy 2 conditions:</p>
       <ul>
         <li>they need to have co-attacked a same target, meaning they should have both attacked C in any same month.</li>
@@ -1734,7 +1739,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
+      <div class="chat-name">SHELDON · THEORIST</div>
       <p>
         Let’s first identify for each target C, the pairs of co-attackers satisfying of above conditions.
         We can then record the start month of their common conflict with C as the first month they co-attacked C while being ennemies with C,
@@ -1749,7 +1754,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
       <p>
         And while we’re at it we can for each such pair (A,B) study the evolution of their friendship status,
         and record the first month where A and B became friends.
@@ -1772,7 +1777,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-<!-- (show plot) -->
 <figure class="scene-figure scene-figure-wide">
   <img src="{{ '/assets/img/coattack_to_friendship_timeline.png' | relative_url }}"
        alt="Timeline plot: for each attacker pair (A,B) against a target C, a red dot marks co-attack start and a green dot marks friendship start.">
@@ -1788,7 +1792,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">PENNY</div>
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
       <p>
         So in this timeplot, for each strong attacker of a common target C,
         the red dot represents their conflict (or strong co-attack) start,
@@ -1802,7 +1806,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
       <p>Exactly!</p>
     </div>
   </div>
@@ -1812,7 +1816,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
+      <div class="chat-name">RAJ · NLP GEEK</div>
       <p>Hey look, some pairs become friends 2 years after their strong co-attack event.</p>
     </div>
   </div>
@@ -1822,7 +1826,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
+      <div class="chat-name">SHELDON · THEORIST</div>
       <p>
         Interesting observation Raj! Indeed, for our analysis of ‘is the ennemy of my ennemy my friend?’
         we should study only pairs which show signs of friendship close to their strong co-attack duration.
@@ -1837,7 +1841,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
       <p>
         I agree. Therefore for every strong co-attacker pair, if we want to assess whether their common conflict was followed by a subsequent friendship,
         I propose we only consider the interval [conflict start, conflict end +1 month].
@@ -1852,7 +1856,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">PENNY</div>
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
       <p>Why do you give a margin of 1 month?</p>
     </div>
   </div>
@@ -1862,7 +1866,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
       <p>To account for the effect that a possible subsequent friendship could arise shortly starting the last month of conflict.</p>
     </div>
   </div>
@@ -1889,7 +1893,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-<!-- (show figure) -->
 <figure class="scene-figure scene-figure-wide">
   <img src="{{ '/assets/img/dag_confounders.png' | relative_url }}"
        alt="DAG showing confounders (similarity, activity, aggressiveness, prior hostility) affecting both treatment (co-attack) and outcome (friendship).">
@@ -1905,7 +1908,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
+      <div class="chat-name">SHELDON · THEORIST</div>
       <p>Gentlemen, I require your attention as I justify my confounders considerations.</p>
     </div>
   </div>
@@ -1915,7 +1918,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
+      <div class="chat-name">SHELDON · THEORIST</div>
       <p>
         <strong>Similarity → CoAttack.</strong>
         Subreddits with similar topics or ideologies are more likely to target the same communities,
@@ -1929,7 +1932,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
+      <div class="chat-name">SHELDON · THEORIST</div>
       <p>
         <strong>Aggressiveness → CoAttack.</strong>
         More aggressive subreddits are intrinsically more likely to engage in hostile interactions,
@@ -1943,7 +1946,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
+      <div class="chat-name">SHELDON · THEORIST</div>
       <p>
         <strong>Activity → CoAttack.</strong>
         Highly active subreddits generate more links overall, so they are mechanically more likely
@@ -1957,7 +1960,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
+      <div class="chat-name">SHELDON · THEORIST</div>
       <p>
         <strong>Similarity → Friendship.</strong>
         Similar subreddits are more likely to exchange positive links even without any shared conflict,
@@ -1971,7 +1974,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
+      <div class="chat-name">SHELDON · THEORIST</div>
       <p>
         <strong>Aggressiveness → Friendship.</strong>
         Highly aggressive communities are less likely to form stable positive ties,
@@ -1985,7 +1988,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
+      <div class="chat-name">SHELDON · THEORIST</div>
       <p>
         <strong>Activity → Friendship.</strong>
         More active subreddits have more chances to form positive interactions,
@@ -1999,7 +2002,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
+      <div class="chat-name">SHELDON · THEORIST</div>
       <p>
         <strong>Hostility → Friendship.</strong>
         Prior hostility between two subreddits reduces the likelihood that they will later become friends.
@@ -2012,7 +2015,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
+      <div class="chat-name">SHELDON · THEORIST</div>
       <p>Now, for how we compute them—pay attention, this is where people start making mistakes.</p>
     </div>
   </div>
@@ -2022,7 +2025,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
+      <div class="chat-name">SHELDON · THEORIST</div>
       <p>
         <strong>Activity of a subreddit X</strong> is the total outgoing links across all months
         before the conflict start.
@@ -2035,7 +2038,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
+      <div class="chat-name">SHELDON · THEORIST</div>
       <p>
         <strong>Aggressiveness of a subreddit X</strong> (over all months \(m\) before conflict start) is:
       </p>
@@ -2052,7 +2055,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
+      <div class="chat-name">SHELDON · THEORIST</div>
       <p>
         <strong>Topical Similarity</strong> between A and B comes from their embeddings \(e_A\) and \(e_B\):
       </p>
@@ -2069,7 +2072,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
+      <div class="chat-name">SHELDON · THEORIST</div>
       <p>
         And <strong>Pre-Conflict Hostility</strong> is the number of negative links exchanged between A and B
         <em>before the event time</em>.
