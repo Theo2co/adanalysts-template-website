@@ -2424,15 +2424,11 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 <!-- (show 5 plots) -->
 
-<div class="viz-embed">
-  <iframe
-    src="{{ '/assets/interactive/PSCORE_DENSITY_BEFORE_MATCHING.html' | relative_url }}"
-    width="100%"
-    height="800"
-    style="border:0; border-radius:14px;"
-    loading="lazy"
-  ></iframe>
-</div>
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/pscore_density_before_matching.png' | relative_url }}"
+       alt="Propensity score density: treated vs control (before matching).">
+  <figcaption>Propensity Score Distributions — Treated vs Control</figcaption>
+</figure>
 
 
 <div class="chat-thread">
@@ -2556,15 +2552,13 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-<div class="viz-embed">
-  <iframe
-    src="{{ '/assets/interactive/PROPENSITY_SCORE_AFTER_MATCHING.html' | relative_url }}"
-    width="100%"
-    height="800"
-    style="border:0; border-radius:14px;"
-    loading="lazy"
-  ></iframe>
-</div>
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/propensity_score_after_matching.png' | relative_url }}"
+       alt="Propensity score density: treated vs control (after matching).">
+  <figcaption>
+    Propensity Score Distributions — Treated vs Control
+  </figcaption>
+</figure>
 
 
 <div class="narrator-block narrator-block--clean">
