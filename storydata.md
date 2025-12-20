@@ -1661,7 +1661,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON · THEORIST</div>
-      <p>Sheldon. It’s my bed time</p>
+      <p>It’s my bed time</p>
     </div>
   </div>
 
