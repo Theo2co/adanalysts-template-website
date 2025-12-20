@@ -1410,8 +1410,8 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 <div class="viz-embed">
   <iframe
     src="{{ '/assets/interactive/pct_multi_attacked_target_subreddits.html' | relative_url }}"
-    width="100%"
-    height="800"
+    width="80%"
+    height="500"
     style="border:0; border-radius:14px;"
     loading="lazy"
   ></iframe>
@@ -1614,7 +1614,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 <div class="viz-embed">
   <iframe
     src="{{ '/assets/interactive/friendship_score_distribution.html' | relative_url }}"
-    width="100%"
+    width="80%"
     height="500"
     style="border:0; border-radius:14px;"
     loading="lazy"
@@ -1796,8 +1796,8 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 <div class="viz-embed">
   <iframe
     src="{{ '/assets/interactive/timelines_basic.html' | relative_url }}"
-    width="100%"
-    height="800"
+    width="80%"
+    height="500"
     style="border:0; border-radius:14px;"
     loading="lazy"
   ></iframe>
@@ -2261,8 +2261,8 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 <div class="viz-embed">
   <iframe
     src="{{ '/assets/interactive/roc_propensity.html' | relative_url }}"
-    width="100%"
-    height="800"
+    width="80%"
+    height="500"
     style="border:0; border-radius:14px;"
     loading="lazy"
   ></iframe>
@@ -2505,8 +2505,8 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 <div class="viz-embed">
   <iframe
     src="{{ '/assets/interactive/match_distance.html' | relative_url }}"
-    width="100%"
-    height="800"
+    width="80%"
+    height="500"
     style="border:0; border-radius:14px;"
     loading="lazy"
   ></iframe>
@@ -2553,7 +2553,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 </div>
 
 <figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/propensity_score_after_matching.png' | relative_url }}"
+  <img src="{{ '/assets/img/pscore_density_after_matching.png' | relative_url }}"
        alt="Propensity score density: treated vs control (after matching).">
   <figcaption>
     Propensity Score Distributions — Treated vs Control
@@ -2642,25 +2642,12 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 <div class="viz-embed">
   <iframe
     src="{{ '/assets/interactive/treatment_outcome_matrix.html' | relative_url }}"
-    width="100%"
-    height="800"
+    width="80%"
+    height="400"
     style="border:0; border-radius:14px;"
     loading="lazy"
   ></iframe>
 </div>
-
-
-<div class="chat-thread">
-
-  <div class="chat-msg chat-msg-left chat-raj">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">RAJ · NLP GEEK</div>
-      <p>This heatmap shows the raw counts of Y=0 and Y=1 for treated vs control after matching.</p>
-    </div>
-  </div>
 
 <div class="chat-thread">
 
@@ -2671,7 +2658,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">SHELDON · THEORIST</div>
       <p>
-        Same matrix, but as percentages (friendship rates).
+        The heatmap shows the raw counts of Y=0 and Y=1 for treated vs control after matching, but as percentages (friendship rates).
          The percentage of control pairs that became friends soon after their common conflict is 1.8%, while that for treated pairs Is 0.6%. Therefore, we have an initial idea that control pairs more frequently tend to become friends after a strong co-attack.
       </p>
     </div>
@@ -2751,8 +2738,8 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 <div class="viz-embed">
   <iframe
     src="{{ '/assets/interactive/bootstrap_att.html' | relative_url }}"
-    width="100%"
-    height="800"
+    width="80%"
+    height="500"
     style="border:0; border-radius:14px;"
     loading="lazy"
   ></iframe>
@@ -3150,8 +3137,8 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 <div class="viz-embed">
   <iframe
     src="{{ '/assets/interactive/sensitivity_curve.html' | relative_url }}"
-    width="100%"
-    height="800"
+    width="80%"
+    height="500"
     style="border:0; border-radius:14px;"
     loading="lazy"
   ></iframe>
@@ -3369,9 +3356,9 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 <div class="viz-embed">
   <iframe
-    src="{{ '/assets/interactive/BOOTSTRAP_ATT_HIDDEN.html' | relative_url }}"
-    width="100%"
-    height="800"
+    src="{{ '/assets/interactive/bootstrap_att_hd.html' | relative_url }}"
+    width="80%"
+    height="500"
     style="border:0; border-radius:14px;"
     loading="lazy"
   ></iframe>
@@ -3464,9 +3451,9 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 <!-- ========================= -->
 <div class="viz-embed">
   <iframe
-    src="{{ '/assets/interactive/SENSITIVITY_HIDDEN.html' | relative_url }}"
-    width="100%"
-    height="800"
+    src="{{ '/assets/interactive/sensitivity_curve_hd.html' | relative_url }}"
+    width="80%"
+    height="500"
     style="border:0; border-radius:14px;"
     loading="lazy"
   ></iframe>
