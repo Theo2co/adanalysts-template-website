@@ -2204,42 +2204,43 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-<div class="narrator-block">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>AUC 0.820. Our model has brain cells. Can we leave now?</p>
+    </div>
   </div>
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
-    <p><strong>INT. APARTMENT 4A – QUICK CHECK.</strong></p>
-    <p>Before matching, groups differ, but overlap exists—so matching is feasible.</p>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>
+        Not yet. AUC being high means treated and control are different BEFORE matching.
+        So we need to check overlap and matchability.
+      </p>
+    </div>
   </div>
-</div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>In short: ROC says “they differ.” Now we ask: “can we still find look-alikes?”</p>
+    </div>
+  </div>
+</div> <!-- end .chat-thread -->
 
 <!-- (show 5 plots) -->
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/boxplot_activity_before_matching.png' | relative_url }}"
-       alt="Boxplot of activity: treated vs control (before matching).">
-  <figcaption>Activity — Treated vs Control (Before Matching)</figcaption>
-</figure>
-
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/boxplot_aggressiveness_before_matching.png' | relative_url }}"
-       alt="Boxplot of aggressiveness: treated vs control (before matching).">
-  <figcaption>Aggressiveness — Treated vs Control (Before Matching)</figcaption>
-</figure>
-
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/boxplot_similarity_before_matching.png' | relative_url }}"
-       alt="Boxplot of similarity: treated vs control (before matching).">
-  <figcaption>Similarity — Treated vs Control (Before Matching)</figcaption>
-</figure>
-
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/boxplot_hostility_pre_before_matching.png' | relative_url }}"
-       alt="Boxplot of hostility_pre: treated vs control (before matching).">
-  <figcaption>Hostility_pre — Treated vs Control (Before Matching)</figcaption>
-</figure>
 
 <figure class="scene-figure scene-figure-wide">
   <img src="{{ '/assets/img/pscore_density_before_matching.png' | relative_url }}"
@@ -2249,23 +2250,16 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 <div class="chat-thread">
 
-  <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
-      <p>Before matching, we show boxplots of confounders and the propensity score distributions, to check overlap.</p>
-    </div>
-  </div>
-
   <div class="chat-msg chat-msg-left chat-raj">
     <div class="chat-avatar">
       <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
-      <p>The treated and control distributions are different… but the key point is: they overlap, so matching is feasible (each treated pair can find a similar control).</p>
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>
+        Now the key diagnostic: propensity score distributions.
+        They’re different… but they overlap.
+      </p>
     </div>
   </div>
 
@@ -2274,18 +2268,11 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
-      <p>Now we do propensity score matching so treated pairs are only compared to truly similar control pairs.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-penny">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">PENNY</div>
-      <p>So we’re basically making the comparison “fair”?</p>
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>
+        That overlap is common support. It means for most treated pairs,
+        there exists a comparable control with a similar propensity score.
+      </p>
     </div>
   </div>
 
@@ -2294,8 +2281,11 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
-      <p>Exactly. We apply common support, then do 1:1 nearest-neighbor matching (with replacement).</p>
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>
+        No overlap would mean: “matching impossible.”
+        But we have overlap—so we can match reliably.
+      </p>
     </div>
   </div>
 
