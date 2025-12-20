@@ -3184,13 +3184,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 </div>
 
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/bootstrap_att_hidden.png' | relative_url }}"
-       alt="Bootstrap Distribution of ATT  -  dashed line at 0, red line observed ATT, shaded 95% CI">
-  <figcaption>
-    Bootstrap Distribution of ATT  -  dashed line at 0, red line observed ATT, shaded 95% CI
-  </figcaption>
-</figure>
 
 <div class="narrator-block narrator-block--clean">
   <div class="narrator-avatar">
@@ -3204,53 +3197,15 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/bootstrap_att_hidden.png' | relative_url }}"
+       alt="Bootstrap Distribution of ATT  -  dashed line at 0, red line observed ATT, shaded 95% CI">
+  <figcaption>
+    Bootstrap Distribution of ATT  -  dashed line at 0, red line observed ATT, shaded 95% CI
+  </figcaption>
+</figure>
+
 <div class="chat-thread">
-
-  <div class="chat-msg chat-msg-right chat-penny">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>Okay… what am I looking at?</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON · THEORIST</div>
-      <p>This is a bootstrap distribution of ATT.</p>
-      <p>We repeatedly resample matched pairs and recompute ATT to see how stable it is.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-left chat-raj">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">RAJ · NLP GEEK</div>
-      <p>Here’s how to read the plot:</p>
-      <ul>
-        <li>Dashed black line = ATT = 0 (no effect)</li>
-        <li>Red line = our observed ATT</li>
-        <li>Pink shaded region = 95% confidence interval</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-left chat-leonard">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">LEONARD · NETWORK NERD</div>
-      <p>And now the key part…</p>
-    </div>
-  </div>
 
   <div class="chat-msg chat-msg-left chat-raj">
     <div class="chat-avatar">
