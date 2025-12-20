@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.1.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"mark": {"type": "line", "color": "steelblue", "strokeWidth": 2}, "encoding": {"tooltip": [{"field": "Gamma", "format": ".2f", "title": "\u0393", "type": "quantitative"}, {"field": "p_upper", "format": ".4f", "title": "Worst-case p-value", "type": "quantitative"}], "x": {"field": "Gamma", "scale": {"domainMin": 0}, "title": "Hidden bias parameter \u0393", "type": "quantitative"}, "y": {"field": "p_upper", "title": "Worst-case p-value", "type": "quantitative"}}}, {"mark": {"type": "point", "color": "black", "filled": true, "size": 60}, "encoding": {"tooltip": [{"field": "Gamma", "format": ".2f", "title": "\u0393", "type": "quantitative"}, {"field": "p_upper", "format": ".4f", "title": "Worst-case p-value", "type": "quantitative"}], "x": {"field": "Gamma", "scale": {"domainMin": 0}, "title": "Hidden bias parameter \u0393", "type": "quantitative"}, "y": {"field": "p_upper", "type": "quantitative"}}}, {"data": {"name": "data-6cdc499123a863a05ac06969f49d7ef8"}, "mark": {"type": "rule", "strokeDash": [6, 4], "strokeWidth": 2}, "encoding": {"color": {"field": "Reference", "legend": {"title": "Reference"}, "type": "nominal"}, "y": {"field": "value", "type": "quantitative"}}}, {"data": {"name": "data-90b8d06d35c060bd0e0f34d6be8a65ab"}, "mark": {"type": "rule", "strokeDash": [2, 2], "strokeWidth": 2}, "encoding": {"color": {"field": "Reference", "legend": {"title": "Reference"}, "type": "nominal"}, "x": {"field": "value", "type": "quantitative"}}}], "data": {"name": "data-a471242da246f73b94e0f282f1b2751d"}, "height": 380, "title": "Rosenbaum Sensitivity Analysis (Sign Test)", "width": 650, "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json", "datasets": {"data-a471242da246f73b94e0f282f1b2751d": [{"Gamma": 1.0, "p_upper": 1.5577472088537968e-09}, {"Gamma": 1.2, "p_upper": 0.07068730769639574}, {"Gamma": 1.5, "p_upper": 0.9999598516022737}, {"Gamma": 1.7, "p_upper": 0.9999999999981862}, {"Gamma": 2.0, "p_upper": 1.0}, {"Gamma": 2.5, "p_upper": 1.0}, {"Gamma": 3.0, "p_upper": 1.0}, {"Gamma": 3.5, "p_upper": 1.0}, {"Gamma": 4.0, "p_upper": 1.0}, {"Gamma": 5.0, "p_upper": 1.0}, {"Gamma": 6.0, "p_upper": 1.0}], "data-6cdc499123a863a05ac06969f49d7ef8": [{"value": 0.05, "axis": "y", "Reference": "\u03b1 = 0.05"}], "data-90b8d06d35c060bd0e0f34d6be8a65ab": [{"value": 1.2, "axis": "x", "Reference": "\u0393* \u2248 1.2"}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
