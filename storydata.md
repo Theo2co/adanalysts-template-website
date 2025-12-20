@@ -1143,6 +1143,21 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 </div>
 <!-- end Chat 6 -->
 
+<div class="narrator-block narrator-block--clean">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p>
+      The room goes quiet for a second—partly because the visualization is genuinely cool,
+      and partly because it makes one thing unavoidable:
+      Reddit isn’t short on enemies.
+      The only question left is whether sharing one actually changes what happens next.
+    </p>
+  </div>
+</div>
 
 <!-- ========================= -->
 <!-- Plot 3 (outside chat) -->
