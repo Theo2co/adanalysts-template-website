@@ -135,6 +135,16 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
+<!-- Whiteboard illustration -->
+<figure class="scene-figure">
+  <img
+    src="{{ '/assets/img/whiteboard-graph.png' | relative_url }}"
+    alt="Whiteboard showing a chaotic directed subreddit interaction graph"
+    loading="lazy"
+  >
+</figure>
+
+
 <div class="chat-thread">
 
   <div class="chat-msg chat-msg-left chat-leonard">
