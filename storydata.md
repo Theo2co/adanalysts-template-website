@@ -2963,7 +2963,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-</div> <!-- end .chat-thread -->
 <figure class="scene-figure scene-figure-wide">
   <img src="{{ '/assets/img/rosenbaum_sensitivity_curve.png' | relative_url }}"
        alt="Sensitivity curve plot showing p_upper(Gamma) flat at 1.0 with a horizontal alpha=0.05 line below.">
