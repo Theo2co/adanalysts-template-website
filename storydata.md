@@ -166,22 +166,13 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 
   <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
+  <div class="narrator-label">Narrator · Data Redditor</div>
     <p>
       To go beyond the raw link network, Raj introduces <strong>subreddit embeddings</strong>:
       each community becomes a point in a 300-dimensional space capturing audience &amp; topic similarity.
     </p>
-
-    <ul>
-      <li>We project this space into <strong>3D</strong> using <strong>UMAP</strong>, creating a “galaxy map” of Reddit.</li>
-      <li>Colors come from <strong>KMeans (k=8)</strong>: they reveal <em>neighborhoods</em> of naturally similar communities.</li>
-      <li>Distance matters: close subreddits are “already similar”  -  a key confounder for enemy-of-my-enemy.</li>
-      <li>
-        UMAP+KMeans clusters are used for visualization (to create neighborhoods).
-        For analysis, we rely on cosine similarity in the original embedding space as the quantitative measure.
-      </li>
-    </ul>
   </div>
+
 </div>
 
 <div class="chat-thread">
