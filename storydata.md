@@ -2147,7 +2147,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON · THEORIST</div>
-      <p>If the bouncer is guessing randomly, AUC = 0.5  -  coin flip.</p>
+      <p>If the bouncer is guessing randomly, AUC (Area Under the Curve) = 0.5  -  coin flip.</p>
     </div>
   </div>
 
