@@ -5,6 +5,7 @@ hero_title: The Enemy of my Enemy is my Friend Theory
 hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 ---
 
+# Pilot {#intro}
 
 <div class="narrator-block">
   <div class="narrator-avatar">
