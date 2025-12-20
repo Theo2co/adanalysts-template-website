@@ -154,47 +154,62 @@ body {
   filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.35));
 }
 
-.hero-bbt-logo {
+.hero-bbt-logo{
+  /* variables pour garder une cohérence */
+  --kicker: clamp(0.85rem, 1.1vw, 1.05rem);
+  --h1:     clamp(3.4rem, 7.2vw, 5.2rem);   /* ENEMY */
+  --h2:     clamp(2.9rem, 6.2vw, 4.6rem);   /* OF MY ENEMY */
+  --tag:    clamp(1.05rem, 1.6vw, 1.35rem); /* is my friend theory */
+
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  color: var(--black);
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.25rem;
+  gap: 0.55rem;              /* espace cohérent entre lignes */
 }
 
 /* "the" */
-.hero-bbt-the {
-  font-size: 0.8rem;
-  font-weight: 800;
-  color: var(--black);
-}
-
-/* Mot noir comme "BIG" */
-.hero-bbt-big {
-  font-size: clamp(3.2rem, 7vw, 4.8rem);   /* plus gros */
+.hero-bbt-the{
+  font-size: var(--kicker);
   font-weight: 900;
   color: var(--black);
+  letter-spacing: 0.22em;
+  opacity: 0.95;
 }
 
+/* ENEMY (gros mot noir) */
+.hero-bbt-big{
+  font-size: var(--h1);
+  font-weight: 950;
+  color: var(--black);
+  line-height: 0.92;         /* compact et “logo-like” */
+  letter-spacing: 0.02em;    /* moins espacé -> plus massif */
+}
 
-/* Bloc blanc sur fond noir/orange comme "BANG" */
-.hero-bbt-bang {
-  font-size: clamp(3.2rem, 6.5vw, 4.4rem); /* plus gros aussi */
-  font-weight: 900;
-  padding: 0.2rem 0.9rem;
+/* Bloc noir (OF MY ENEMY) */
+.hero-bbt-bang{
+  font-size: var(--h2);
+  font-weight: 950;
+  padding: 0.28rem 1.05rem;  /* un peu plus “badge” */
   background: var(--black);
   color: var(--white);
+  line-height: 0.95;
+  letter-spacing: 0.06em;
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
 }
 
-
-/* Ligne "theory" en dessous */
-.hero-bbt-theory {
-  font-size: 1.1rem;
-  font-weight: 900;
+/* Ligne du bas (is my friend theory) — plus lisible et mieux proportionnée */
+.hero-bbt-theory{
+  font-size: var(--tag);
+  font-weight: 950;
   color: var(--black);
+  letter-spacing: 0.16em;
+  margin-top: -0.15rem;      /* rapproche visuellement du bloc */
+  opacity: 0.95;
 }
+
 
 /* Sous-titre */
 .hero-subtitle {
