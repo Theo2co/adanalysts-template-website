@@ -1407,7 +1407,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-<div class="viz-embed" style="max-width: 900px; margin: 0 auto;">
+<div class="viz-embed" style="max-width: 700px; margin: 0 auto;">
   <iframe
     src="{{ '/assets/interactive/pct_multi_attacked_target_subreddits.html' | relative_url }}"
     width="80%"
@@ -1611,7 +1611,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-<div class="viz-embed" style="max-width: 900px; margin: 0 auto;">
+<div class="viz-embed" style="max-width: 700px; margin: 0 auto;">
   <iframe
     src="{{ '/assets/interactive/friendship_score_distribution.html' | relative_url }}"
     width="80%"
@@ -1793,7 +1793,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-<div class="viz-embed" style="max-width: 900px; margin: 0 auto;">
+<div class="viz-embed" style="max-width: 700px; margin: 0 auto;">
   <iframe
     src="{{ '/assets/interactive/timelines_basic.html' | relative_url }}"
     width="80%"
@@ -2258,7 +2258,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-<div class="viz-embed" style="max-width: 900px; margin: 0 auto;">
+<div class="viz-embed" style="max-width: 700px; margin: 0 auto;">
   <iframe
     src="{{ '/assets/interactive/roc_propensity.html' | relative_url }}"
     width="80%"
@@ -2502,7 +2502,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 
   <!-- (show plot) -->
-<div class="viz-embed" style="max-width: 900px; margin: 0 auto;">
+<div class="viz-embed" style="max-width: 700px; margin: 0 auto;">
   <iframe
     src="{{ '/assets/interactive/match_distance.html' | relative_url }}"
     width="80%"
@@ -2639,7 +2639,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 
 </div> <!-- end .chat-thread -->
-<div class="viz-embed" style="max-width: 900px; margin: 0 auto;">
+<div class="viz-embed" style="max-width: 700px; margin: 0 auto;">
   <iframe
     src="{{ '/assets/interactive/treatment_outcome_matrix.html' | relative_url }}"
     width="80%"
@@ -2735,7 +2735,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-<div class="viz-embed" style="max-width: 900px; margin: 0 auto;">
+<div class="viz-embed" style="max-width: 700px; margin: 0 auto;">
   <iframe
     src="{{ '/assets/interactive/bootstrap_att.html' | relative_url }}"
     width="80%"
@@ -3134,7 +3134,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-<div class="viz-embed" style="max-width: 900px; margin: 0 auto;">
+<div class="viz-embed" style="max-width: 700px; margin: 0 auto;">
   <iframe
     src="{{ '/assets/interactive/sensitivity_curve.html' | relative_url }}"
     width="80%"
@@ -3354,7 +3354,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-<div class="viz-embed" style="max-width: 900px; margin: 0 auto;">
+<div class="viz-embed" style="max-width: 700px; margin: 0 auto;">
   <iframe
     src="{{ '/assets/interactive/bootstrap_att_hd.html' | relative_url }}"
     width="80%"
@@ -3449,7 +3449,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 <!-- ========================= -->
 <!-- Sensitivity figure -->
 <!-- ========================= -->
-<div class="viz-embed" style="max-width: 900px; margin: 0 auto;">
+<div class="viz-embed" style="max-width: 700px; margin: 0 auto;">
   <iframe
     src="{{ '/assets/interactive/sensitivity_curve_hd.html' | relative_url }}"
     width="80%"
