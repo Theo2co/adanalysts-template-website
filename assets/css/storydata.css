@@ -616,5 +616,11 @@ body {
   border: 0;
 }
 
+/* Décale l’ancre pour compenser la navbar fixed */
+#intro, #dataset, #triads, #results, #conclusion {
+  scroll-margin-top: 110px;   /* ajuste si besoin */
+}
+
+
 
 /*Test 2*/
