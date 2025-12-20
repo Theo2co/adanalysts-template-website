@@ -268,7 +268,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <ul>
       <li>We project this space into <strong>3D</strong> using <strong>UMAP</strong>, creating a “galaxy map” of Reddit.</li>
       <li>Colors come from <strong>KMeans (k=8)</strong>: they reveal <em>neighborhoods</em> of naturally similar communities.</li>
-      <li>Distance matters: close subreddits are “already similar” — a key confounder for enemy-of-my-enemy.</li>
+      <li>Distance matters: close subreddits are “already similar”  -  a key confounder for enemy-of-my-enemy.</li>
       <li>
         UMAP+KMeans clusters are used for visualization (to create neighborhoods).
         For analysis, we rely on cosine similarity in the original embedding space as the quantitative measure.
@@ -287,7 +287,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <div class="chat-name">SHELDON · THEORIST</div>
       <p>
         Excellent. This embedding space is our <em>baseline geometry</em>:
-        it tells us who was close <strong>before</strong> we introduce enemies —
+        it tells us who was close <strong>before</strong> we introduce enemies  - 
         so we don’t confuse “same tribe” with “new alliance”.
       </p>
     </div>
@@ -667,11 +667,11 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="narrator-label">Narrator · Data Redditor</div>
 
     <p>
-      After a very long night of work — the kind fueled by cold coffee, overconfidence,
-      and mild despair — Raj finally pins down a model that is simple but robust.
+      After a very long night of work  -  the kind fueled by cold coffee, overconfidence,
+      and mild despair  -  Raj finally pins down a model that is simple but robust.
     </p>
 
-    <p class="narrator-lead"><strong>Step 1 — Selecting truly discriminative textual features</strong></p>
+    <p class="narrator-lead"><strong>Step 1  -  Selecting truly discriminative textual features</strong></p>
     <p>
       The goal is simple: keep only the textual signals that consistently distinguish
       hostile (−1) from non-hostile (+1) links, without overfitting.
@@ -691,7 +691,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       </li>
     </ul>
 
-    <p class="narrator-lead"><strong>Step 2 — A probabilistic hostility model</strong></p>
+    <p class="narrator-lead"><strong>Step 2  -  A probabilistic hostility model</strong></p>
     <p>These selected features are fed into a logistic regression with L1 regularization.</p>
 
     <div class="narrator-grid">
@@ -721,7 +721,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <li>Liblinear keeps the optimization stable with a small number of features.</li>
     </ul>
 
-    <p class="narrator-lead"><strong>Step 3 — Decision logic with temporal corroboration</strong></p>
+    <p class="narrator-lead"><strong>Step 3  -  Decision logic with temporal corroboration</strong></p>
     <p>The probability alone is not blindly trusted. Two explicit rules are applied.</p>
 
     <div class="narrator-grid">
@@ -736,7 +736,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <div class="narrator-card">
         <div class="narrator-card-title">Corroboration Rule</div>
         <p class="narrator-card-text">
-          If <code>p_true_hostile ≥ 0.85</code>, the model is already confident — but not absolute.
+          If <code>p_true_hostile ≥ 0.85</code>, the model is already confident  -  but not absolute.
           In this case, we require temporal confirmation using <code>s_flip</code>.
           Only flips in the top 5% closest to 1 (fastest reversals relative to the pair’s normal rhythm) are accepted.
         </p>
@@ -799,7 +799,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">RAJ · NLP GEEK</div>
-      <p>Okay, first—please admire this graph. Each feature on its own already separates friendly from hostile interactions.</p>
+      <p>Okay, first - please admire this graph. Each feature on its own already separates friendly from hostile interactions.</p>
     </div>
   </div>
 
@@ -834,7 +834,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <div class="chat-name">RAJ · NLP GEEK</div>
       <p>
         Now, the model results.
-        Using those features, plus subreddit embedding similarity—and ignoring pairs with fewer than five interactions—the model flags <strong>12,079</strong> additional links.
+        Using those features, plus subreddit embedding similarity - and ignoring pairs with fewer than five interactions - the model flags <strong>12,079</strong> additional links.
       </p>
     </div>
   </div>
@@ -1102,7 +1102,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">RAJ · NLP GEEK</div>
       <p>Not really. And it’s actually very satisfying to visualize.</p>
-      <p>Because—obviously—I already made the plot.</p>
+      <p>Because - obviously - I already made the plot.</p>
     </div>
   </div>
 
@@ -1164,7 +1164,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
     <p>
-      The room goes quiet for a second—partly because the visualization is genuinely cool,
+      The room goes quiet for a second - partly because the visualization is genuinely cool,
       and partly because it makes one thing unavoidable:
       Reddit isn’t short on enemies.
       The only question left is whether sharing one actually changes what happens next.
@@ -1300,7 +1300,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
-    <p class="narrator-lead"><strong>Part 1 — Monthly summaries (setup)</strong></p>
+    <p class="narrator-lead"><strong>Part 1  -  Monthly summaries (setup)</strong></p>
     <p>
       Before anyone can talk about “co-attacks” or “friendship after conflict,” the team needs a timeline
       that’s clean enough to measure cause and effect. So they compress Reddit into 41 monthly snapshots.
@@ -1448,7 +1448,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
     <p><strong>INT. APARTMENT 4A – NIGHT.</strong></p>
-    <p>Their discussion is briefly derailed by their regularly scheduled Chinese dinner-an interruption as predictable as it is unavoidable—after which they regroup, recalibrate, and resume the work.</p>
+    <p>Their discussion is briefly derailed by their regularly scheduled Chinese dinner-an interruption as predictable as it is unavoidable - after which they regroup, recalibrate, and resume the work.</p>
   </div>
 </div>
 
@@ -2016,7 +2016,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON · THEORIST</div>
-      <p>Now, for how we compute them—pay attention, this is where people start making mistakes.</p>
+      <p>Now, for how we compute them - pay attention, this is where people start making mistakes.</p>
     </div>
   </div>
 
@@ -2147,7 +2147,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON · THEORIST</div>
-      <p>If the bouncer is guessing randomly, AUC = 0.5 — coin flip.</p>
+      <p>If the bouncer is guessing randomly, AUC = 0.5  -  coin flip.</p>
     </div>
   </div>
 
@@ -2261,7 +2261,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 <figure class="scene-figure scene-figure-wide">
   <img src="{{ '/assets/img/pscore_density_before_matching.png' | relative_url }}"
        alt="Propensity score density: treated vs control (before matching).">
-  <figcaption>Propensity Score Distributions — Treated vs Control</figcaption>
+  <figcaption>Propensity Score Distributions  -  Treated vs Control</figcaption>
 </figure>
 
 <div class="chat-thread">
@@ -2300,7 +2300,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <div class="chat-name">SHELDON · THEORIST</div>
       <p>
         No overlap would mean: “matching impossible.”
-        But we have overlap—so we can match reliably.
+        But we have overlap - so we can match reliably.
       </p>
     </div>
   </div>
@@ -2384,7 +2384,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 <figure class="scene-figure scene-figure-wide">
   <img src="{{ '/assets/img/pscore_density_after_matching.png' | relative_url }}"
        alt="Propensity score density: treated vs control (after matching) showing strong overlap.">
-  <figcaption>Propensity Score Distributions — Treated vs Control (After Matching)</figcaption>
+  <figcaption>Propensity Score Distributions  -  Treated vs Control (After Matching)</figcaption>
 </figure>
 
 <div class="narrator-block narrator-block--clean">
@@ -2396,7 +2396,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="narrator-label">Narrator · Data Redditor</div>
     <p>
       We look at the propensity score density AFTER matching.
-      If matching worked, the treated and control curves should overlap strongly—
+      If matching worked, the treated and control curves should overlap strongly - 
       because we deliberately paired each treated unit with a control unit that had a similar probability of treatment.
     </p>
   </div>
@@ -2506,7 +2506,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <div class="chat-name">SHELDON · THEORIST</div>
       <p>
         Same matrix, but as percentages (friendship rates).
-        Controls are about 1.8%, treated about 0.6%—so treated pairs are less likely to become friends in this window.
+        Controls are about 1.8%, treated about 0.6% - so treated pairs are less likely to become friends in this window.
       </p>
     </div>
   </div>
@@ -2905,7 +2905,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">LEONARD · NETWORK NERD</div>
-      <p>Because the data goes the opposite way—controls win more often—so there’s zero evidence for “treated &gt; control.”</p>
+      <p>Because the data goes the opposite way - controls win more often - so there’s zero evidence for “treated &gt; control.”</p>
     </div>
   </div>
 
@@ -2962,7 +2962,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">RAJ · NLP GEEK</div>
-      <p>Usually, yes—when you’re trying to defend a positive effect.<br>
+      <p>Usually, yes - when you’re trying to defend a positive effect.<br>
       But here… we already don’t have a positive effect.</p>
     </div>
   </div>
@@ -3067,6 +3067,348 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 </div> <!-- end .chat-thread -->
 
+<div class="narrator-block">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p><strong>INT. APARTMENT 4A – NIGHT.</strong><br>
+      The team reached a pretty awkward conclusion:
+      co-attacking didn’t create friendship  -  it slightly reduced it.
+    </p>
+  </div>
+</div>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>Great. My childhood wisdom… ruined by statistics.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="narrator-block">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p>
+      But then Raj brings up a scary thought: what if some comments that were labeled “positive”
+      were actually <em>implicitly hostile</em>?
+    </p>
+  </div>
+</div>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>What if some posts look polite… but are secretly negative?</p>
+      <p>Like “Wow, amazing idea 😐” energy.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>Hidden hostility. Mislabeling.</p>
+      <p>Exactly the kind of thing that can flip causal results.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="narrator-block">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p><strong>INT. APARTMENT 4A – LATER.</strong><br>
+      They take the original dataset (<code>df_monthly</code>) and relabel posts flagged as “implicit negatives”
+      from +1 to −1. Same structure, new labels.
+    </p>
+  </div>
+</div>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>So we rebuild the monthly dataset with these corrected negatives.</p>
+      <p>We call it <code>df_monthly_hidden</code>.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>So it’s the same world… but with the “fake nice” comments exposed.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>Exactly. And now we rerun the entire causal pipeline:</p>
+      <p>propensity scores, matching, outcome Y, ATT, bootstrap, sensitivity - <br>
+         everything. But starting from <code>df_monthly_hidden</code>.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/bootstrap_att_hidden.png' | relative_url }}"
+       alt="Bootstrap Distribution of ATT  -  dashed line at 0, red line observed ATT, shaded 95% CI">
+  <figcaption>
+    Bootstrap Distribution of ATT  -  dashed line at 0, red line observed ATT, shaded 95% CI
+  </figcaption>
+</figure>
+
+<div class="narrator-block narrator-block--clean">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p><strong>INT. APARTMENT 4A – RESULTS SLIDE.</strong><br>
+      Raj shows the bootstrap histogram. Everyone leans in.
+    </p>
+  </div>
+</div>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>Okay… what am I looking at?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>This is a bootstrap distribution of ATT.</p>
+      <p>We repeatedly resample matched pairs and recompute ATT to see how stable it is.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>Here’s how to read the plot:</p>
+      <ul>
+        <li>Dashed black line = ATT = 0 (no effect)</li>
+        <li>Red line = our observed ATT</li>
+        <li>Pink shaded region = 95% confidence interval</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>And now the key part…</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>
+        With <code>df_monthly_hidden</code>, ATT is <strong>+0.17 percentage points</strong>.
+        The distribution is tightly centered there,
+        with a bootstrap SD of about <strong>0.03</strong>,
+        and a 95% CI of <strong>[0.12, 0.23] pp</strong>  -  fully ABOVE zero.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>So… it’s actually positive now?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>Yes. Statistically strong evidence too  -  the bootstrap p-value is basically zero.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>
+        Meaning: once we account for potential hidden hostility,
+        co-attacking is associated with a small but real increase in friendship formation.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>The proverb just got its redemption arc.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="narrator-block">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p><strong>INT. APARTMENT 4A – QUIET MOMENT.</strong><br>
+      Sheldon draws two stick figures labeled “Looks positive” and “Actually negative.”
+    </p>
+  </div>
+</div>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>
+        If we mistakenly treat implicit hostility as positive interaction,
+        we can misclassify adversarial relationships as neutral or friendly.
+        That changes who counts as “enemy,” who enters conflict windows,
+        and ultimately changes the estimated effect.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>So the main lesson is: the causal conclusion is sensitive to how we define “negative.”</p>
+    </div>
+  </div>
+
+</div>
+
+<h2 id="responsible-ending">Scene  -  The responsible ending (caution)</h2>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>
+        But we should be careful:
+        those “implicit negatives” are predicted by our model, not verified ground truth.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>
+        Exactly. We didn’t magically discover truth.
+        We tested: “If hidden hostility exists and we correct for it, what changes?”
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>So what can we say for sure?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>
+        For sure: our results depend strongly on measurement of negativity.
+        Mislabeling or missing negative interactions can change both the direction and size of the effect.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+
 # Finale – The Enemy of my Enemy is my Friend Theory, evaluated {#conclusion}
 
 <div class="narrator-block">
@@ -3113,7 +3455,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">SHELDON · THEORIST</div>
       <p>And the sensitivity analysis doesn’t show “robustness of a positive effect.”<br>
-      It shows there is no positive effect to defend—even at Γ = 1.</p>
+      It shows there is no positive effect to defend - even at Γ = 1.</p>
     </div>
   </div>
 
