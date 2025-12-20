@@ -1184,7 +1184,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">LEONARD</div>
-      <p>Okay—real question. If two subreddits attack the same target… do they later become friends?</p>
+      <p>Okay-real question. If two subreddits attack the same target… do they later become friends?</p>
     </div>
   </div>
 
@@ -1363,7 +1363,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">PENNY</div>
-      <p>and if that fraction is consistently big?</p>
+      <p>And if that fraction is consistently big?</p>
     </div>
   </div>
 
@@ -1394,7 +1394,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   <img src="{{ '/assets/img/PlotA.png' | relative_url }}"
        alt="Plot A: Monthly fraction of targets attacked by at least 2 distinct attackers.">
   <figcaption>
-    <strong>Plot A.</strong> Monthly fraction of targets attacked by at least 2 distinct attackers.
+    Monthly fraction of targets attacked by at least 2 distinct attackers.
   </figcaption>
 </figure>
 <div class="chat-thread">
@@ -1613,7 +1613,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">RAJ</div>
-      <p>great, now we need to identify for each target subreddit, which are its common attackers.</p>
+      <p>Great, now we need to identify for each target subreddit, which are its common attackers.</p>
     </div>
   </div>
 
@@ -1669,33 +1669,9 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">LEONARD</div>
-      <p>Now we finally define a co-attack.</p>
+      <p>So I was thinking about our goal, and we’re not just interested in studying the pairs of subreddits who attacked a same target.</p>
     </div>
   </div>
-
-  <div class="chat-msg chat-msg-left chat-raj">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
-      <p>For each month and each target C:<br>
-      collect attackers A such that A→C has at least one negative link.</p>
-    </div>
-  </div>
-
-</div> <!-- end .chat-thread -->
-
-<!-- (show figure) -->
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/attacks_per_attacker_month_log.png' | relative_url }}"
-       alt="Distribution of attacks per attacker per month on a log scale.">
-  <figcaption>
-    Distribution of attacks per attacker per month (log scale).
-  </figcaption>
-</figure>
-
-<div class="chat-thread">
 
   <div class="chat-msg chat-msg-right chat-penny">
     <div class="chat-avatar">
@@ -1703,18 +1679,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">PENNY</div>
-      <p>But are we sure monthly bins make sense?</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-left chat-raj">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
-      <p>That’s why we plot the distribution of attacks per attacker per month,<br>
-      on a log scale.</p>
+      <p>I don’t get where you’re headed.</p>
     </div>
   </div>
 
@@ -1724,17 +1689,12 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON</div>
-      <p>The takeaway: even monthly, most attacker-target months have 0 or 1 attack.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-left chat-leonard">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
-      <p>So weekly bins would become too sparse and we’d miss co-attacks.</p>
+      <p>
+        See Penny it’s simple, we want to study whether the enemy of my enemy is my friend.
+        If we consider 2 subreddits A and B who both attacked a same target C but 2 years apart,
+        then they could bias our conclusion because they most probably didn’t even notice themselves as common attackers of C.
+        These pairs thus have a very low chance that if they became friends, it was because of their attacks on C.
+      </p>
     </div>
   </div>
 
@@ -1744,90 +1704,60 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">RAJ</div>
-      <p>And multi-month bins would be too loose:<br>
-      two attacks months apart would look “coordinated” when they aren’t.</p>
+      <p>exactly, so we are interested in pairs that satisfy 2 conditions:</p>
+      <ul>
+        <li>they need to have co-attacked a same target, meaning they should have both attacked C in any same month.</li>
+        <li>They need to be considered both ennemies with C during that co-attack month.</li>
+      </ul>
+      <p>
+        Let’s call all pairs satisfying these 2 conditions ‘strong co-attackers of C’.
+        These pairs are the ones whose relationship evolution we should be analyzing to have the answer to our problematic.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>
+        let’s first identify for each target C, the pairs of co-attackers satisfying of above conditions.
+        We can then record the start month of their common conflict with C as the first month they co-attacked C while being ennemies with C,
+        and the end month of their common conflict as the last month satisfying both conditions.
+        We can also calculate their ‘conflict duration’ as the time between the end and start of the common conflict.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD</div>
+      <p>
+        And while we’re at it we can for each such pair (A,B) study the evolution of their friendship status,
+        and record the first month where A and B became friends.
+      </p>
     </div>
   </div>
 
 </div> <!-- end .chat-thread -->
 
-<div class="narrator-block">
+<div class="narrator-block narrator-block--clean">
   <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
   </div>
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
-    <p><strong>INT. APARTMENT 4A – NIGHT.</strong></p>
-    <p>They tighten the definition again.</p>
+    <p>
+      they manage to save the conflict start, end, as well as the friendship start month for all strong co-attackers of a same target C.
+      They even draw visualize a sample of them:
+    </p>
   </div>
 </div>
-
-<div class="chat-thread">
-
-  <div class="chat-msg chat-msg-left chat-leonard">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
-      <p>Important: not every shared target is a real conflict.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
-      <p>So we keep only months where:<br>
-      1. A and B both attacked C in the same month (counts &gt; 0),<br>
-      2. A is an Enemy of C and B is an Enemy of C that month.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-penny">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">PENNY</div>
-      <p>Cool. But what are we testing now?</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-left chat-leonard">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
-      <p>Now we test the main idea: if two subreddits co-attack the same target, do they later become friends?</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-penny">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">PENNY</div>
-      <p>How do we define “friends”?</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
-      <p>We use the monthly Friendship Score between (A,B), and we call them friends when it passes the friend threshold.</p>
-    </div>
-  </div>
-
-</div> <!-- end .chat-thread -->
 
 <!-- (show plot) -->
 <figure class="scene-figure scene-figure-wide">
@@ -1840,13 +1770,17 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 <div class="chat-thread">
 
-  <div class="chat-msg chat-msg-left chat-raj">
+  <div class="chat-msg chat-msg-right chat-penny">
     <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
-      <p>In this timeline, each line is an attacker pair (A,B) for one target C.</p>
+      <div class="chat-name">PENNY</div>
+      <p>
+        So in this timeplot, for each strong attacker of a common target C,
+        the red dot represents their conflict (or strong co-attack) start,
+        and the green dot represents their friendship start?
+      </p>
     </div>
   </div>
 
@@ -1856,24 +1790,19 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">LEONARD</div>
-      <p>The big takeaway: friendship can happen quickly, but sometimes it happens years later.</p>
+      <p>Exactly!</p>
     </div>
   </div>
 
-</div> <!-- end .chat-thread -->
-<div class="narrator-block">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>Hey look, some pairs become friends 2 years after their strong co-attack event.</p>
+    </div>
   </div>
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
-    <p><strong>INT. APARTMENT 4A – CONTINUOUS.</strong></p>
-    <p>They argue about “what counts” as conflict-caused.</p>
-  </div>
-</div>
-
-<div class="chat-thread">
 
   <div class="chat-msg chat-msg-right chat-sheldon">
     <div class="chat-avatar">
@@ -1881,33 +1810,14 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON</div>
-      <p>If friendship happens 2 years later, it’s harder to link it to the conflict.</p>
+      <p>
+        Interesting observation Raj! Indeed, for our analysis of ‘is the ennemy of my ennemy my friend?’
+        we should study only pairs which show signs of friendship close to their strong co-attack duration.
+        Otherwise, if A and B strongly co-attacked C and became friends 3 years later,
+        then this positive friendship indication would bias our results since this subsequent friendship is very likely not caused by their strong co-attack event.
+      </p>
     </div>
   </div>
-
-  <div class="chat-msg chat-msg-left chat-raj">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
-      <p>So we only count “new friendship” if it happens inside:<br>
-      [conflict start, conflict end + 1 month].</p>
-    </div>
-  </div>
-
-</div> <!-- end .chat-thread -->
-
-<!-- (show plot) -->
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/friendship_windows_near_far.png' | relative_url }}"
-       alt="Co-Attacking Pair Friendship Outcomes">
-  <figcaption>
-    Co-Attacking Pair Friendship Outcomes
-  </figcaption>
-</figure>
-
-<div class="chat-thread">
 
   <div class="chat-msg chat-msg-left chat-leonard">
     <div class="chat-avatar">
@@ -1915,21 +1825,11 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">LEONARD</div>
-      <p>Now the outcomes:</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-left chat-raj">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
       <p>
-        • New friendship near conflict: 0.693%<br>
-        • Friendship far after conflict: 1.861%<br>
-        • Never became friends: 92.483%<br>
-        • Already friends before conflict: 4.963%
+        I agree. Therefore for every strong co-attacker pair, if we want to assess whether their common conflict was followed by a subsequent friendship,
+        I propose we only consider the interval [conflict start, conflict end +1 month].
+        If they became friends after that interval, then the chance that this friendship was due to their strong co-attack is reduced.
+        However, if we observe a friendship start inside that interval, then this is a positive indication that their co-attack might have played a role in this friendship.
       </p>
     </div>
   </div>
@@ -1940,7 +1840,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">PENNY</div>
-      <p>So it’s rare, but it exists.</p>
+      <p>Why do you give a margin of 1 month?</p>
     </div>
   </div>
 
@@ -1950,133 +1850,32 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">LEONARD</div>
-      <p>And separating “near” vs “far” matters, because “near” is the one that could plausibly be related to the co-attack.</p>
+      <p>To account for the effect that a possible subsequent friendship could arise shortly starting the last month of conflict.</p>
     </div>
   </div>
 
 </div> <!-- end .chat-thread -->
 
-<!-- (show plot) -->
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/coattack_timeline_with_conflict_end.png' | relative_url }}"
-       alt="Timeline plot showing co-attack start (red), conflict end (orange), and friendship start (green) for attacker pairs over time.">
-  <figcaption>
-    Timeline with co-attack start, conflict end, and friendship start.
-  </figcaption>
-</figure>
-
-<div class="chat-thread">
-
-  <div class="chat-msg chat-msg-left chat-raj">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
-      <p>This last timeline adds conflict end (orange dot), so you can see whether friendship starts during or right after the conflict window.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
-      <p>So we observe some “enemy-of-my-enemy” friendship formation — now the next step is testing whether it’s causal, not just correlation.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-penny">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">PENNY</div>
-      <p>So what’s the “treatment” here?</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
-      <p>Treatment = a strong co-attack event: A and B co-attack the same target C in the same month, while both are enemies with C.</p>
-    </div>
-  </div>
-
-</div> <!-- end .chat-thread -->
-<div class="narrator-block">
+<div class="narrator-block narrator-block--clean">
   <div class="narrator-avatar">
     <img src="{{ '/assets/img/narrator.png' | relative_url }}"
          alt="Reddit-style narrator avatar">
   </div>
+
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
-    <p><strong>INT. APARTMENT 4A – NEXT DAY.</strong> Now the team switches from “pattern” to “causality”.</p>
+
+    <p>
+      Penny couldn’t stop thinking about lunch. That day, they were supposed to order pizzas.
+      Penny took all the team’s topping preferences, called the Cheasecake Factory for delivery,
+      and messed up everyone’s order. They still ate, very quickly, and resumed the work as soon as possible.
+      They now want to identify confounders.
+      Sheldon draws a Directed Acyclic Diagram (DAG), highlighting the possible confounders and their relationship with the treatment and the outcome:
+    </p>
+
   </div>
 </div>
 
-<div class="chat-thread">
-
-  <div class="chat-msg chat-msg-left chat-raj">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
-      <p>
-        Treated pairs (A,B): they ever strongly co-attacked someone, and we use the month of the first
-        strong co-attack as the event time. Also, we remove pairs that were already friends before the
-        event.
-      </p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-left chat-leonard">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
-      <p>
-        And we only evaluate friendship inside a realistic window:
-        [conflict_start, conflict_end + 1], because friendships far after are less likely caused by the
-        conflict.
-      </p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-left chat-raj">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
-      <p>
-        Control pairs: pairs that never co-attacked any common target (not weak, not strong).
-        Then we give them a pseudo conflict window by sampling start times and durations from the
-        treated distribution, and we also ensure they’re not friends before the pseudo start.
-      </p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
-      <p>
-        Outcome is binary:
-        1 if a strict friendship appears within the conflict window, otherwise 0.
-      </p>
-    </div>
-  </div>
-
-</div> <!-- end .chat-thread -->
 <!-- (show figure) -->
 <figure class="scene-figure scene-figure-wide">
   <img src="{{ '/assets/img/dag_confounders.png' | relative_url }}"
