@@ -2218,7 +2218,21 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
     <p>
-      After computing a propensity score for every pair, they plot the <strong>ROC curve.</strong>
+      After computing a propensity score for every pair, they first run a logistic regression to estimate propensity scores
+      and inspect the fitted coefficients—just to see which pre-conflict traits are associated with becoming “treated.”
+    </p>
+    <p>
+      In the regression:
+      <strong>aggressiveness</strong> and <strong>activity</strong> have <strong>positive coefficients</strong>
+      (higher values make co-attacking more likely),
+      while <strong>hostility_pre</strong> and <strong>similarity</strong> have <strong>negative coefficients</strong>
+      (higher values make co-attacking less likely).
+      The <strong>magnitude</strong> of each coefficient reflects the strength of its association with treatment assignment.
+    </p>
+    <p>
+      Crucially, these coefficients describe how treatment is assigned in the data—they are <strong>not causal effects</strong>.
+      Their job is to confirm that confounding exists and to motivate why we need <strong>propensity-score matching</strong>.
+      Only then do they plot the ROC curve as a quick check of how well the confounders separate treated from control before matching.
     </p>
   </div>
 </div>
@@ -2460,14 +2474,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-<!-- (show plot) -->
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/matching_distance_hist.png' | relative_url }}"
-       alt="Histogram of matching distance (absolute propensity score difference) after propensity score matching.">
-  <figcaption>
-    Matching distance histogram (|pscore_treated − pscore_control|).
-  </figcaption>
-</figure>
 
 <div class="chat-thread">
 
@@ -2483,6 +2489,15 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       </p>
     </div>
   </div>
+
+  <!-- (show plot) -->
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/matching_distance_hist.png' | relative_url }}"
+       alt="Histogram of matching distance (absolute propensity score difference) after propensity score matching.">
+  <figcaption>
+    Matching distance histogram (|pscore_treated − pscore_control|).
+  </figcaption>
+</figure>
 
   <div class="chat-msg chat-msg-left chat-leonard">
     <div class="chat-avatar">
@@ -2648,7 +2663,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <div class="chat-name">SHELDON · THEORIST</div>
       <p>
         Same matrix, but as percentages (friendship rates).
-        Controls are about 1.8%, treated about 0.6% - so treated pairs are less likely to become friends in this window.
+         The percentage of control pairs that became friends soon after their common conflict is 1.8%, while that for treated pairs Is 0.6%. Therefore, we have an initial idea that control pairs more frequently tend to become friends after a strong co-attack.
       </p>
     </div>
   </div>
@@ -2751,7 +2766,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON</div>
-      <p>That’s what the bootstrap plot shows: we resample matched pairs many times to see how ATT varies.</p>
+      <p>Excellent Penny! You know you surprise me for a non-STEM! To answer your concerns, we need to perform bootstrap.That’s what the bootstrap plot shows: we resample matched pairs many times to see how ATT varies.</p>
     </div>
   </div>
 
