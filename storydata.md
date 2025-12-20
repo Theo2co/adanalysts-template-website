@@ -1805,7 +1805,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
       <p>
-        So in this timeplot, for each strong attacker of a common target C,
+        So in this timeplot, for each strong co-attackers of a common target C,
         the red dot represents their conflict (or strong co-attack) start,
         and the green dot represents their friendship start?
       </p>
@@ -1883,6 +1883,60 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 
 </div> <!-- end .chat-thread -->
+<div class="narrator-block narrator-block--clean">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+
+    <p>
+      <strong>INT. APARTMENT 4A – NEXT DAY.</strong>
+      The team finally switches from “pattern-spotting” to something far more dangerous:
+      <strong>causality</strong>. Step one is defining what counts as the “treatment,”
+      what counts as a “control,” and what outcome they’ll measure.
+    </p>
+
+    <p class="narrator-lead"><strong>Treated pairs (A, B)</strong></p>
+    <ul>
+      <li>They <strong>ever</strong> strongly co-attacked some common target <strong>C</strong>.</li>
+      <li>Their <strong>event time</strong> is the month of their <strong>first strong co-attack</strong> — the earliest potentially causal signal.</li>
+      <li>They were <strong>not friends before</strong> that event time.</li>
+      <li>
+        Their <strong>conflict period</strong> is
+        <span class="math-inline">\([\text{conflict\_start},\; \text{conflict\_end} + 1]\)</span>,
+        which captures months where coordinated hostility is active (or immediately consequential).
+      </li>
+      <li>
+        Friendship formation is evaluated <strong>only inside this window</strong>,
+        since friendships far outside it are unlikely to be caused by the co-attack.
+      </li>
+    </ul>
+
+    <p class="narrator-lead"><strong>Control pairs (A, B)</strong></p>
+    <p>
+      Control pairs are pairs that <strong>never co-attacked</strong> any common target at any intensity
+      (neither weak nor strong) during the entire observation period.
+    </p>
+    <p>
+      To make them comparable, each control pair receives a <strong>pseudo event</strong>:
+      a pseudo conflict start is sampled from the treated distribution of strong co-attack start times,
+      and a pseudo conflict duration is sampled from the treated conflict-duration distribution.
+      The pseudo conflict end is then set to:
+      <span class="math-inline">\(\text{pseudo\_end}=\text{pseudo\_start}+\text{duration}\)</span>.
+      Controls are also required to have <strong>no friendship links before</strong> their pseudo event.
+    </p>
+
+    <p class="narrator-lead"><strong>Outcome (Y)</strong></p>
+    <p>
+      Finally, every pair gets a binary outcome:
+      <strong>Y = 1</strong> if a strict friendship starts within the conflict period,
+      and <strong>Y = 0</strong> otherwise.
+    </p>
+  </div>
+</div>
 
 <div class="narrator-block narrator-block--clean">
   <div class="narrator-avatar">
@@ -2055,7 +2109,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       </p>
       <div class="chat-math">
         \[
-          \text{aggr}(X) = \frac{\sum_m \text{out\_neg}(X,m)}{\text{total\_out}(X)}
+          \text{aggr}(X) = \frac{\sum_m \text{out_neg}(X,m)}{\text{total_out}(X)}
         \]
       </div>
     </div>
