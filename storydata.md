@@ -1171,7 +1171,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <p>
       <strong>INT. APARTMENT 4A – NIGHT.</strong> Leonard’s whiteboard is full of arrows between subreddits and one
       giant question:
-      <em>“Does a shared enemy create friendship?”</em>
+      <em>“Does sharing an enemy lead to subsequent friendship?”</em>
     </p>
   </div>
 </div>
@@ -1263,7 +1263,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">SHELDON</div>
       <p>Because we need consistency.<br>
-      So we create a clean month format and a month index from 1 to 41.</p>
+      So we create a clean month format and a month index from 1 to 41 since our dataset spans 41 months of Reddit activity.</p>
     </div>
   </div>
 
@@ -1354,37 +1354,16 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
   <div class="chat-bubble">
     <div class="chat-name">LEONARD</div>
-    <p>Now we show Plot A.</p>
+    <p>Let’s visualize the fraction of subreddits that get attacked by at least 2 distinct attackers in every month.</p>
   </div>
 </div>
-
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/PlotA.png' | relative_url }}"
-       alt="Plot A: Monthly fraction of targets attacked by at least 2 distinct attackers.">
-  <figcaption>
-    <strong>Plot A.</strong> Monthly fraction of targets attacked by at least 2 distinct attackers.
-  </figcaption>
-</figure>
-
-
-  <div class="chat-msg chat-msg-left chat-raj">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
-      <p>We compute: in each month,<br>
-      what fraction of targets got attacked by at least 2 different attackers.</p>
-    </div>
-  </div>
-
   <div class="chat-msg chat-msg-right chat-penny">
     <div class="chat-avatar">
       <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
     </div>
     <div class="chat-bubble">
       <div class="chat-name">PENNY</div>
-      <p>And if that fraction is big?</p>
+      <p>and if that fraction is consistently big?</p>
     </div>
   </div>
 
@@ -1394,8 +1373,50 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON</div>
-      <p>Then shared antagonism isn’t rare noise.<br>
-      It’s a structural pattern on Reddit.</p>
+      <p>Then the data we have involves shared antagonism, and it is suitable for your study.</p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+<div class="narrator-block narrator-block--clean">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p>
+      This is their first reality check: before we even talk about “friendship,” we verify that co-attacking the same target happens often enough to study.
+      After spending some time reorganizing the data, they draw Plot A:
+    </p>
+  </div>
+</div>
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/PlotA.png' | relative_url }}"
+       alt="Plot A: Monthly fraction of targets attacked by at least 2 distinct attackers.">
+  <figcaption>
+    <strong>Plot A.</strong> Monthly fraction of targets attacked by at least 2 distinct attackers.
+  </figcaption>
+</figure>
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD</div>
+      <p>We see indeed that every month, about 35% of the targeted subreddits are attacked by at least 2 distinct attackers.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>Shared antagonism isn’t rare noise.<br>
+      It seems to be a structural pattern on Reddit.</p>
     </div>
   </div>
 
@@ -1408,48 +1429,12 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
-    <p>
-      Plot A is their first reality check: before we even talk about “friendship,” we verify that
-      <em>co-attacking the same target</em> happens often enough to study.
-      If multiple attackers keep converging on the same targets month after month, then “shared enemies”
-      aren’t edge cases — they’re part of the ecosystem.
-    </p>
-  </div>
-</div>
-<div class="narrator-block">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
-  </div>
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
     <p><strong>INT. APARTMENT 4A – NIGHT.</strong></p>
-    <p>Now they define relationship strength between any two subreddits.</p>
+    <p>Their discussion is briefly derailed by their regularly scheduled Chinese dinner-an interruption as predictable as it is unavoidable—after which they regroup, recalibrate, and resume the work.</p>
   </div>
 </div>
 
 <div class="chat-thread">
-
-  <div class="chat-msg chat-msg-left chat-leonard">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
-      <p>Now we need a clean way to define: friend / neutral / enemy.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-left chat-raj">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
-      <p>So we build a monthly table for each unordered pair (A,B).<br>
-      Meaning A and B together, regardless of direction.</p>
-    </div>
-  </div>
 
   <div class="chat-msg chat-msg-right chat-sheldon">
     <div class="chat-avatar">
@@ -1457,8 +1442,10 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON</div>
-      <p>For each month, we compute total interactions:
-      count = n(A→B) + n(B→A).</p>
+      <p>
+        For each month, we compute the total interaction count between each pair (A,B),
+        equal to the number of links sent by A to B, and from B to A.
+      </p>
     </div>
   </div>
 
@@ -1468,7 +1455,17 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">RAJ</div>
-      <p>And the sentiment sum: positives are +1, negatives are −1.</p>
+      <p>Let’s also define a Sentiment Balance between A and B based on their monthly interactions:</p>
+      <div class="chat-math">
+        \[
+        \text{SentimentBalance}_{A,B}
+        =
+        \frac{\text{PosLinks}_{A,B}-\text{NegLinks}_{A,B}}
+             {\text{PosLinks}_{A,B}+\text{NegLinks}_{A,B}}
+        =
+        \frac{\text{sum}_{A,B}}{\text{count}_{A,B}}
+        \]
+      </div>
     </div>
   </div>
 
@@ -1478,8 +1475,22 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">LEONARD</div>
-      <p>From there we get the sentiment balance as a Ratio.<br>
-      So Ratio is −1 if everything is negative, +1 if everything is positive.</p>
+      <p>
+        Great idea, that way we can have an idea about their sentiment status by weighting in both their positive and negative interactions.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>
+        Exactly! This ratio is −1 if all interactions between A and B are negative during that month,
+        +1 if all interactions are positive.
+      </p>
     </div>
   </div>
 
@@ -1499,7 +1510,9 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON</div>
-      <p>Exactly why we weight by volume.</p>
+      <p>
+        I’m afraid Penny is right, we need to weight this ratio by the volume of the pair’s interactions.
+      </p>
     </div>
   </div>
 
@@ -1507,9 +1520,18 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-avatar">
       <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
     </div>
-    <div class="chat-chat-bubble chat-bubble">
+    <div class="chat-bubble">
       <div class="chat-name">RAJ</div>
-      <p>We define the Friendship Score, so frequent interaction carries more weight.</p>
+      <p>Okay, let’s define a friendship score:</p>
+      <div class="chat-math">
+        \[
+        \text{FriendshipScore}_{A,B}
+        =
+        \text{SentimentBalance}_{A,B}\cdot
+        \log\!\bigl(1+\text{count}_{A,B}\bigr)
+        \]
+      </div>
+      <p>Now frequent interactions carry more weight.</p>
     </div>
   </div>
 
@@ -1519,11 +1541,40 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">LEONARD</div>
-      <p>Now the key: we don’t pick thresholds randomly.</p>
+      <p>We can now use these friendship scores to classify the monthly relationship status of each pair of subreddits: friends, neutral, or enemies.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ</div>
+      <p>Let’s run K-means on friendship scores with 3 clusters, each corresponding to one of the statuses.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>Now we can define the thresholds on friendship scores for ennemy or friendship categorization as the midpoints between cluster centers.</p>
     </div>
   </div>
 
 </div> <!-- end .chat-thread -->
+<div class="narrator-block narrator-block--clean">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p>They run K-means successfully, identifiying the ennemy and friendship thresholds. The plot them on top of the friendship scores distribution:</p>
+  </div>
+</div>
 
 <!-- (show plot) -->
 <figure class="scene-figure scene-figure-wide">
@@ -1536,14 +1587,33 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 <div class="chat-thread">
 
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY</div>
+      <p>So based on where the friendship score falls relative to these thresholds we identify the realtionship status between the pair?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD</div>
+      <p>Exactly, if the score is lower than the ennemy threshold, then the subreddits are ennemies, if its greater than the friendship threshold, then they are friends, and if its in between, they’re neutral.</p>
+    </div>
+  </div>
+
   <div class="chat-msg chat-msg-left chat-raj">
     <div class="chat-avatar">
       <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
     </div>
     <div class="chat-bubble">
       <div class="chat-name">RAJ</div>
-      <p>We pool all monthly Friendship Scores<br>
-      and run K-means with 3 clusters: enemy-like, neutral, friend-like.</p>
+      <p>great, now we need to identify for each target subreddit, which are its common attackers.</p>
     </div>
   </div>
 
@@ -1553,35 +1623,32 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON</div>
-      <p>Then thresholds are the midpoints between cluster centers.<br>
-      Learned once, used everywhere.</p>
+      <p>We can’t.</p>
     </div>
   </div>
 
-  <div class="chat-msg chat-msg-left chat-raj">
+  <div class="chat-msg chat-msg-left chat-leonard">
     <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
-      <p>In our run, we got:<br>
-      Enemy threshold ≈ −0.015<br>
-      Friend threshold ≈ 0.988.</p>
+      <div class="chat-name">LEONARD</div>
+      <p>Why so? We can look at the negative interactions…</p>
     </div>
   </div>
 
-  <div class="chat-msg chat-msg-right chat-penny">
+  <div class="chat-msg chat-msg-right chat-sheldon">
     <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">PENNY</div>
-      <p>So the histogram figure shows the distribution,<br>
-      and the dashed lines show where “enemy” and “friend” start.</p>
+      <div class="chat-name">SHELDON</div>
+      <p>Sheldon. It’s my bed time</p>
     </div>
   </div>
 
 </div> <!-- end .chat-thread -->
+
 <div class="narrator-block">
   <div class="narrator-avatar">
     <img src="{{ '/assets/img/narrator.png' | relative_url }}"
@@ -1589,8 +1656,8 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
-    <p><strong>INT. APARTMENT 4A – LATER.</strong></p>
-    <p>Now they define “co-attack” in a strict way.</p>
+    <p><strong>INT. APARTMENT 4A – The Next Morning</strong></p>
+    <p>The team now aims at identifying all subreddits that actually co-attack a same target.</p>
   </div>
 </div>
 
