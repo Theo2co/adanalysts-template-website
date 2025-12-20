@@ -3523,16 +3523,18 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 # Finale – The Enemy of my Enemy is my Friend Theory, evaluated {#conclusion}
 
+
 <div class="narrator-block">
   <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
   </div>
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
     <p><strong>INT. APARTMENT 4A – NIGHT.</strong></p>
     <p>
-      The whiteboard is a crime scene of arrows, thresholds, and shattered intuition.
-      Leonard stares at the proverb like it personally inconvenienced his GPA.
+      Leonard doesn’t erase the proverb this time. He rewrites it twice.
+      Same pipeline. Same definitions. Two different worlds—depending on what “negative” really means.
     </p>
   </div>
 </div>
@@ -3546,21 +3548,9 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">LEONARD · NETWORK NERD</div>
       <p>
-        So here’s what we can honestly say.
-        With our strict definitions and matched design, the proverb doesn’t hold up as a causal rule.
-      </p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-left chat-raj">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">RAJ · NLP GEEK</div>
-      <p>
-        Right. The baseline story is clear:
-        co-attacking doesn’t produce friendship in the window where it could plausibly be caused.
+        In the original data (<code>df_monthly</code>), the story is blunt:
+        ATT = <strong>−1.13 percentage points</strong>.
+        Strong co-attackers were <em>less</em> likely to form strict friendship than matched controls - and the bootstrap interval stayed entirely below zero.
       </p>
     </div>
   </div>
@@ -3572,8 +3562,24 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
       <p>
-        Translation: “enemy of my enemy” is not automatically “my friend.”
-        Sometimes it’s just… two people yelling at the same person.
+        So my proverb got roasted by statistics.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>
+        Then we tested the “hidden hostility” idea.
+        We relabeled predicted implicit negatives as negatives and reran everything (<code>df_monthly_hidden</code>).
+        Now the bootstrap flips:
+        ATT = <strong>+0.17 pp</strong>,
+        SD ≈ <strong>0.03 pp</strong>,
+        and the 95% CI is <strong>[0.12, 0.23] pp</strong>—fully above zero.
       </p>
     </div>
   </div>
@@ -3585,9 +3591,51 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">SHELDON · THEORIST</div>
       <p>
-        And the robustness checks tell us <em>why</em> we shouldn’t oversell it.
-        Changing the measurement of negativity can change the estimate - 
-        which means the conclusion is highly sensitive to how hostility is encoded.
+        Translation: the causal conclusion is <strong>sensitive</strong> to measurement.
+        If implicit hostility is mistakenly treated as “positive,”
+        we can misclassify adversarial ties as neutral—or even friendly—changing who counts as enemy, who enters conflicts,
+        and what effect we estimate.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>
+        So the proverb got… a redemption arc?
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>
+        Not so fast. Bootstrap says the estimate is stable <em>in our sample</em>.
+        Rosenbaum sensitivity asks the scarier question:
+        “Could a small hidden confounder explain this away?”
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>
+        And under the hidden-hostility relabeling, the positive effect is <strong>fragile</strong>:
+        once Γ goes slightly above 1 (around <strong>Γ &gt; 1.2</strong>),
+        the worst-case p-value jumps to <strong>1.0</strong> and stays there.
+        So that “positive” story does not survive even minimal hidden bias.
       </p>
     </div>
   </div>
@@ -3599,28 +3647,10 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">LEONARD · NETWORK NERD</div>
       <p>
-        The “hidden hostility” variant is the cautionary ending:
-        even when the sign looks better under a relabeling,
-        the sensitivity analysis says it’s not something we can defend as robust.
-      </p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-left chat-raj">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">RAJ · NLP GEEK</div>
-      <p>
-        So our takeaway isn’t “the proverb is always false.”
-        It’s: <strong>in this dataset, under strict definitions, we don’t have defensible evidence
-        that co-attacking causally increases friendship</strong>.
-      </p>
-      <p>
-        And if anything, the safest interpretation is that
-        <strong>shared enemies do not reliably create alliances</strong> - 
-        especially once you demand robustness to hidden bias and measurement noise.
+        So here’s what we can defend:
+        <strong>we do not have robust evidence that co-attacking increases strict friendship.</strong>
+        The sign can flip depending on how we label negativity,
+        and the “positive” version collapses under a tiny amount of unobserved confounding.
       </p>
     </div>
   </div>
@@ -3632,28 +3662,28 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
       <p>
-        So the moral is… friendship needs more than a common enemy.
-        Like trust. Or memes. Or literally anything else.
+        So the final verdict is… the proverb isn’t a law.
+        It’s a vibe that depends on what we count as “hostile.”
       </p>
     </div>
   </div>
 
-  <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON · THEORIST</div>
-      <p>
-        Precisely.
-        The strongest result here is methodological:
-        if your “negativity” measurement is even slightly wrong,
-        your causal narrative can change - so robustness must be part of the conclusion, not an appendix.
-      </p>
-    </div>
-  </div>
+</div><!-- end .chat-thread -->
 
-</div> <!-- end .chat-thread -->
+<div class="narrator-block">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p>
+      In the end, the clean takeaway isn’t a catchy proverb - it’s a methodological one:
+      <strong>the estimated effect is highly sensitive to how negative interactions are defined and measured</strong>.
+      And when robustness is the bar, the data refuses to promise that shared enemies reliably create friends.
+    </p>
+  </div>
+</div>
 
 <div class="narrator-block">
   <div class="narrator-avatar">
