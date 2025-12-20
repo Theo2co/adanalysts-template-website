@@ -1881,7 +1881,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   <img src="{{ '/assets/img/dag_confounders.png' | relative_url }}"
        alt="DAG showing confounders (similarity, activity, aggressiveness, prior hostility) affecting both treatment (co-attack) and outcome (friendship).">
   <figcaption>
-    DAG: why we must control for confounders before estimating the causal effect of co-attacking on friendship.
+    DAG: Why we must control for confounders before estimating the causal effect of co-attacking on friendship.
   </figcaption>
 </figure>
 
@@ -1893,7 +1893,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON</div>
-      <p>gentlemen, I require your attention as I justify my confounders considerations.</p>
+      <p>Gentlemen, I require your attention as I justify my confounders considerations.</p>
     </div>
   </div>
 
@@ -2066,6 +2066,17 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 </div> <!-- end .chat-thread -->
 
+<div class="narrator-block">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p><strong>INT. APARTMENT 4A – NIGHT.</strong><br>
+    Raj puts up a curvy line. Penny stares like it’s a bad rollercoaster design.</p>
+  </div>
+</div>
 
 <!-- (show figure) -->
 <figure class="scene-figure scene-figure-wide">
@@ -2075,6 +2086,124 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     ROC curve for propensity score model (AUC = 0.820).
   </figcaption>
 </figure>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>Why is this line trying to escape the graph?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>
+        It’s the ROC curve. It checks if our propensity model can separate
+        treated pairs (co-attacking) from control pairs using the confounders.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>
+        Think of it like a bouncer: we give each pair a “treated-likelihood score”
+        (propensity score), and the ROC curve shows how good the bouncer is at deciding.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>If the bouncer is guessing randomly, AUC = 0.5 — coin flip.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>Our AUC is 0.820.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>So… good bouncer?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>
+        Pretty good. It means if we randomly pick one treated and one control pair,
+        there’s about an 82% chance the treated pair gets the higher score.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>And that’s the point: treatment isn’t random. It’s linked to pre-conflict traits.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>
+        So we need propensity-score matching to compare “look-alikes”
+        and avoid confusing baseline differences with treatment effects.
+      </p>
+    </div>
+  </div>
+
+</div> <!-- end .chat-thread -->
+
+<div class="narrator-block narrator-block--clean">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p>Penny nods like she totally knew what AUC meant all along.</p>
+  </div>
+</div>
+
 <div class="narrator-block">
   <div class="narrator-avatar">
     <img src="{{ '/assets/img/narrator.png' | relative_url }}"
