@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.1.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"mark": {"type": "rect", "stroke": "black", "strokeWidth": 1}, "encoding": {"color": {"field": "Value", "legend": null, "scale": {"domain": [0, 1], "range": ["#ffd29f", "#faab57", "#fd7931"]}, "type": "quantitative"}, "tooltip": [{"field": "treated", "title": "Treatment", "type": "nominal"}, {"field": "Outcome", "title": "Outcome", "type": "nominal"}, {"field": "Value", "format": ".3f", "title": "Proportion", "type": "quantitative"}], "x": {"field": "Outcome", "title": "Outcome", "type": "nominal"}, "y": {"field": "treated", "title": null, "type": "nominal"}}, "title": "Treatment vs Outcome (Row-wise proportions)"}, {"mark": {"type": "text", "color": "black", "fontSize": 12}, "encoding": {"text": {"field": "Value", "format": ".3f", "type": "quantitative"}, "x": {"field": "Outcome", "type": "nominal"}, "y": {"field": "treated", "type": "nominal"}}}], "data": {"name": "data-8ba8aa7fdb1a10d9f5a0caffab137a36"}, "height": 220, "width": 420, "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json", "datasets": {"data-8ba8aa7fdb1a10d9f5a0caffab137a36": [{"treated": "Control", "Outcome": "No friendship (Y=0)", "Value": 0.982442630525181}, {"treated": "Treated", "Outcome": "No friendship (Y=0)", "Value": 0.9937092016254191}, {"treated": "Control", "Outcome": "Friendship (Y=1)", "Value": 0.017557369474819035}, {"treated": "Treated", "Outcome": "Friendship (Y=1)", "Value": 0.00629079837458091}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
