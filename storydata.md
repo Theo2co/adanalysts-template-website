@@ -1454,6 +1454,20 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 <div class="chat-thread">
 
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>
+        Now, to study our problematic — <em>“Is the enemy of my enemy my friend?”</em> —
+        we first need to know who’s enemies with whom… and who’s friends with whom.
+        So let’s zoom in on the <strong>monthly interaction dynamics</strong> between any pair of subreddits.
+      </p>
+    </div>
+  </div>
+
   <div class="chat-msg chat-msg-right chat-sheldon">
     <div class="chat-avatar">
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
@@ -1611,7 +1625,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>So based on where the friendship score falls relative to these thresholds we identify the realtionship status between the pair?</p>
+      <p>So based on where the friendship score falls relative to these thresholds we identify the relationship status between the pair?</p>
     </div>
   </div>
 
@@ -1708,10 +1722,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">SHELDON · THEORIST</div>
       <p>
-        See Penny it’s simple, we want to study whether the enemy of my enemy is my friend.
-        If we consider 2 subreddits A and B who both attacked a same target C but 2 years apart,
-        then they could bias our conclusion because they most probably didn’t even notice themselves as common attackers of C.
-        These pairs thus have a very low chance that if they became friends, it was because of their attacks on C.
+        See Penny it’s simple, we want to study whether the enemy of my enemy is my friend. Now imagine two subreddits, A and B, that both attacked the same target subreddit C, but two years apart. If A and B later become friends, counting this as evidence would be misleading. Because their attacks happened so far apart in time, they likely didn’t even realize they had a common enemy. So if they do become friends later on, it’s very unlikely that this happened because of their attacks on C.
       </p>
     </div>
   </div>
@@ -1772,7 +1783,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="narrator-label">Narrator · Data Redditor</div>
     <p>
       They manage to save the conflict start, end, as well as the friendship start month for all strong co-attackers of a same target C.
-      They even draw visualize a sample of them:
+      They even visualize a sample of them:
     </p>
   </div>
 </div>
