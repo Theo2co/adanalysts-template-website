@@ -2497,13 +2497,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 </div> <!-- end .chat-thread -->
 
-<!-- Image: Heatmap — row-wise proportions -->
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/heatmap_rowwise_proportions.png' | relative_url }}"
-       alt="Heatmap showing row-wise proportions (friendship rates) for treated vs control after matching.">
-  <figcaption>Heatmap — row-wise proportions (friendship rates).</figcaption>
-</figure>
-
 <div class="chat-thread">
 
   <div class="chat-msg chat-msg-left chat-leonard">
@@ -2638,7 +2631,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 
 </div> <!-- end .chat-thread -->
-# Scene — Sensitivity Analysis
 
 <div class="narrator-block">
   <div class="narrator-avatar">
@@ -2966,10 +2958,19 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
-    <p><strong>INT. APARTMENT 4A – ON THE TABLE.</strong> Raj scrolls down the Γ grid.</p>
+    <p><strong>INT. APARTMENT 4A – ON THE TABLE.</strong></p> 
+    <p>Raj scrolls down the Γ grid.</p>
   </div>
 </div>
 
+</div> <!-- end .chat-thread -->
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/rosenbaum_sensitivity_curve.png' | relative_url }}"
+       alt="Sensitivity curve plot showing p_upper(Gamma) flat at 1.0 with a horizontal alpha=0.05 line below.">
+  <figcaption>
+    Sensitivity curve: p_upper(Γ) is flat at 1.0 (alpha = 0.05 line is far below).
+  </figcaption>
+</figure>
 <div class="chat-thread">
 
   <div class="chat-msg chat-msg-left chat-raj">
@@ -3004,22 +3005,14 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
   </div>
 
-</div> <!-- end .chat-thread -->
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/rosenbaum_sensitivity_curve.png' | relative_url }}"
-       alt="Sensitivity curve plot showing p_upper(Gamma) flat at 1.0 with a horizontal alpha=0.05 line below.">
-  <figcaption>
-    Sensitivity curve: p_upper(Γ) is flat at 1.0 (alpha = 0.05 line is far below).
-  </figcaption>
-</figure>
-
 <div class="narrator-block narrator-block--clean">
   <div class="narrator-avatar">
     <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
   </div>
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
-    <p><strong>INT. APARTMENT 4A – ON THE PLOT.</strong> An orange line sits stubbornly at the top.</p>
+    <p><strong>INT. APARTMENT 4A – ON THE PLOT.</strong>/</p>
+    <p>An orange line sits stubbornly at the top.</p>
   </div>
 </div>
 
