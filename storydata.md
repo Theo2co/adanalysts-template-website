@@ -2318,78 +2318,24 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
-      <p>This histogram shows the matching distance.<br>
-      Most values are very close to zero → matches are high quality.</p>
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>
+        We do 1:1 nearest-neighbor matching: for each treated pair,
+        pick the closest control by propensity score.
+      </p>
     </div>
   </div>
-
-</div> <!-- end .chat-thread -->
-
-<!-- (show plot) -->
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/matched_pairs_pscore_scatter.png' | relative_url }}"
-       alt="Scatter plot of propensity scores for each matched pair showing treated and control dots close together.">
-  <figcaption>
-    Propensity scores within matched pairs (treated vs control).
-  </figcaption>
-</figure>
-
-<div class="chat-thread">
-
-  <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
-      <p>This scatter plot shows the treated and control propensity scores inside each matched pair.<br>
-      The two dots sit close vertically → treated and control in each pair had nearly the same treatment probability.</p>
-    </div>
-  </div>
-
-</div> <!-- end .chat-thread -->
-
-<!-- (show 5 plots same as before but after matching) -->
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/boxplot_activity_after_matching.png' | relative_url }}"
-       alt="Boxplot of activity: treated vs control (after matching).">
-  <figcaption>Activity — Treated vs Control (After Matching)</figcaption>
-</figure>
-
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/boxplot_aggressiveness_after_matching.png' | relative_url }}"
-       alt="Boxplot of aggressiveness: treated vs control (after matching).">
-  <figcaption>Aggressiveness — Treated vs Control (After Matching)</figcaption>
-</figure>
-
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/boxplot_similarity_after_matching.png' | relative_url }}"
-       alt="Boxplot of similarity: treated vs control (after matching).">
-  <figcaption>Similarity — Treated vs Control (After Matching)</figcaption>
-</figure>
-
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/boxplot_hostility_pre_after_matching.png' | relative_url }}"
-       alt="Boxplot of hostility_pre: treated vs control (after matching).">
-  <figcaption>Hostility_pre — Treated vs Control (After Matching)</figcaption>
-</figure>
-
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/pscore_density_after_matching.png' | relative_url }}"
-       alt="Propensity score density: treated vs control (after matching) showing strong overlap.">
-  <figcaption>Propensity Score Distributions — Treated vs Control (After Matching)</figcaption>
-</figure>
-
-<div class="chat-thread">
 
   <div class="chat-msg chat-msg-left chat-leonard">
     <div class="chat-avatar">
       <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
-      <p>Now we check balance directly using boxplots, after matching.</p>
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>
+        This distance histogram shows |pscore_T − pscore_C|.
+        Most distances are near zero → good-quality matches.
+      </p>
     </div>
   </div>
 
@@ -2398,23 +2344,61 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">PENNY</div>
-      <p>So these boxplots are basically “proof” the confounders got balanced.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
-      <p>This density plot shows treated vs control propensity score distributions after matching.<br>
-      The overlap is strong → common support + matching worked.</p>
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>So we found look-alikes… not random roommates. Nice.</p>
     </div>
   </div>
 
 </div> <!-- end .chat-thread -->
+
+<!-- (show 5 plots same as before but after matching) -->
+<div class="narrator-block">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p><strong>INT. APARTMENT 4A – NIGHT.</strong><br>
+    After the matching chaos, the team does the one check that matters:
+    Did treated and control finally become comparable?</p>
+  </div>
+</div>
+
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/pscore_density_after_matching.png' | relative_url }}"
+       alt="Propensity score density: treated vs control (after matching) showing strong overlap.">
+  <figcaption>Propensity Score Distributions — Treated vs Control (After Matching)</figcaption>
+</figure>
+
+<div class="narrator-block narrator-block--clean">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p>
+      We look at the propensity score density AFTER matching.
+      If matching worked, the treated and control curves should overlap strongly—
+      because we deliberately paired each treated unit with a control unit that had a similar probability of treatment.
+    </p>
+  </div>
+</div>
+
+<div class="narrator-block narrator-block--clean">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p>
+      And that’s exactly what we see here:
+      the two distributions now sit on top of each other much more closely than before.
+    </p>
+  </div>
+</div>
 
 <div class="narrator-block">
   <div class="narrator-avatar">
@@ -2423,8 +2407,8 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
-    <p><strong>INT. APARTMENT 4A – RESULTS SLIDE.</strong></p>
-    <p>They summarize outcomes after matching.</p>
+    <p><strong>INT. APARTMENT 4A – RESULTS SLIDE.</strong><br>
+    Matching is done. Now they finally compare outcomes.</p>
   </div>
 </div>
 
@@ -2435,8 +2419,8 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
-      <p>Now we define the outcome the same way for both groups:</p>
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>We define the outcome the same way for both groups.</p>
     </div>
   </div>
 
@@ -2445,17 +2429,26 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
+      <div class="chat-name">RAJ · NLP GEEK</div>
       <p>
-        Y = 1 if a new strict friendship starts inside
-        [conflict_start, conflict_end + 1].
+        Y = 1 if a NEW strict friendship starts inside<br>
+        [conflict_start, conflict_end + 1 month].<br>
         Otherwise Y = 0.
       </p>
     </div>
   </div>
 
-</div> <!-- end .chat-thread -->
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>So… Y is just “friends in time: yes or no.”</p>
+    </div>
+  </div>
 
+</div> <!-- end .chat-thread -->
 <!-- (show plot) -->
 <figure class="scene-figure scene-figure-wide">
   <img src="{{ '/assets/img/outcome_counts_heatmap.png' | relative_url }}"
@@ -2472,13 +2465,12 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
+      <div class="chat-name">RAJ · NLP GEEK</div>
       <p>This heatmap shows the raw counts of Y=0 and Y=1 for treated vs control after matching.</p>
     </div>
   </div>
 
 </div> <!-- end .chat-thread -->
-
 <!-- (show plot) -->
 <figure class="scene-figure scene-figure-wide">
   <img src="{{ '/assets/img/outcome_proportions_heatmap.png' | relative_url }}"
@@ -2495,18 +2487,32 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
-      <p>Same matrix, but as row-wise proportions (friendship rates). Here, controls have about 1.8% friendship, treated about 0.6% — which suggests treated pairs are less likely to become friends in this window (after matching).</p>
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>
+        Same matrix, but as percentages (friendship rates).
+        Controls are about 1.8%, treated about 0.6%—so treated pairs are less likely to become friends in this window.
+      </p>
     </div>
   </div>
+
+</div> <!-- end .chat-thread -->
+
+<!-- Image: Heatmap — row-wise proportions -->
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/heatmap_rowwise_proportions.png' | relative_url }}"
+       alt="Heatmap showing row-wise proportions (friendship rates) for treated vs control after matching.">
+  <figcaption>Heatmap — row-wise proportions (friendship rates).</figcaption>
+</figure>
+
+<div class="chat-thread">
 
   <div class="chat-msg chat-msg-left chat-leonard">
     <div class="chat-avatar">
       <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
-      <p>Now that we’ve matched treated and control pairs, we can finally estimate the causal effect: the ATT (Average Treatment Effect on the Treated).</p>
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>Now we summarize that difference with ATT: Average Treatment Effect on the Treated.</p>
     </div>
   </div>
 
@@ -2515,8 +2521,8 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">PENNY</div>
-      <p>What does ATT mean here, in plain words?</p>
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>In normal words?</p>
     </div>
   </div>
 
@@ -2525,8 +2531,11 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">SHELDON</div>
-      <p>It’s the average difference in outcomes inside each matched pair, it’s a difference in friendship probabilities, in percentage points.</p>
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>
+        ATT is the average (Y_treated − Y_control) across matched pairs.
+        Since Y is 0/1, it’s a difference in friendship probability, in percentage points.
+      </p>
     </div>
   </div>
 
@@ -2535,8 +2544,8 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
-      <p>We have 84,409 matched pairs, and the estimated ATT is −1.13 percentage points.</p>
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>We have 84,409 matched pairs, and ATT is −1.13 percentage points.</p>
     </div>
   </div>
 
@@ -2545,12 +2554,13 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
-      <p>So among strong co-attackers, friendship is actually 1.13 pp less likely than similar non-co-attacking pairs.</p>
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>So strong co-attackers are about 1.13 points LESS likely to become strict friends than similar controls.</p>
     </div>
   </div>
 
 </div> <!-- end .chat-thread -->
+
 <div class="narrator-block">
   <div class="narrator-avatar">
     <img src="{{ '/assets/img/narrator.png' | relative_url }}"
