@@ -3297,16 +3297,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </figcaption>
 </figure>
 
-<div class="narrator-block narrator-block--clean">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
-  </div>
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
-    <p>Raj scrolls. The mood changes instantly.</p>
-  </div>
-</div>
 
 <div class="chat-thread">
 
@@ -3378,13 +3368,15 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 <div class="narrator-block">
   <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
   </div>
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
     <p><strong>INT. APARTMENT 4A – NIGHT.</strong></p>
-    <p>Leonard erases the proverb from the board.</p>
+    <p>
+      The whiteboard is a crime scene of arrows, thresholds, and shattered intuition.
+      Leonard stares at the proverb like it personally inconvenienced his GPA.
+    </p>
   </div>
 </div>
 
@@ -3396,9 +3388,10 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">LEONARD · NETWORK NERD</div>
-      <p>So our updated conclusion is clear:<br>
-      under our strict friendship definition and matched design,<br>
-      the data does NOT support “enemy of my enemy is my friend.”</p>
+      <p>
+        So here’s what we can honestly say.
+        With our strict definitions and matched design, the proverb doesn’t hold up as a causal rule.
+      </p>
     </div>
   </div>
 
@@ -3408,8 +3401,23 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">RAJ · NLP GEEK</div>
-      <p>If anything, the matched comparisons suggest the opposite:<br>
-      treated pairs are less likely to become strict friends than controls.</p>
+      <p>
+        Right. The baseline story is clear:
+        co-attacking doesn’t produce friendship in the window where it could plausibly be caused.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>
+        Translation: “enemy of my enemy” is not automatically “my friend.”
+        Sometimes it’s just… two people yelling at the same person.
+      </p>
     </div>
   </div>
 
@@ -3419,21 +3427,89 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON · THEORIST</div>
-      <p>And the sensitivity analysis doesn’t show “robustness of a positive effect.”<br>
-      It shows there is no positive effect to defend - even at Γ = 1.</p>
+      <p>
+        And the robustness checks tell us <em>why</em> we shouldn’t oversell it.
+        Changing the measurement of negativity can change the estimate—
+        which means the conclusion is highly sensitive to how hostility is encoded.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>
+        The “hidden hostility” variant is the cautionary ending:
+        even when the sign looks better under a relabeling,
+        the sensitivity analysis says it’s not something we can defend as robust.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>
+        So our takeaway isn’t “the proverb is always false.”
+        It’s: <strong>in this dataset, under strict definitions, we don’t have defensible evidence
+        that co-attacking causally increases friendship</strong>.
+      </p>
+      <p>
+        And if anything, the safest interpretation is that
+        <strong>shared enemies do not reliably create alliances</strong>—
+        especially once you demand robustness to hidden bias and measurement noise.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>
+        So the moral is… friendship needs more than a common enemy.
+        Like trust. Or memes. Or literally anything else.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>
+        Precisely.
+        The strongest result here is methodological:
+        if your “negativity” measurement is even slightly wrong,
+        your causal narrative can change—so robustness must be part of the conclusion, not an appendix.
+      </p>
     </div>
   </div>
 
 </div> <!-- end .chat-thread -->
 
-<div class="narrator-block narrator-block--clean">
+<div class="narrator-block">
   <div class="narrator-avatar">
     <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
   </div>
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
-    <p>Sometimes, the strongest robustness check is the simplest one:<br>
-    the direction of the data itself.</p>
+    <p><strong>INT. APARTMENT 4A – LAST SHOT.</strong></p>
+    <p>
+      Leonard doesn’t erase the proverb this time.
+      He underlines it… then writes one word next to it:
+      <strong>“Maybe.”</strong>
+    </p>
   </div>
 </div>
 
