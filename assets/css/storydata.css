@@ -130,6 +130,13 @@ body {
   color: var(--black);
 }
 
+/* Lien actif (scroll) = même style que hover */
+.hero-nav-links a.is-active {
+  background: var(--orange);
+  color: var(--black);
+}
+
+
 /* ---------- TITRE STYLE BIG BANG THEORY ---------- */
 
 .hero-content {
