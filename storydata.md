@@ -1156,6 +1156,96 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   ></iframe>
 </div>
 
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>
+        At last. We are entering the core theoretical question.
+        But before that, it might still be worth looking at how the flagged hidden hostilities are distributed across communities.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>That sounds complicated.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>Not really. And it’s actually very satisfying to visualize.</p>
+      <p>Because — obviously — I already made the plot.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>Of course you did.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>Okay… now that I want to see.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>
+        Same embedding layout as before — so positions are comparable across months.
+        Red nodes are subreddits that emitted at least one hidden-hostility link during that month.
+      </p>
+      <p>
+        The larger the node, the more hidden hostility it emitted.
+        Grey nodes are still active in the network — just not flagged as emitters.
+      </p>
+    </div>
+  </div>
+
+</div>
+<!-- end chat -->
+
+<!-- ========================= -->
+<!-- Hidden Hostility Emitters Map -->
+<!-- ========================= -->
+<div class="viz-embed">
+  <iframe
+    src="{{ '/assets/interactive/hidden_hostility_emitters_map.html' | relative_url }}"
+    width="100%"
+    height="800"
+    style="border:0; border-radius: 14px;"
+    loading="lazy"
+  ></iframe>
+</div>
+
+
 <div class="narrator-block narrator-block--clean">
   <div class="narrator-avatar">
     <img src="{{ '/assets/img/narrator.png' | relative_url }}"
