@@ -1925,7 +1925,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       a pseudo conflict start is sampled from the treated distribution of strong co-attack start times,
       and a pseudo conflict duration is sampled from the treated conflict-duration distribution.
       The pseudo conflict end is then set to:
-      <span class="math-inline">\(\text{pseudo\_end}=\text{pseudo\_start}+\text{duration}\)</span>.
+      <span class="math-inline">\(\text{pseudo_end}=\text{pseudo_start}+\text{duration}\)</span>.
       Controls are also required to have <strong>no friendship links before</strong> their pseudo event.
     </p>
 
