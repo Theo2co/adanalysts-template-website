@@ -1723,7 +1723,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">SHELDON</div>
       <p>
-        let’s first identify for each target C, the pairs of co-attackers satisfying of above conditions.
+        Let’s first identify for each target C, the pairs of co-attackers satisfying of above conditions.
         We can then record the start month of their common conflict with C as the first month they co-attacked C while being ennemies with C,
         and the end month of their common conflict as the last month satisfying both conditions.
         We can also calculate their ‘conflict duration’ as the time between the end and start of the common conflict.
@@ -1753,7 +1753,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
     <p>
-      they manage to save the conflict start, end, as well as the friendship start month for all strong co-attackers of a same target C.
+      They manage to save the conflict start, end, as well as the friendship start month for all strong co-attackers of a same target C.
       They even draw visualize a sample of them:
     </p>
   </div>
@@ -1887,37 +1887,13 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 <div class="chat-thread">
 
-  <div class="chat-msg chat-msg-left chat-leonard">
+  <div class="chat-msg chat-msg-right chat-sheldon">
     <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
-      <p>Now look at the DAG figure. It shows why we must control for confounders: similarity, activity, aggressiveness, and prior hostility can affect both co-attacking and friendship.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-penny">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">PENNY</div>
-      <p>Meaning: even without co-attacking, similar or highly active subs might become friends anyway.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-left chat-raj">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
-      <p>Exactly — that’s why we compute these confounders before matching:<br>
-      • Activity (how much A and B post/link overall before the event)<br>
-      • Aggressiveness (how negative each subreddit tends to be)<br>
-      • Topical similarity (cosine similarity of embeddings)<br>
-      • Pre-conflict hostility between A and B (negative links exchanged before event time)</p>
+      <div class="chat-name">SHELDON</div>
+      <p>gentlemen, I require your attention as I justify my confounders considerations.</p>
     </div>
   </div>
 
@@ -1927,37 +1903,11 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON</div>
-      <p>So now we have treated + control pairs with the same structure, an outcome, and confounders</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-left chat-leonard">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
-      <p>Now we need a fair comparison. So we estimate propensity scores: “How likely is a pair (A,B) to be treated, based only on pre-conflict confounders?”</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-penny">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">PENNY</div>
-      <p>What do we feed into that model?</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-left chat-raj">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
-      <p>We merge treated and control pairs, and keep only the confounders: activity, aggressiveness, similarity, hostility_pre.</p>
+      <p>
+        <strong>Similarity → CoAttack.</strong>
+        Subreddits with similar topics or ideologies are more likely to target the same communities,
+        which increases the probability of co-attacks.
+      </p>
     </div>
   </div>
 
@@ -1967,56 +1917,11 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON</div>
-      <p>Before modeling, we standardize each confounder (mean 0, std 1). This prevents one variable from dominating just because it has bigger numbers.</p>
-    </div>
-  </div>
-
-</div> <!-- end .chat-thread -->
-<div class="narrator-block">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
-  </div>
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
-    <p><strong>INT. APARTMENT 4A – SCREEN VIEW.</strong></p>
-    <p>They estimate “chance of being treated” from confounders.</p>
-  </div>
-</div>
-
-<div class="chat-thread">
-
-  <div class="chat-msg chat-msg-left chat-raj">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
-      <p>Then we fit a logistic regression that outputs a probability</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-left chat-leonard">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
-      <p>That probability is the propensity score, stored as <code>pscore</code> for every pair.</p>
-    </div>
-  </div>
-
-</div> <!-- end .chat-thread -->
-
-<div class="chat-thread">
-
-  <div class="chat-msg chat-msg-right chat-penny">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">PENNY</div>
-      <p>What does this coefficient bar plot tell us?</p>
+      <p>
+        <strong>Aggressiveness → CoAttack.</strong>
+        More aggressive subreddits are intrinsically more likely to engage in hostile interactions,
+        including coordinated attacks on shared targets.
+      </p>
     </div>
   </div>
 
@@ -2026,54 +1931,141 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON</div>
-      <p>Since inputs are standardized, each bar shows how a one–standard-deviation increase changes the log-odds of being treated.</p>
+      <p>
+        <strong>Activity → CoAttack.</strong>
+        Highly active subreddits generate more links overall, so they are mechanically more likely
+        to appear in co-attack events.
+      </p>
     </div>
   </div>
 
-  <div class="chat-msg chat-msg-left chat-raj">
+  <div class="chat-msg chat-msg-right chat-sheldon">
     <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
-      <p>Here, aggressiveness and activity push treatment probability up, while hostility_pre and similarity push it down. Important: these are not causal effects—just how treatment is assigned in the data.</p>
+      <div class="chat-name">SHELDON</div>
+      <p>
+        <strong>Similarity → Friendship.</strong>
+        Similar subreddits are more likely to exchange positive links even without any shared conflict,
+        simply because they overlap in interests and users.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>
+        <strong>Aggressiveness → Friendship.</strong>
+        Highly aggressive communities are less likely to form stable positive ties,
+        regardless of whether they co-attack someone.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>
+        <strong>Activity → Friendship.</strong>
+        More active subreddits have more chances to form positive interactions,
+        simply because they interact more in general.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>
+        <strong>Hostility → Friendship.</strong>
+        Prior hostility between two subreddits reduces the likelihood that they will later become friends.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>Now, for how we compute them—pay attention, this is where people start making mistakes.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>
+        <strong>Activity of a subreddit X</strong> is the total outgoing links across all months
+        before the conflict start.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>
+        <strong>Aggressiveness of a subreddit X</strong> (over all months \(m\) before conflict start) is:
+      </p>
+      <div class="chat-math">
+        \[
+          \text{aggr}(X) = \frac{\sum_m \text{out\_neg}(X,m)}{\text{total\_out}(X)}
+        \]
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>
+        <strong>Topical Similarity</strong> between A and B comes from their embeddings \(e_A\) and \(e_B\):
+      </p>
+      <div class="chat-math">
+        \[
+          \text{similarity}(A,B) = \cos(e_A, e_B)
+        \]
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON</div>
+      <p>
+        And <strong>Pre-Conflict Hostility</strong> is the number of negative links exchanged between A and B
+        <em>before the event time</em>.
+      </p>
     </div>
   </div>
 
 </div> <!-- end .chat-thread -->
 
-<!-- (show figure) -->
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/propensity_logreg_coefficients.png' | relative_url }}"
-       alt="Coefficient bar plot from standardized logistic regression used for propensity scoring (activity, aggressiveness, similarity, hostility_pre).">
-  <figcaption>
-    Logistic regression coefficients (standardized inputs): which confounders predict treatment assignment.
-  </figcaption>
-</figure>
-
-<div class="chat-thread">
-
-  <div class="chat-msg chat-msg-left chat-leonard">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">LEONARD</div>
-      <p>The ROC curve checks if the model can separate treated vs control.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-left chat-raj">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">RAJ</div>
-      <p>We get AUC = 0.820, which means treatment is strongly related to pre-conflict characteristics—so confounding is real, and matching is justified.</p>
-    </div>
-  </div>
-
-</div> <!-- end .chat-thread -->
 
 <!-- (show figure) -->
 <figure class="scene-figure scene-figure-wide">
