@@ -3264,35 +3264,13 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <p>The proverb just got its redemption arc.</p>
     </div>
   </div>
-
-</div>
-
-<div class="narrator-block">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
-  </div>
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
-    <p><strong>INT. APARTMENT 4A – QUIET MOMENT.</strong><br>
-      Sheldon draws two stick figures labeled “Looks positive” and “Actually negative.”
-    </p>
-  </div>
-</div>
-
-<div class="chat-thread">
-
-  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-msg chat-msg-right chat-sheldon">
     <div class="chat-avatar">
       <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON · THEORIST</div>
-      <p>
-        If we mistakenly treat implicit hostility as positive interaction,
-        we can misclassify adversarial relationships as neutral or friendly.
-        That changes who counts as “enemy,” who enters conflict windows,
-        and ultimately changes the estimated effect.
-      </p>
+      <p>Premature celebration. We have not asked the most important question: does it survive hidden bias?</p>
     </div>
   </div>
 
@@ -3302,39 +3280,43 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">RAJ · NLP GEEK</div>
-      <p>So the main lesson is: the causal conclusion is sensitive to how we define “negative.”</p>
+      <p>That’s why we run Rosenbaum sensitivity analysis again.</p>
     </div>
   </div>
 
-</div>
+</div> <!-- end .chat-thread -->
 
-<h2 id="responsible-ending">Scene  -  The responsible ending (caution)</h2>
+<!-- ========================= -->
+<!-- Sensitivity figure -->
+<!-- ========================= -->
+<figure class="scene-figure scene-figure-wide">
+  <img src="{{ '/assets/img/sensitivity_hidden.png' | relative_url }}"
+       alt="Sensitivity curve / Rosenbaum bounds table for df_monthly_hidden (Gamma vs worst-case p-value).">
+  <figcaption>
+    Rosenbaum sensitivity analysis for <code>df_monthly_hidden</code>: worst-case p-values as hidden bias Γ increases.
+  </figcaption>
+</figure>
+
+<div class="narrator-block narrator-block--clean">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p>Raj scrolls. The mood changes instantly.</p>
+  </div>
+</div>
 
 <div class="chat-thread">
 
-  <div class="chat-msg chat-msg-left chat-leonard">
+  <div class="chat-msg chat-msg-left chat-raj">
     <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
     </div>
     <div class="chat-bubble">
-      <div class="chat-name">LEONARD · NETWORK NERD</div>
-      <p>
-        But we should be careful:
-        those “implicit negatives” are predicted by our model, not verified ground truth.
-      </p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON · THEORIST</div>
-      <p>
-        Exactly. We didn’t magically discover truth.
-        We tested: “If hidden hostility exists and we correct for it, what changes?”
-      </p>
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>Here’s the result: once we allow even a small amount of hidden bias, the worst-case p-value jumps to 1.0 and stays there.</p>
     </div>
   </div>
 
@@ -3344,7 +3326,37 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>So what can we say for sure?</p>
+      <p>Meaning… it collapses?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>Yes. The effect is not robust. It disappears as soon as Γ goes slightly above 1—around Γ &gt; 1.2.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>So even though bootstrap says “small positive effect,” sensitivity says “a tiny unobserved factor could explain it away.”</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>So it’s like… the effect exists only in a perfect world.</p>
     </div>
   </div>
 
@@ -3354,14 +3366,12 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">RAJ · NLP GEEK</div>
-      <p>
-        For sure: our results depend strongly on measurement of negativity.
-        Mislabeling or missing negative interactions can change both the direction and size of the effect.
-      </p>
+      <p>Exactly. Bootstrap answers: “Is the estimate stable in our sample?” Sensitivity answers: “Could hidden confounding overturn it?”</p>
+      <p>And here, the answer is: yes, very easily.</p>
     </div>
   </div>
 
-</div>
+</div> <!-- end .chat-thread -->
 
 
 # Finale – The Enemy of my Enemy is my Friend Theory, evaluated {#conclusion}
