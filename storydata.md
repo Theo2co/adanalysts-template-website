@@ -2085,34 +2085,114 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
   </div>
 
-  <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON · THEORIST</div>
-      <p>
-        <strong>Activity of a subreddit X</strong> is the total outgoing links across all months
-        before the conflict start.
-      </p>
-    </div>
+  
+</div> <!-- end .chat-thread -->
+<div class="narrator-block narrator-block--clean">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
   </div>
 
-  <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON · THEORIST</div>
-      <p>
-        <strong>Aggressiveness of a subreddit X</strong> (over all months \(m\) before conflict start) is:
-      </p>
-      <div class="chat-math">
-        \[
-          \text{aggr}(X) = \frac{\sum_m \text{out_neg}(X,m)}{\text{total_out}(X)}
-        \]
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+
+    <p class="narrator-lead">
+      Before matching, the team needs concrete <strong>confounders</strong> — numbers that describe each pair
+      <em>before</em> the conflict starts.
+      So they compute four ingredients for every pair \((A,B)\).
+    </p>
+
+    <div class="narrator-grid">
+      <div class="narrator-card">
+        <div class="narrator-card-title">Activity</div>
+        <p class="narrator-card-text">
+          The <strong>activity</strong> of a subreddit \(X\) is its total outgoing links summed across all months
+          <strong>before the conflict start</strong>.
+        </p>
+      </div>
+
+      <div class="narrator-card">
+        <div class="narrator-card-title">Aggressiveness</div>
+        <p class="narrator-card-text">
+          The <strong>aggressiveness</strong> of a subreddit \(X\) is the fraction of its outgoing links that are negative
+          over all months \(m\) before conflict start:
+        </p>
+        <div class="narrator-math">
+          \[
+            \text{aggr}(X) = \frac{\sum_m \text{out\_neg}(X,m)}{\text{total\_out}(X)}
+          \]
+        </div>
+      </div>
+
+      <div class="narrator-card">
+        <div class="narrator-card-title">Topical similarity</div>
+        <p class="narrator-card-text">
+          <strong>Topical similarity</strong> between \(A\) and \(B\) is computed from their embeddings \(e_A\) and \(e_B\):
+        </p>
+        <div class="narrator-math">
+          \[
+            \text{similarity}(A,B) = \cos(e_A, e_B)
+          \]
+        </div>
+      </div>
+
+      <div class="narrator-card">
+        <div class="narrator-card-title">Pre-conflict hostility</div>
+        <p class="narrator-card-text">
+          <strong>Pre-conflict hostility</strong> is the number of negative links exchanged between \(A\) and \(B\)
+          <em>before the event time</em>.
+        </p>
       </div>
     </div>
+
+  </div>
+</div>
+
+<!-- ========================= -->
+<!-- Scene: Propensity scores -->
+<!-- ========================= -->
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>So now we have treated + control pairs with the same structure, an outcome, and confounders.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>Now we need a fair comparison. So we estimate propensity scores:</p>
+      <p><em>“How likely is a pair (A,B) to be treated, based only on pre-conflict confounders?”</em></p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>What do we feed into that model?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>We merge treated and control pairs, and keep only the confounders: activity, aggressiveness, similarity, hostility_pre.</p>
+    </div>
   </div>
 
   <div class="chat-msg chat-msg-right chat-sheldon">
@@ -2121,31 +2201,28 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON · THEORIST</div>
-      <p>
-        <strong>Topical Similarity</strong> between A and B comes from their embeddings \(e_A\) and \(e_B\):
-      </p>
-      <div class="chat-math">
-        \[
-          \text{similarity}(A,B) = \cos(e_A, e_B)
-        \]
-      </div>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON · THEORIST</div>
-      <p>
-        And <strong>Pre-Conflict Hostility</strong> is the number of negative links exchanged between A and B
-        <em>before the event time</em>.
-      </p>
+      <p>Before modeling, we standardize each confounder (mean 0, std 1). This prevents one variable from dominating just because it has bigger numbers.</p>
     </div>
   </div>
 
 </div> <!-- end .chat-thread -->
+
+<!-- ========================= -->
+<!-- Narrator transition -->
+<!-- ========================= -->
+<div class="narrator-block narrator-block--clean">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p>
+      After computing a propensity score for every pair, they plot the <strong>ROC curve.</strong>
+    </p>
+  </div>
+</div>
+
 
 <div class="narrator-block">
   <div class="narrator-avatar">
