@@ -3003,7 +3003,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       It’s because the one-sided test in the direction “treated &gt; control” is already completely non-significant at Γ = 1.</p>
     </div>
   </div>
-
+</div> <!-- end .chat-thread -->
 <div class="narrator-block narrator-block--clean">
   <div class="narrator-avatar">
     <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
