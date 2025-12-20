@@ -3326,7 +3326,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON · THEORIST</div>
-      <p>Yes. The effect is not robust. It disappears as soon as Γ goes slightly above 1—around Γ &gt; 1.2.</p>
+      <p>Yes. The effect is not robust. It disappears as soon as Γ goes slightly above 1 - around Γ &gt; 1.2.</p>
     </div>
   </div>
 
@@ -3429,7 +3429,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <div class="chat-name">SHELDON · THEORIST</div>
       <p>
         And the robustness checks tell us <em>why</em> we shouldn’t oversell it.
-        Changing the measurement of negativity can change the estimate—
+        Changing the measurement of negativity can change the estimate - 
         which means the conclusion is highly sensitive to how hostility is encoded.
       </p>
     </div>
@@ -3462,7 +3462,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       </p>
       <p>
         And if anything, the safest interpretation is that
-        <strong>shared enemies do not reliably create alliances</strong>—
+        <strong>shared enemies do not reliably create alliances</strong> - 
         especially once you demand robustness to hidden bias and measurement noise.
       </p>
     </div>
@@ -3491,7 +3491,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
         Precisely.
         The strongest result here is methodological:
         if your “negativity” measurement is even slightly wrong,
-        your causal narrative can change—so robustness must be part of the conclusion, not an appendix.
+        your causal narrative can change - so robustness must be part of the conclusion, not an appendix.
       </p>
     </div>
   </div>
