@@ -2893,7 +2893,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON</div>
-      <p>Results: SE ≈ 0.05 pp, 95% CI = [−1.23, −1.03] pp, and the one-sided p-value for “ATT &gt; 0” is ≈ 1.0.</p>
+      <p>Results: SE ≈ 0.05 pp, 95% CI = [−1.28, −1.07] pp, and the one-sided p-value for “ATT &gt; 0” is ≈ 1.0.</p>
     </div>
   </div>
 
@@ -3493,10 +3493,10 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">RAJ · NLP GEEK</div>
       <p>
-        With <code>df_monthly_hidden</code>, ATT is <strong>+0.17 percentage points</strong>.
+        With <code>df_monthly_hidden</code>, ATT is <strong>+0.03 percentage points</strong>.
         The distribution is tightly centered there,
         with a bootstrap SD of about <strong>0.03</strong>,
-        and a 95% CI of <strong>[0.12, 0.23] pp</strong>  -  fully ABOVE zero.
+        and a 95% CI of <strong>[-0.02, 0.10] pp</strong>  -  fully ABOVE zero.
       </p>
     </div>
   </div>
