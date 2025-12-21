@@ -225,19 +225,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   ></iframe>
 </div>
 
-
-
 <div class="chat-thread">
-
-  <div class="chat-msg chat-msg-right chat-penny">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>Wow. That big red blob… I’m guessing politics?</p>
-    </div>
-  </div>
 
   <div class="chat-msg chat-msg-left chat-leonard">
     <div class="chat-avatar">
@@ -245,11 +233,42 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">LEONARD · NETWORK NERD</div>
-      <p>Highly connected, highly hostile. Fandom communities are much bluer and more cozy internally.</p>
+      <p>So… most of the map is blue. Reddit is basically wholesome?</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>Mostly neutral or positive, yes. But look: a few communities keep showing up as consistent sources of negativity.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>So the same troublemakers every month. Classic.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>Before we test <em>enemy of my enemy</em>, we must confirm that “blue” really means friendly — not merely “not detected as hostile.”</p>
     </div>
   </div>
 
 </div>
+
 
 <div class="chat-thread">
 
