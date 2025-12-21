@@ -243,7 +243,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">RAJ · NLP GEEK</div>
-      <p>Most interactions are neutral-to-positive, but a smaller set of subreddits keeps showing up as sources of negativity — and they often         sit in the same embedding neighborhoods on the UMAP map.</p>
+      <p>Most interactions are neutral-to-positive, but a smaller set of subreddits keeps showing up as sources of negativity  -  and they often         sit in the same embedding neighborhoods on the UMAP map.</p>
     </div>
   </div>
   
@@ -253,7 +253,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>So it’s not “bad vibes everywhere”… it’s more concentrated in a few areas. But before you build theories — are we sure blue really             means friendly?</p>
+      <p>So it’s not “bad vibes everywhere”… it’s more concentrated in a few areas. But before you build theories  -  are we sure blue really             means friendly?</p>
     </div>
   </div>
 
@@ -423,7 +423,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       After taking a step back, Raj formulates a simple but powerful score:
       For each pair, he first computes a reference timescale: the <strong>median interval</strong> between consecutive
       interactions (it captures the typical pace of interaction).
-      Then, for every sentiment flip, he measures <strong>&Delta;t</strong> — the time elapsed until the next interaction
+      Then, for every sentiment flip, he measures <strong>&Delta;t</strong>  -  the time elapsed until the next interaction
       with the opposite sentiment. This delay is converted into a score:
     </p>
   
@@ -1143,13 +1143,13 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">RAJ · NLP GEEK</div>
       <p>
-        Another interesting way that we have to vizualise it is through an interactive map. Same embedding layout as before — so positions are
+        Another interesting way that we have to vizualise it is through an interactive map. Same embedding layout as before  -  so positions are
         comparable across months.
         Red nodes are subreddits that emitted at least one hidden-hostility link during that month.
       </p>
       <p>
         The larger the node, the more hidden hostility it emitted.
-        Grey nodes are still active in the network — just not flagged as emitters.
+        Grey nodes are still active in the network  -  just not flagged as emitters.
       </p>
     </div>
   </div>
@@ -1523,7 +1523,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">LEONARD · NETWORK NERD</div>
       <p>
-        Now, to study our problematic — <em>“Is the enemy of my enemy my friend?”</em> —
+        Now, to study our problematic  -  <em>“Is the enemy of my enemy my friend?”</em>  - 
         we first need to know who’s enemies with whom… and who’s friends with whom.
         So let’s zoom in on the <strong>monthly interaction dynamics</strong> between any pair of subreddits.
       </p>
@@ -1970,7 +1970,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <p class="narrator-lead"><strong>Treated pairs (A, B)</strong></p>
     <ul>
       <li>They <strong>ever</strong> strongly co-attacked some common target <strong>C</strong>.</li>
-      <li>Their <strong>event time</strong> is the month of their <strong>first strong co-attack</strong> — the earliest potentially causal signal.</li>
+      <li>Their <strong>event time</strong> is the month of their <strong>first strong co-attack</strong>  -  the earliest potentially causal signal.</li>
       <li>They were <strong>not friends before</strong> that event time.</li>
       <li>
         Their <strong>conflict period</strong> is
@@ -2164,7 +2164,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="narrator-label">Narrator · Data Redditor</div>
 
     <p class="narrator-lead">
-      Before matching, the team needs concrete <strong>confounders</strong> — numbers that describe each pair
+      Before matching, the team needs concrete <strong>confounders</strong>  -  numbers that describe each pair
       <em>before</em> the conflict starts.
       So they compute four ingredients for every pair \((A,B)\).
     </p>
@@ -2528,7 +2528,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="narrator-label">Narrator · Data Redditor</div>
     <p>
       After a few data manipulations, they plot the propensity score distributions
-      for treated and control pairs side by side—checking whether there is enough overlap
+      for treated and control pairs side by side - checking whether there is enough overlap
       to make matching possible.
     </p>
   </div>
@@ -2904,7 +2904,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">RAJ · NLP GEEK</div>
       <p>
-        Wow—so the whole confidence interval is negative.
+        Wow - so the whole confidence interval is negative.
         Meaning we’re 95% confident that the true ATT is below zero.
       </p>
     </div>
@@ -3496,7 +3496,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
         With <code>df_monthly_hidden</code>, the ATT is <strong>+0.03 percentage points</strong>.
         But it’s <strong>extremely close to zero</strong>.
         The bootstrap SD is about <strong>0.03</strong>,
-        the 95% CI is <strong>[−0.02, 0.10] pp</strong> — and it <strong>crosses zero</strong>.
+        the 95% CI is <strong>[−0.02, 0.10] pp</strong>  -  and it <strong>crosses zero</strong>.
         The bootstrap p-value is <strong>0.1314</strong>.
       </p>
     </div>
@@ -3533,7 +3533,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <div class="chat-name">LEONARD · NETWORK NERD</div>
       <p>
         Meaning: after relabeling potential implicit negatives, the “effect” becomes
-        <strong>negligible and ambiguous</strong> — it could be slightly negative, zero, or slightly positive.
+        <strong>negligible and ambiguous</strong>  -  it could be slightly negative, zero, or slightly positive.
         We don’t have strong evidence that co-attacking increases friendship formation.
       </p>
     </div>
@@ -3655,7 +3655,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
         Exactly. Bootstrap answers: “Is the estimate stable in our sample?”
         Sensitivity asks: “Could unobserved confounding flip the story?”
       </p>
-      <p>And here, the answer is: <strong>yes — very easily</strong>.</p>
+      <p>And here, the answer is: <strong>yes  -  very easily</strong>.</p>
     </div>
   </div>
 
@@ -3673,7 +3673,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
     <p><strong>INT. APARTMENT 4A – LATE EVENING.</strong></p>
-    <p>The room is quiet now. The analysis is finished. Over slices of pizza that Penny definitely did not order, they pause to reflect on what actually changed — and what did not.</p>
+    <p>The room is quiet now. The analysis is finished. Over slices of pizza that Penny definitely did not order, they pause to reflect on what actually changed  -  and what did not.</p>
   </div>
 </div>
 
@@ -3695,7 +3695,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON · THEORIST</div>
-      <p>Under the revised labeling of outcomes, the conclusion becomes less dramatic — but also less certain.</p>
+      <p>Under the revised labeling where potential implicit negatives are counted as negatives, the conclusion shifts  -  but it is still not straightforward.</p>
     </div>
   </div>
 
@@ -3706,8 +3706,8 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">LEONARD · NETWORK NERD</div>
       <p>
-        We estimate an ATT of <strong>+0.03 percentage points</strong> — a <strong>negligible</strong> change in friendship probability.
-        It’s so close to zero that it doesn’t translate into a meaningful practical effect.
+        Our matched comparisons still do <strong>not</strong> provide strong evidence that strongly co-attacking a common enemy
+        increases the likelihood of forming a friendship.
       </p>
     </div>
   </div>
@@ -3718,7 +3718,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>So it’s not “friends forever,” but it’s also not “definitely no.” It’s just… unclear.</p>
+      <p>So, on average, attacking the same target still doesn’t really bring subreddits closer together?</p>
     </div>
   </div>
 
@@ -3729,8 +3729,9 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">RAJ · NLP GEEK</div>
       <p>
-        Right. The bootstrap p-value is <strong>0.1314</strong>, and the 95% CI is <strong>[−0.02, 0.10] pp</strong>.
-        That interval includes negative values, zero, and positive values — so we can’t pin the sign down with confidence.
+        The point estimate turns <strong>slightly positive</strong>  -  about <strong>+0.03 percentage points</strong>  - 
+        but it’s <strong>extremely close to zero</strong>, and the bootstrap uncertainty is wide enough to include
+        slightly negative values too.
       </p>
     </div>
   </div>
@@ -3741,7 +3742,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON · THEORIST</div>
-      <p>And the sensitivity analysis is even more decisive: the worst-case p-value stays above 0.05 for all Γ.</p>
+      <p>Which is why we cannot treat it as a “positive result.” It is <strong>not statistically significant</strong> under the bootstrap test.</p>
     </div>
   </div>
 
@@ -3752,8 +3753,9 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">LEONARD · NETWORK NERD</div>
       <p>
-        So even if the point estimate is slightly positive, there’s <strong>no defensible robust positive causal effect</strong>
-        we can claim for co-attacking on friendship formation.
+        In practical terms, this means the data are compatible with a tiny increase, <strong>no effect</strong>,
+        or even a tiny decrease in friendship formation. The revised estimate is best described as
+        <strong>negligible and ambiguous</strong>.
       </p>
     </div>
   </div>
@@ -3764,7 +3766,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>So the proverb is… still unproven. Not dead, not confirmed — just not supported strongly.</p>
+      <p>So the proverb isn’t proven… but it’s also not clearly disproven anymore.</p>
     </div>
   </div>
 
@@ -3774,11 +3776,65 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON · THEORIST</div>
-      <p>Exactly.</p>
+      <p>Exactly. The revised specification removes the clean “negative” story  -  but it does <strong>not</strong> replace it with a reliable “positive” one.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>And this isn’t a result we can lean on confidently.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>
+        The sensitivity analysis shows there is <strong>no defensible robust positive causal effect</strong> to defend  - 
+        once hidden bias is allowed, the finding can be explained away very easily.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>Even in the best-case reading of the estimate, we still cannot claim that shared hostility <strong>causally</strong> promotes subsequent friendship.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>So even after the relabeling… the proverb still doesn’t “win.” It just becomes harder to call.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>Correct.</p>
     </div>
   </div>
 
 </div><!-- end .chat-thread -->
+
 
 <!-- ========================= -->
 <!-- IMPLICIT NEGATIVES -->
@@ -3791,7 +3847,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
     <p>
-      Then the definition of “negative” changes. And with it, the story shifts — not into certainty, but into ambiguity.
+      Then the definition of “negative” changes. And with it, the story shifts  -  not into certainty, but into ambiguity.
     </p>
   </div>
 </div>
@@ -3838,7 +3894,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">SHELDON · THEORIST</div>
       <p>
-        Yes—and Rosenbaum confirms it: there is <strong>no robust positive causal effect</strong> once hidden bias is considered.
+        Yes - and Rosenbaum confirms it: there is <strong>no robust positive causal effect</strong> once hidden bias is considered.
       </p>
     </div>
   </div>
@@ -3946,7 +4002,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <div class="chat-name">SHELDON · THEORIST</div>
       <p>
         That the relationship between co-attacking and friendship formation is <strong>highly sensitive</strong>
-        to how negative interactions are defined and measured — and that we do <strong>not</strong> have robust evidence
+        to how negative interactions are defined and measured  -  and that we do <strong>not</strong> have robust evidence
         for a positive causal effect.
       </p>
     </div>
@@ -3959,7 +4015,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">RAJ · NLP GEEK</div>
       <p>
-        Mislabeling—or failing to observe—negative interactions can change both the <strong>direction</strong>
+        Mislabeling - or failing to observe - negative interactions can change both the <strong>direction</strong>
         and the <strong>statistical interpretation</strong> of the estimated effect.
       </p>
     </div>
@@ -3971,7 +4027,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>So the proverb isn’t universally true or false — it depends on what we can actually measure.</p>
+      <p>So the proverb isn’t universally true or false  -  it depends on what we can actually measure.</p>
     </div>
   </div>
 
@@ -4007,7 +4063,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
     <p>
-      In the end, the strongest result isn’t a neat moral about enemies or friendship — it’s the reminder that our conclusions
+      In the end, the strongest result isn’t a neat moral about enemies or friendship  -  it’s the reminder that our conclusions
       depend heavily on how accurately we can measure hostility in the first place.
     </p>
   </div>
