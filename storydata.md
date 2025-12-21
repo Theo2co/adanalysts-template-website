@@ -3420,8 +3420,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
     <p><strong>INT. APARTMENT 4A – NIGHT.</strong><br>
-      The team reached a pretty awkward conclusion:
-      co-attacking didn’t create friendship  -  it slightly reduced it.
+      The team reached a pretty awkward conclusion: the data didn’t support the proverb ‘the enemy of my enemy is my friend’. On the contrary, it slightly opposed it.
     </p>
   </div>
 </div>
