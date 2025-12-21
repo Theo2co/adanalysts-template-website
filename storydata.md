@@ -321,13 +321,13 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 # Scene 2 – Hidden hostilities: The Case of the Smiling Enemy {#triads}
 
-<figure class="scene-figure scene-figure--wide">
+<div class="scene-figure scene-figure-intro">
   <img
     src="{{ '/assets/img/scene2_hidden_hostilities.png' | relative_url }}"
-    alt="Scene 2 – Hidden hostilities: The Case of the Smiling Enemy"
-    loading="lazy"
+    alt="Scene 2 – Hidden hostilities"
   >
-</figure>
+</div>
+
 
 
 <!-- ========================= -->
