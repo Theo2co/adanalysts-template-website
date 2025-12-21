@@ -4036,3 +4036,12 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 And that’s how a proverb from geopolitics, a network of noisy subreddits, and four scientists with way too much whiteboard space turned into <strong>The Enemy of my Enemy is my Friend Theory</strong>.
 
+<div class="finale-characters">
+  <img
+    src="{{ '/assets/img/hero-characters.png' | relative_url }}"
+    alt="Sitcom-style illustration of four data scientists"
+    loading="lazy"
+  >
+</div>
+
+
