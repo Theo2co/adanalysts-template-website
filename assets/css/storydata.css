@@ -697,5 +697,19 @@ body {
   letter-spacing: 0.01em;
 }
 
+.finale-characters{
+  margin: 2rem auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+.finale-characters img{
+  display: block;
+  max-width: min(780px, 92%);
+  height: auto;
+  filter: drop-shadow(0 14px 28px rgba(0,0,0,0.18));
+}
+
+
 
 /*Test 2*/
