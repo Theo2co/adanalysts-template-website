@@ -2033,7 +2033,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <strong>INT. APARTMENT 4A – NEXT DAY.</strong>
       The team finally switches from “pattern-spotting” to something far more dangerous:
       <strong>causality</strong>. Step one is defining what counts as the “treatment,”
-      what counts as a “control,” and what outcome they’ll measure.
+      what counts as a “control,” and what outcome they’ll measure. They finally agree on the following definitions of treated pairs, control pairs, and outcome:
     </p>
 
     <p class="narrator-lead"><strong>Treated pairs (A, B)</strong></p>
@@ -2043,7 +2043,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <li>They were <strong>not friends before</strong> that event time.</li>
       <li>
         Their <strong>conflict period</strong> is
-        <span class="math-inline">\([\text{conflict\_start},\; \text{conflict\_end} + 1]\)</span>,
+        <span class="math-inline">\([\text{conflict_start},\; \text{conflict_end} + 1]\)</span>,
         which captures months where coordinated hostility is active (or immediately consequential).
       </li>
       <li>
@@ -2063,7 +2063,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       and a pseudo conflict duration is sampled from the treated conflict-duration distribution.
       The pseudo conflict end is then set to:
       <span class="math-inline">\(\text{pseudo_end}=\text{pseudo_start}+\text{duration}\)</span>.
-      Controls are also required to have <strong>no friendship links before</strong> their pseudo event.
+      Controls are also required to have <strong>no friendship links before</strong> their pseudo event in order to remove any biasing effect that this could have on the problem conclusion.
     </p>
 
     <p class="narrator-lead"><strong>Outcome (Y)</strong></p>
@@ -2241,7 +2241,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
     <div class="narrator-grid">
       <div class="narrator-card">
-        <div class="narrator-card-title">Activity</div>
         <p class="narrator-card-text">
           The <strong>activity</strong> of a subreddit \(X\) is its total outgoing links summed across all months
           <strong>before the conflict start</strong>.
@@ -2249,7 +2248,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       </div>
 
       <div class="narrator-card">
-        <div class="narrator-card-title">Aggressiveness</div>
         <p class="narrator-card-text">
           The <strong>aggressiveness</strong> of a subreddit \(X\) is the fraction of its outgoing links that are negative
           over all months \(m\) before conflict start:
@@ -2262,7 +2260,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       </div>
 
       <div class="narrator-card">
-        <div class="narrator-card-title">Topical similarity</div>
         <p class="narrator-card-text">
           <strong>Topical similarity</strong> between \(A\) and \(B\) is computed from their embeddings \(e_A\) and \(e_B\):
         </p>
@@ -2274,7 +2271,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       </div>
 
       <div class="narrator-card">
-        <div class="narrator-card-title">Pre-conflict hostility</div>
         <p class="narrator-card-text">
           <strong>Pre-conflict hostility</strong> is the number of negative links exchanged between \(A\) and \(B\)
           <em>before the event time</em>.
@@ -2307,8 +2303,47 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">LEONARD · NETWORK NERD</div>
-      <p>Now we need a fair comparison. So we estimate propensity scores:</p>
-      <p><em>“How likely is a pair (A,B) to be treated, based only on pre-conflict confounders?”</em></p>
+      <p>Now we need to match every treated pair to a control pair in order to assess how friendship formation differs between the 2 groups. This matching has to be done fairly between pairs, such that we match pairs that are similar in order to factor out external bias. </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>And how do we ensure a fair matching?</p>
+    </div>
+  </div>
+  
+    <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>We match them using propensity scores.</p>
+    </div>
+  </div>
+
+   <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>Propensity what?</p>
+    </div>
+  </div>
+
+    <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>It’s a score that indicate “How likely is a pair (A,B) to be treated, based only on pre-conflict confounders?”. So we need to fit a regression model on our data in order to estimate the propensity score for each pair. Then we can match treated and control pairs based on similarities in propensity scores.</p>
     </div>
   </div>
 
@@ -2328,7 +2363,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">RAJ · NLP GEEK</div>
-      <p>We merge treated and control pairs, and keep only the confounders: activity, aggressiveness, similarity, hostility_pre.</p>
+      <p>We merge treated and control pairs, and keep only the confounders values (activity, aggressiveness, similarity, hostility) as input to our regression model, while the outcome of each pair is a binary label ‘treated’ (0 if it’s a control pair, 1 if it is a treated pair).</p>
     </div>
   </div>
 
@@ -2355,20 +2390,12 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
     <p>
-      After computing a propensity score for every pair, they first run a logistic regression to estimate propensity scores
-      and inspect the fitted coefficients—just to see which pre-conflict traits are associated with becoming “treated.”
+      They first run a logistic regression to estimate the propensity scores for each treated and control pair. The model learns the relationship between the confounders values, and the ‘treated’ output variable. Now if they provide a set of confounder values to the model, it outputs the probability of being treated given these confounder values. They give the confounder values of each treated and control pair they have to the model, and obtain for each their predicted propensity score.
     </p>
     <p>
-      In the regression:
-      <strong>aggressiveness</strong> and <strong>activity</strong> have <strong>positive coefficients</strong>
-      (higher values make co-attacking more likely),
-      while <strong>hostility_pre</strong> and <strong>similarity</strong> have <strong>negative coefficients</strong>
-      (higher values make co-attacking less likely).
-      The <strong>magnitude</strong> of each coefficient reflects the strength of its association with treatment assignment.
+      They first run a logistic regression to estimate the propensity scores for each treated and control pair. The model learns the relationship between the confounders values, and the ‘treated’ output variable. Now if they provide a set of confounder values to the model, it outputs the probability of being treated given these confounder values. They give the confounder values of each treated and control pair they have to the model, and obtain for each their predicted propensity score.
     </p>
     <p>
-      Crucially, these coefficients describe how treatment is assigned in the data—they are <strong>not causal effects</strong>.
-      Their job is to confirm that confounding exists and to motivate why we need <strong>propensity-score matching</strong>.
       Only then do they plot the ROC curve as a quick check of how well the confounders separate treated from control before matching.
     </p>
   </div>
@@ -2437,14 +2464,30 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 
   <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON · THEORIST</div>
-      <p>If the bouncer is guessing randomly, AUC (Area Under the Curve) = 0.5, like a coin flip.</p>
-    </div>
+  <div class="chat-avatar">
+    <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
   </div>
+
+  <div class="chat-bubble">
+    <div class="chat-name">SHELDON · THEORIST</div>
+
+    <p>
+      Yes. And the <strong>Area Under the ROC Curve (AUC)</strong> summarizes the model’s ability to
+      discriminate between treated and control pairs.
+    </p>
+
+    <p>
+      Interpreted probabilistically, it is the probability that a randomly selected treated pair
+      receives a higher propensity score than a randomly selected control pair.
+    </p>
+
+    <ul>
+      <li><strong>AUC = 0.5</strong> corresponds to random guessing.</li>
+      <li><strong>Higher AUC</strong> values indicate stronger separation between treated and control groups.</li>
+    </ul>
+  </div>
+</div>
+
 
   <div class="chat-msg chat-msg-left chat-raj">
     <div class="chat-avatar">
@@ -2549,6 +2592,33 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <p>In short: ROC says “they differ.” Now we ask: “can we still find look-alikes?”</p>
     </div>
   </div>
+  <div class="chat-msg chat-msg-left chat-raj">
+  <div class="chat-avatar">
+    <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+  </div>
+  <div class="chat-bubble">
+    <div class="chat-name">RAJ · NLP GEEK</div>
+    <p>
+      To answer that, we need to visualize the propensity score distributions
+      for both treated and control groups.
+    </p>
+  </div>
+</div>
+
+<div class="narrator-block narrator-block--clean">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p>
+      After a few data manipulations, they plot the propensity score distributions
+      for treated and control pairs side by side—checking whether there is enough overlap
+      to make matching possible.
+    </p>
+  </div>
+</div>
+
 </div> <!-- end .chat-thread -->
 
 <!-- (show 5 plots) -->
@@ -2569,8 +2639,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">RAJ · NLP GEEK</div>
       <p>
-        Now the key diagnostic: propensity score distributions.
-        They’re different… but they overlap.
+        So the distributions are different… but they overlap
       </p>
     </div>
   </div>
@@ -2610,25 +2679,13 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
     <p><strong>INT. APARTMENT 4A – LATER.</strong></p>
-    <p>They match treated pairs to similar controls by propensity score.</p>
+    <p>They now need to match treated pairs to similar control pairs by propensity scores similarity. for that, they perform a 1:1 nearest-neighbor matching: for each treated pair, they pick the closest control pair in propensity score.</p>
+    <p>To evaluate how close the resulting matched pairs’ propensity scores are, they visualize the distribution of propensity score differences between every two matched pairs:</p>
   </div>
 </div>
 
 
 <div class="chat-thread">
-
-  <div class="chat-msg chat-msg-left chat-raj">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">RAJ · NLP GEEK</div>
-      <p>
-        We do 1:1 nearest-neighbor matching: for each treated pair,
-        pick the closest control by propensity score.
-      </p>
-    </div>
-  </div>
 
   <!-- (show plot) -->
 <div class="viz-embed" style="max-width: 2000px; margin: 0 auto;">
@@ -2649,8 +2706,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">LEONARD · NETWORK NERD</div>
       <p>
-        This distance histogram shows |pscore_T − pscore_C|.
-        Most distances are near zero → good-quality matches.
+        So this histogram shows the distribution of pairwise propensity scores difference (pairwise propensity score treated - propensity score control). We can see that this distribution is concentrated near zero, which means we have good-quality matches.
       </p>
     </div>
   </div>
@@ -2676,8 +2732,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
     <p><strong>INT. APARTMENT 4A – NIGHT.</strong><br>
-    After the matching chaos, the team does the one check that matters:
-    Did treated and control finally become comparable?</p>
+    After the matching chaos, the team does the one check that matters: After matching, are the propensity scores of treated and control pairs finally comparable? For that, they plot again the distribution of propensity scores of treated pairs, and that of the control pairs that have been selected by the matching procedure.</p>
   </div>
 </div>
 
@@ -2689,35 +2744,32 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </figcaption>
 </figure>
 
-
-<div class="narrator-block narrator-block--clean">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
+<div class="chat-thread">
+<div class="chat-msg chat-msg-right chat-penny">
+  <div class="chat-avatar">
+    <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
   </div>
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
+  <div class="chat-bubble">
+    <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+    <p>Hey! The two distributions now sit exactly on top of each other!</p>
+  </div>
+</div>
+
+<div class="chat-msg chat-msg-left chat-leonard">
+  <div class="chat-avatar">
+    <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+  </div>
+  <div class="chat-bubble">
+    <div class="chat-name">LEONARD · NETWORK NERD</div>
     <p>
-      We look at the propensity score density AFTER matching.
-      If matching worked, the treated and control curves should overlap strongly - 
-      because we deliberately paired each treated unit with a control unit that had a similar probability of treatment.
+      That’s the magic of a (near) perfect match.
+      It’s exactly what we expect, because we deliberately paired each treated unit
+      with a control unit that had an extremely similar probability of treatment.
     </p>
   </div>
 </div>
 
-<div class="narrator-block narrator-block--clean">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
-  </div>
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
-    <p>
-      And that’s exactly what we see here:
-      the two distributions now sit on top of each other much more closely than before.
-    </p>
-  </div>
-</div>
+</div> <!-- end .chat-thread -->
 
 <div class="narrator-block">
   <div class="narrator-avatar">
@@ -2768,6 +2820,23 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 
 </div> <!-- end .chat-thread -->
+
+<div class="narrator-block narrator-block--clean">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p>
+      For every pair, they compute the outcome: whether the pair starts a strict friendship inside the
+      window <strong>[conflict_start, conflict_end + 1 month]</strong>.
+      Then they visualize the <strong>row-wise percentages</strong> for each group (control vs treated):
+      how many pairs become friends within that window, and how many do not.
+    </p>
+  </div>
+</div>
+
 <div class="viz-embed" style="max-width: 2000px; margin: 0 auto;">
   <iframe
     src="{{ '/assets/interactive/treatment_outcome_matrix.html' | relative_url }}"
@@ -2787,8 +2856,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">SHELDON · THEORIST</div>
       <p>
-        The heatmap shows the raw counts of Y=0 and Y=1 for treated vs control after matching, but as percentages (friendship rates).
-         The percentage of control pairs that became friends soon after their common conflict is 1.8%, while that for treated pairs Is 0.6%. Therefore, we have an initial idea that control pairs more frequently tend to become friends after a strong co-attack.
+        The heatmap shows the percentages for Y=0 and Y=1 for treated vs control after matching. The percentage of control pairs that became friends soon after their common conflict is 1.8%, while that for treated pairs Is 0.6%. Therefore, we have an initial idea that control pairs more frequently tend to become friends after a strong co-attack. Yet, these  percentages are very small.
       </p>
     </div>
   </div>
@@ -2852,29 +2920,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 </div> <!-- end .chat-thread -->
 
-<div class="narrator-block">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
-  </div>
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
-    <p><strong>INT. APARTMENT 4A – FINAL CALC.</strong></p>
-    <p>Now they compute ATT: average (Y<sub>T</sub> − Y<sub>C</sub>) across matched pairs.</p>
-  </div>
-</div>
-
-<div class="viz-embed" style="max-width: 2000px; margin: 0 auto;">
-  <iframe
-    src="{{ '/assets/interactive/bootstrap_att.html' | relative_url }}"
-    width="80%"
-    height="500"
-    style="border:0; border-radius:14px;"
-    loading="lazy"
-  ></iframe>
-</div>
-
-
 <div class="chat-thread">
 
   <div class="chat-msg chat-msg-right chat-penny">
@@ -2893,9 +2938,19 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON</div>
-      <p>Excellent Penny! You know you surprise me for a non-STEM! To answer your concerns, we need to perform bootstrap.That’s what the bootstrap plot shows: we resample matched pairs many times to see how ATT varies.</p>
+      <p>Excellent Penny! You know you surprise me for a non-STEM! To answer your concerns, we need to perform bootstrap: we repeatedly resample matched pairs many times, and record how ATT varies between the different resamples we get. This allows us to quantify how much the estimated causal effect would vary across different realizations of similar observational samples. In other words, we can get a confidence interval for our originally observed ATT value.</p>
     </div>
   </div>
+
+  <div class="viz-embed" style="max-width: 2000px; margin: 0 auto;">
+  <iframe
+    src="{{ '/assets/interactive/bootstrap_att.html' | relative_url }}"
+    width="80%"
+    height="500"
+    style="border:0; border-radius:14px;"
+    loading="lazy"
+  ></iframe>
+</div>
 
   <div class="chat-msg chat-msg-left chat-raj">
     <div class="chat-avatar">
@@ -2919,6 +2974,20 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <p>Results: SE ≈ 0.05 pp, 95% CI = [−1.23, −1.03] pp, and the one-sided p-value for “ATT &gt; 0” is ≈ 1.0.</p>
     </div>
   </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>
+        Wow—so the whole confidence interval is negative.
+        Meaning we’re 95% confident that the true ATT is below zero.
+      </p>
+    </div>
+  </div>
+
 
   <div class="chat-msg chat-msg-left chat-leonard">
     <div class="chat-avatar">
@@ -3402,7 +3471,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">RAJ · NLP GEEK</div>
       <p>What if some posts look polite… but are secretly negative?</p>
-      <p>Like “Wow, amazing idea 😐” energy.</p>
+      <p>Like “Wow, amazing idea 😐” energy. We initially identified which posts in our dataset potentially carry this type of energy. What if considering them as actual negative links changes our conclusion?</p>
     </div>
   </div>
 
@@ -3666,20 +3735,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="narrator-body">
       <div class="narrator-label">Narrator · Data Redditor</div>
       <p><strong>INT. APARTMENT 4A – LATE EVENING.</strong></p>
-      <p>The room is quiet now. The analysis is finished. What remains is the conclusion.</p>
-    </div>
-  </div>
-
-  <!-- ========================= -->
-  <!-- STRICT DEFINITIONS -->
-  <!-- ========================= -->
-  <div class="narrator-block narrator-block--clean">
-    <div class="narrator-avatar">
-      <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Narrator avatar">
-    </div>
-    <div class="narrator-body">
-      <div class="narrator-label">Narrator · Data Redditor</div>
-      <p class="narrator-lead"><strong>STRICT DEFINITIONS — MAIN CONCLUSION</strong></p>
+      <p>The room is quiet now. The analysis is finished. Over slices of pizza that Penny definitely did not order, they pause to reflect on the many conclusions they have reached.</p>
     </div>
   </div>
 
@@ -3773,18 +3829,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
   </div><!-- end .chat-thread -->
 
-  <!-- ========================= -->
-  <!-- ROBUSTNESS -->
-  <!-- ========================= -->
-  <div class="narrator-block narrator-block--clean">
-    <div class="narrator-avatar">
-      <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Narrator avatar">
-    </div>
-    <div class="narrator-body">
-      <div class="narrator-label">Narrator · Data Redditor</div>
-      <p class="narrator-lead"><strong>ROBUSTNESS OF THE NEGATIVE CONCLUSION</strong></p>
-    </div>
-  </div>
+
 
   <div class="chat-thread">
 
@@ -3903,17 +3948,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       </div>
     </div>
 
-    <div class="chat-msg chat-msg-left chat-leonard">
-      <div class="chat-avatar">
-        <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
-      </div>
-      <div class="chat-bubble">
-        <div class="chat-name">LEONARD · NETWORK NERD</div>
-        <p>
-          Which means relationships that were genuinely adversarial—but previously miscounted—stop being treated like friendly or neutral ties.
-        </p>
-      </div>
-    </div>
 
   </div><!-- end .chat-thread -->
 
@@ -4050,7 +4084,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       </div>
       <div class="chat-bubble">
         <div class="chat-name">SHELDON · THEORIST</div>
-        <p>No. Its validity depends on how well we can identify hostility in the data.</p>
+        <p>At least not for our data. Its validity depends on how well we can identify hostility in the data.</p>
       </div>
     </div>
 
@@ -4076,8 +4110,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="narrator-body">
       <div class="narrator-label">Narrator · Data Redditor</div>
       <p>
-        In the end, the strongest result isn’t about friendship or enemies—
-        it’s about how much our conclusions depend on what we are able to observe.
+        In the end, the strongest result isn’t about friendship or enemies - it’s about how much our conclusions depend on the accuracy of the data we have.
       </p>
     </div>
   </div>
