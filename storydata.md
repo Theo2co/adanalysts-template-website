@@ -3071,7 +3071,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">RAJ · NLP GEEK</div>
-      <p>n = 1,977 non-tied pairs.</p>
+      <p>n = 2,044 non-tied pairs.</p>
     </div>
   </div>
 
@@ -3092,7 +3092,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">RAJ · NLP GEEK</div>
       <p>Treated wins N<sub>+</sub> = 527.<br>
-      Control wins N<sub>−</sub> = 1,450.</p>
+      Control wins N<sub>−</sub> = 1,517.</p>
     </div>
   </div>
 
@@ -3123,7 +3123,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">RAJ · NLP GEEK</div>
       <p>Exactly. The average difference is:<br>
-      tau_hat ≈ −0.47 across non-tied pairs.<br>
+      tau_hat ≈ −0.484 across non-tied pairs.<br>
       Negative means treated co-attacking pairs are LESS likely to form strict friendship than matched controls.</p>
     </div>
   </div>
