@@ -357,7 +357,7 @@ body {
 }
 
 
-/* ---------- FOOTER (TeamCSX-like, sans fond) ---------- */
+/* ---------- FOOTER (sans fond) ---------- */
 
 .page-footer {
   background: var(--white);
@@ -730,7 +730,7 @@ body {
   margin: 2.5rem auto 3rem;
   height: auto;
 
-  /* magie ici 👇 */
+  /*  */
   -webkit-mask-image: radial-gradient(
     ellipse at center,
     rgba(0,0,0,1) 65%,
