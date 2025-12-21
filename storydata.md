@@ -1736,7 +1736,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
-    <p>They run K-means successfully, identifiying the ennemy and friendship thresholds. The plot them on top of the friendship scores distribution:</p>
+    <p>They run K-means successfully, identifiying the ennemy and friendship thresholds. They plot them on top of the friendship scores distribution:</p>
   </div>
 </div>
 
@@ -2395,9 +2395,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <p>
       Next, they compute the Receiver Operating Characteristic (ROC) curve of the propensity-score model to evaluate how well the pre-conflict confounders discriminate between treated (co-attacking) and control pairs.
     </p>
-    <p>
-      Only then do they plot the ROC curve as a quick check of how well the confounders separate treated from control before matching.
-    </p>
   </div>
 </div>
 
@@ -2410,7 +2407,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
     <p><strong>INT. APARTMENT 4A – NIGHT.</strong><br>
-    Raj puts up a curvy line. Penny stares like it’s a bad rollercoaster design.</p>
+    Raj draws the ROC curve. Penny stares like it’s a bad rollercoaster design.</p>
   </div>
 </div>
 
@@ -2450,18 +2447,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
   </div>
 
-  <div class="chat-msg chat-msg-left chat-leonard">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">LEONARD · NETWORK NERD</div>
-      <p>
-        Think of it like a bouncer: we give each pair a “treated-likelihood score”
-        (propensity score), and the ROC curve shows how good the bouncer is at deciding.
-      </p>
-    </div>
-  </div>
 
   <div class="chat-msg chat-msg-right chat-sheldon">
   <div class="chat-avatar">
@@ -2505,7 +2490,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>So… good bouncer?</p>
+      <p>So… good?</p>
     </div>
   </div>
 
@@ -2934,6 +2919,19 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <p>Excellent Penny! You know you surprise me for a non-STEM! To answer your concerns, we need to perform bootstrap: we repeatedly resample matched pairs many times, and record how ATT varies between the different resamples we get. This allows us to quantify how much the estimated causal effect would vary across different realizations of similar observational samples. In other words, we can get a confidence interval for our originally observed ATT value.</p>
     </div>
   </div>
+
+  <div class="narrator-block narrator-block--clean">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p>
+      They plot the histogram of the bootstrap ATT distribution, overlaying the previously observed ATT,
+      and the 95% confidence interval around that estimate.
+    </p>
+  </div>
+</div>
 
   <div class="viz-embed" style="max-width: 2000px; margin: 0 auto;">
   <iframe
