@@ -1143,7 +1143,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">RAJ · NLP GEEK</div>
       <p>
-        Another interesting way that we have to vizualise it through an interactive map. Same embedding layout as before — so positions are
+        Another interesting way that we have to vizualise it is through an interactive map. Same embedding layout as before — so positions are
         comparable across months.
         Red nodes are subreddits that emitted at least one hidden-hostility link during that month.
       </p>
