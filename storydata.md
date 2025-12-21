@@ -458,6 +458,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       This makes the score comparable across pairs with very different activity rhythms.
     </p>
   </div>
+</div>
 
 
 <!-- ========================= -->
