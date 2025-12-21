@@ -3545,7 +3545,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <div class="chat-name">SHELDON · THEORIST</div>
       <p>
         Precisely. The point estimate is slightly positive, but <strong>not statistically significant</strong>.
-        With <strong>p = 0.1314</strong>, we <strong>cannot reject</strong> the null that the effect is ≤ 0.
+        With <strong>p = 0.1314</strong>, we <strong>cannot reject</strong> the null that the ATT is ≤ 0.
       </p>
     </div>
   </div>
@@ -3557,9 +3557,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">LEONARD · NETWORK NERD</div>
       <p>
-        Meaning: after relabeling potential implicit negatives, the “effect” becomes
-        <strong>negligible and ambiguous</strong>  -  it could be slightly negative, zero, or slightly positive.
-        We don’t have strong evidence that co-attacking increases friendship formation.
+        Meaning: after relabeling potential implicit negatives, the ATT becomes negligible and ambiguous: the confidence interval indicates that it could be slightly negative, zero, or slightly positive. Therefore, we don’t have strong evidence that co-attacking increases friendship formation.
       </p>
     </div>
   </div>
@@ -3711,6 +3709,150 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     class="finale-illustration"
   >
 </figure>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>Under the strict definitions we used for conflict and friendship, the conclusion is straightforward.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>
+        Our matched comparisons do <strong>not</strong> support the hypothesis that strongly co-attacking a common enemy
+        increases the likelihood of forming a friendship.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>So, on average, attacking the same target doesn’t bring subreddits closer together.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>In fact, friendship outcomes show up more often among control pairs than among treated pairs.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>Which is why the estimated effect is <strong>negative</strong> rather than positive.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>
+        Even after controlling for observed confounders, co-attacking is associated with a small but statistically robust
+        <strong>decrease</strong> in the probability of forming a friendship.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>So the data really doesn’t back up “the enemy of my enemy is my friend.”</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>Not under these definitions, no.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>And this isn’t a fragile result.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-left chat-leonard">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">LEONARD · NETWORK NERD</div>
+      <p>The sensitivity analysis shows there is <strong>no robust positive causal effect</strong> to defend.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>
+        Even in the best-case scenario—no unobserved confounding—we still cannot claim that shared hostility
+        causally promotes subsequent friendship.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>So even when everything is stacked in favor of the proverb… it still doesn’t win.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>Correct.</p>
+    </div>
+  </div>
+
+</div><!-- end .chat-thread -->
+
 
 <div class="chat-thread">
 
@@ -3896,8 +4038,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">LEONARD · NETWORK NERD</div>
       <p>
-        The point estimate is slightly positive, but the evidence is weak:
-        <strong>p = 0.1314</strong>, and the confidence interval still spans negative values.
+        The point estimate is slightly positive, but the evidence is weak (the p-value is p = 0.1314), and the confidence interval still spans negative values.
       </p>
     </div>
   </div>
@@ -3908,7 +4049,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>So even after the relabeling, we still can’t say co-attacking clearly makes friends.</p>
+      <p>So even after the relabeling, we still can’t support the ‘enemy of my enemy is my friend’ hypothesis.</p>
     </div>
   </div>
 
@@ -3947,7 +4088,17 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">RAJ · NLP GEEK</div>
-      <p>And the revised result comes with a warning label.</p>
+      <p>But hey, the revised result comes with a warning label.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>What do you mean?</p>
     </div>
   </div>
 
@@ -3967,17 +4118,8 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">LEONARD · NETWORK NERD</div>
-      <p>So we should interpret them as <em>possible</em> hidden hostility, not confirmed hostility.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-penny">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>Meaning the direction of the estimate can change depending on what we assume we missed.</p>
+      <p>So we should interpret them as possible hidden hostility, not confirmed hostility.
+</p>
     </div>
   </div>
 
@@ -3987,7 +4129,16 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON · THEORIST</div>
-      <p>Exactly.</p>
+      <p>This means that the revised results are  themselves uncertain: if some interactions are still misclassified, the estimated effect may change again.</p>
+    </div>
+  </div>
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>😶</p>
     </div>
   </div>
 
@@ -4026,9 +4177,8 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">SHELDON · THEORIST</div>
       <p>
-        That the relationship between co-attacking and friendship formation is <strong>highly sensitive</strong>
-        to how negative interactions are defined and measured  -  and that we do <strong>not</strong> have robust evidence
-        for a positive causal effect.
+        That the relationship between co-attacking and friendship formation is <strong>
+        highly sensitive to how negative interactions are defined and measured.</strong>
       </p>
     </div>
   </div>
@@ -4040,8 +4190,8 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">RAJ · NLP GEEK</div>
       <p>
-        Mislabeling - or failing to observe - negative interactions can change both the <strong>direction</strong>
-        and the <strong>statistical interpretation</strong> of the estimated effect.
+         Misclassifying or failing to observe some negative interactions can affect both the direction and the statistical interpretation of the estimated treatment effect. So having a ground truth that enables us to accurately detect hidden hostilities is crucial to reach a stable and reliable conclusion.
+
       </p>
     </div>
   </div>
@@ -4052,7 +4202,8 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>So the proverb isn’t universally true or false  -  it depends on what we can actually measure.</p>
+      <p>So from the data we have, we cannot say whether the proverb is true or false?
+      </p>
     </div>
   </div>
 
@@ -4062,19 +4213,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON · THEORIST</div>
-      <p>At least not for our data. Without reliable ground truth for negativity, any causal conclusion remains contingent.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-left chat-leonard">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">LEONARD · NETWORK NERD</div>
-      <p>
-        And since the sensitivity analysis finds no robustness, any “positive” reading has to be treated cautiously.
-      </p>
+      <p>I’m afraid so. Gentleman, if you’ll excuse me, it’s my bed time.</p>
     </div>
   </div>
 
