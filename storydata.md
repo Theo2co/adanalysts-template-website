@@ -192,8 +192,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-## 1. A first look at Reddit’s galaxy
-
 <div class="narrator-block">
   <div class="narrator-avatar">
     <img src="{{ '/assets/img/narrator.png' | relative_url }}"
@@ -208,6 +206,12 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <li>blue edges = mostly <strong>non-negative</strong> interactions</li>
       <li>node size = total outgoing interactions</li>
     </ul>
+
+    <p style="margin-top: 0.6rem;">
+      The layout is a <strong>2D UMAP projection of subreddit embeddings</strong> (cosine):
+      positions stay <strong>fixed across months</strong>, while <strong>color (net outgoing sentiment)</strong>
+      and <strong>size (monthly activity)</strong> change over time.
+    </p>
   </div>
 </div>
 
@@ -220,6 +224,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     loading="lazy"
   ></iframe>
 </div>
+
 
 
 <div class="chat-thread">
