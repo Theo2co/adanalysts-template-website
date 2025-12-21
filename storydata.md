@@ -427,22 +427,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       with the opposite sentiment. This delay is converted into a score:
     </p>
   
-    <div class="narrator-grid">
-      <div class="narrator-card">
-        <div class="narrator-card-title">Reference pace (per pair)</div>
-        <p class="narrator-card-text">
-          Compute the <strong>median interval</strong> between consecutive interactions.
-        </p>
-      </div>
-  
-      <div class="narrator-card">
-        <div class="narrator-card-title">Flip delay</div>
-        <p class="narrator-card-text">
-          For each flip, measure <strong>&Delta;t</strong>: time until the next interaction with the opposite sentiment.
-        </p>
-      </div>
-    </div>
-  
     <div class="narrator-math">
       \[
         s_{\text{flip}}=\exp\!\left(-\frac{\Delta t}{\text{Median Interval}}\right)
