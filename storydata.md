@@ -2095,13 +2095,12 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/dag_confounders.png' | relative_url }}"
-       alt="DAG showing confounders (similarity, activity, aggressiveness, prior hostility) affecting both treatment (co-attack) and outcome (friendship).">
-  <figcaption>
-    DAG: Why we must control for confounders before estimating the causal effect of co-attacking on friendship.
-  </figcaption>
-</figure>
+<div class="narrator-figure narrator-figure--wide">
+  <img
+    src="{{ '/assets/img/dag_confounders.png' | relative_url }}"
+    alt="DAG showing confounders (similarity, activity, aggressiveness, prior hostility) affecting both treatment (co-attack) and outcome (friendship)."
+  >
+</div>
 
 <div class="chat-thread">
 
@@ -2608,11 +2607,13 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 <!-- (show 5 plots) -->
 
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/pscore_density_before_matching.png' | relative_url }}"
-       alt="Propensity score density: treated vs control (before matching).">
-  <figcaption>Propensity Score Distributions — Treated vs Control (Before Matching)</figcaption>
-</figure>
+<div class="narrator-figure narrator-figure--wide">
+  <img
+    src="{{ '/assets/img/pscore_density_before_matching.png' | relative_url }}"
+    alt="Propensity score density: treated vs control (before matching)."
+  >
+</div>
+
 
 
 <div class="chat-thread">
@@ -2721,13 +2722,12 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
-<figure class="scene-figure scene-figure-wide">
-  <img src="{{ '/assets/img/pscore_density_after_matching.png' | relative_url }}"
-       alt="Propensity score density: treated vs control (after matching).">
-  <figcaption>
-    Propensity Score Distributions — Treated vs Control (After Matching)
-  </figcaption>
-</figure>
+<div class="narrator-figure narrator-figure--wide">
+  <img
+    src="{{ '/assets/img/pscore_density_after_matching.png' | relative_url }}"
+    alt="Propensity score density: treated vs control (after matching)."
+  >
+</div>
 
 <div class="chat-thread">
 <div class="chat-msg chat-msg-right chat-penny">
