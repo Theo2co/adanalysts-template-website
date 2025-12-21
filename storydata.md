@@ -3660,6 +3660,16 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
   </div>
 
+  <!-- Illustration right under the narrator block -->
+<figure class="finale-figure">
+  <img
+    src="{{ '/assets/img/finale-pizza.png' | relative_url }}"
+    alt="The crew reflects over pizza after finishing the analysis"
+    loading="lazy"
+    class="finale-illustration"
+  >
+</figure>
+
   <div class="chat-thread">
 
     <div class="chat-msg chat-msg-right chat-sheldon">
