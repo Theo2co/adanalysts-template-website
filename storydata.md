@@ -3718,7 +3718,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON · THEORIST</div>
-      <p>Under the strict definitions we used for conflict and friendship, the conclusion is straightforward.</p>
+      <p>So first, when we ignored the potential implicit negatives, and under the strict definitions we used for conflict and friendship, the conclusion is straightforward.</p>
     </div>
   </div>
 
