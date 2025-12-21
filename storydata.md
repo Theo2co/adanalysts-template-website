@@ -190,57 +190,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       </p>
     </div>
   </div>
-
-  <div class="chat-msg chat-msg-left chat-raj">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">RAJ · NLP GEEK</div>
-      <p>Hold that thought. If our labels are wrong, any “enemy-of-my-enemy” analysis becomes science fiction.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-penny">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>So first you’re doing… what, therapy for your dataset?</p>
-    </div>
-  </div>
-
-</div>
-
-<div class="narrator-block">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
-         alt="Reddit-style narrator avatar">
-  </div>
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
-    <p>The crew quickly bumps into the limits of their sentiment classifier:</p>
-    <ol>
-      <li>Accuracy hovers around <strong>0.8</strong>, trained on only 1,020 labelled posts.</li>
-      <li>Neutral and positive are merged into one big “non-negative” bucket.</li>
-      <li>Irony, inside jokes, and passive-aggressive shade are often mislabelled.</li>
-    </ol>
-  </div>
-</div>
-
-<div class="chat-thread">
-
-  <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON · THEORIST</div>
-      <p>Which means some of these cheerful blue arrows are actually red. They’re just… <em>undercover red</em>.</p>
-    </div>
-  </div>
-
 </div>
 
 ## 1. A first look at Reddit’s galaxy
@@ -292,6 +241,60 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">LEONARD · NETWORK NERD</div>
       <p>Highly connected, highly hostile. Fandom communities are much bluer and more cozy internally.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-left chat-raj">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">RAJ · NLP GEEK</div>
+      <p>Hold that thought. If our labels are wrong, any “enemy-of-my-enemy” analysis becomes science fiction.</p>
+    </div>
+  </div>
+
+  <div class="chat-msg chat-msg-right chat-penny">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
+      <p>So first you’re doing… what, therapy for your dataset?</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="narrator-block">
+  <div class="narrator-avatar">
+    <img src="{{ '/assets/img/narrator.png' | relative_url }}"
+         alt="Reddit-style narrator avatar">
+  </div>
+  <div class="narrator-body">
+    <div class="narrator-label">Narrator · Data Redditor</div>
+    <p>The crew quickly bumps into the limits of their sentiment classifier:</p>
+    <ol>
+      <li>Accuracy hovers around <strong>0.8</strong>, trained on only 1,020 labelled posts.</li>
+      <li>Neutral and positive are merged into one big “non-negative” bucket.</li>
+      <li>Irony, inside jokes, and passive-aggressive shade are often mislabelled.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="chat-thread">
+
+  <div class="chat-msg chat-msg-right chat-sheldon">
+    <div class="chat-avatar">
+      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
+    </div>
+    <div class="chat-bubble">
+      <div class="chat-name">SHELDON · THEORIST</div>
+      <p>Which means some of these cheerful blue arrows are actually red. They’re just… <em>undercover red</em>.</p>
     </div>
   </div>
 
