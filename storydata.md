@@ -1252,6 +1252,13 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 # Scene 3 – The Experiment: Testing The Enemy of my Enemy is my Friend Theory {#results}
 
+<div class="scene-figure scene-figure-intro">
+  <img
+    src="{{ '/assets/img/scene3_experiment.png' | relative_url }}"
+    alt="Scene 3 – The Experiment: Testing the Enemy of my Enemy is my Friend Theory"
+  >
+</div>
+
 <div class="narrator-block">
   <div class="narrator-avatar">
     <img src="{{ '/assets/img/narrator.png' | relative_url }}"
