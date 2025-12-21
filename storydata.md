@@ -4065,7 +4065,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">SHELDON · THEORIST</div>
-      <p>I’m afraid so. Gentleman, if you’ll excuse me, it’s my bed time.</p>
+      <p>I’m afraid so. Gentlemen, if you’ll excuse me, it’s my bed time.</p>
     </div>
   </div>
 
