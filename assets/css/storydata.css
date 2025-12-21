@@ -671,6 +671,31 @@ body {
   scroll-margin-top: 110px;   /* ajuste si besoin */
 }
 
+/* Footer GitHub link */
+.page-footer-github {
+  margin: 0.9rem auto 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--black);
+  border: 1px solid rgba(17, 17, 17, 0.14);
+  transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+}
+
+.page-footer-github:hover {
+  background: rgba(249, 115, 22, 0.10); /* orange très léger */
+  border-color: rgba(249, 115, 22, 0.55);
+  transform: translateY(-1px);
+}
+
+.page-footer-github span {
+  font-size: 0.95rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+}
 
 
 /*Test 2*/
