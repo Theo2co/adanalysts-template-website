@@ -812,7 +812,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <div class="chat-name">RAJ · NLP GEEK</div>
       <p>
         Now, the model results.
-        Using those features, plus subreddit embedding similarity - and ignoring pairs with fewer than five interactions - the model flags <strong>12,079</strong> additional links.
+        Using those features, plus subreddit embedding similarity - and ignoring pairs with fewer than five interactions - the model flags <strong>11,977</strong> additional links.
       </p>
     </div>
   </div>
