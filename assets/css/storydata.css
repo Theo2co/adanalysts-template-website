@@ -710,6 +710,20 @@ body {
   filter: drop-shadow(0 14px 28px rgba(0,0,0,0.18));
 }
 
+.finale-figure{
+  margin: 1.2rem auto 2.4rem;
+  max-width: 900px;
+}
+
+.finale-illustration{
+  display: block;
+  width: min(820px, 100%);
+  height: auto;
+  margin: 0 auto;
+  /* optional: gives it the same “cinematic” feel as your other visuals */
+  filter: drop-shadow(0 14px 28px rgba(0,0,0,0.20));
+}
+
 
 
 /*Test 2*/
