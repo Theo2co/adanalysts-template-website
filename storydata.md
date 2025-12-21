@@ -243,29 +243,20 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
     <div class="chat-bubble">
       <div class="chat-name">RAJ · NLP GEEK</div>
-      <p>Mostly neutral or positive, yes. But look: a few communities keep showing up as consistent sources of negativity.</p>
+      <p>Most interactions are neutral-to-positive, but a smaller set of subreddits keeps showing up as sources of negativity — and they often         sit in the same embedding neighborhoods on the UMAP map.</p>
     </div>
   </div>
-
+  
   <div class="chat-msg chat-msg-right chat-penny">
     <div class="chat-avatar">
       <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
     </div>
     <div class="chat-bubble">
       <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>So the same troublemakers every month. Classic.</p>
+      <p>So it’s not “bad vibes everywhere”… it’s more concentrated in a few areas. But before you build theories — are we sure blue really             means friendly?</p>
     </div>
   </div>
 
-  <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON · THEORIST</div>
-      <p>Before we test <em>enemy of my enemy</em>, we must confirm that “blue” really means friendly — not merely “not detected as hostile.”</p>
-    </div>
-  </div>
 
 </div>
 
