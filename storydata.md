@@ -2393,7 +2393,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       They first run a logistic regression to estimate the propensity scores for each treated and control pair. The model learns the relationship between the confounders values, and the ‘treated’ output variable. Now if they provide a set of confounder values to the model, it outputs the probability of being treated given these confounder values. They give the confounder values of each treated and control pair they have to the model, and obtain for each their predicted propensity score.
     </p>
     <p>
-      They first run a logistic regression to estimate the propensity scores for each treated and control pair. The model learns the relationship between the confounders values, and the ‘treated’ output variable. Now if they provide a set of confounder values to the model, it outputs the probability of being treated given these confounder values. They give the confounder values of each treated and control pair they have to the model, and obtain for each their predicted propensity score.
+      Next, they compute the Receiver Operating Characteristic (ROC) curve of the propensity-score model to evaluate how well the pre-conflict confounders discriminate between treated (co-attacking) and control pairs.
     </p>
     <p>
       Only then do they plot the ROC curve as a quick check of how well the confounders separate treated from control before matching.
