@@ -22,6 +22,15 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
 </div>
 
+<div class="scene-figure">
+  <img
+    src="{{ '/assets/img/scene-4a-night.png' | relative_url }}"
+    alt="Apartment 4A at night: whiteboard full of equations and a messy graph, four data nerds."
+    loading="lazy"
+  />
+</div>
+
+
 <figure class="scene-figure scene-figure-intro">
   <img src="{{ '/assets/img/scene-int-4a.png' | relative_url }}"
        alt="Leonard's whiteboard covered in equations and a huge messy graph, in Apartment 4A at night.">
