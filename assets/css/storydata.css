@@ -724,6 +724,24 @@ body {
   filter: drop-shadow(0 14px 28px rgba(0,0,0,0.20));
 }
 
+.scene-figure-intro img {
+  display: block;
+  max-width: 80%;
+  margin: 2.5rem auto 3rem;
+  height: auto;
+
+  /* magie ici 👇 */
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    rgba(0,0,0,1) 65%,
+    rgba(0,0,0,0) 100%
+  );
+  mask-image: radial-gradient(
+    ellipse at center,
+    rgba(0,0,0,1) 65%,
+    rgba(0,0,0,0) 100%
+  );
+}
 
 
 /*Test 2*/
