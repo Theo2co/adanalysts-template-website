@@ -1136,60 +1136,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 
 <div class="chat-thread">
 
-  <div class="chat-msg chat-msg-right chat-sheldon">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-sheldon.png' | relative_url }}" alt="Sheldon">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">SHELDON · THEORIST</div>
-      <p>
-        At last. We are entering the core theoretical question.
-        But before that, it might still be worth looking at how the flagged hidden hostilities are distributed across communities.
-      </p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-penny">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>That sounds complicated.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-left chat-raj">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">RAJ · NLP GEEK</div>
-      <p>Not really. And it’s actually very satisfying to visualize.</p>
-      <p>Because — obviously — I already made the plot.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-left chat-leonard">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-leonard.png' | relative_url }}" alt="Leonard">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">LEONARD · NETWORK NERD</div>
-      <p>Of course you did.</p>
-    </div>
-  </div>
-
-  <div class="chat-msg chat-msg-right chat-penny">
-    <div class="chat-avatar">
-      <img src="{{ '/assets/img/avatar-penny.png' | relative_url }}" alt="Penny">
-    </div>
-    <div class="chat-bubble">
-      <div class="chat-name">PENNY · DEFINITELY NOT STEM</div>
-      <p>Okay… now that I want to see.</p>
-    </div>
-  </div>
-
   <div class="chat-msg chat-msg-left chat-raj">
     <div class="chat-avatar">
       <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
@@ -1197,7 +1143,8 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     <div class="chat-bubble">
       <div class="chat-name">RAJ · NLP GEEK</div>
       <p>
-        Same embedding layout as before — so positions are comparable across months.
+        Another interesting way that we have to vizualise it through an interactive map. Same embedding layout as before — so positions are
+        comparable across months.
         Red nodes are subreddits that emitted at least one hidden-hostility link during that month.
       </p>
       <p>
