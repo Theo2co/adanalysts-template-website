@@ -2861,9 +2861,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
   </div>
 
-</div> <!-- end .chat-thread -->
-
-<div class="chat-thread">
 
   <div class="chat-msg chat-msg-left chat-leonard">
     <div class="chat-avatar">
@@ -2917,10 +2914,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <p>So strong co-attackers are about 1.13 points LESS likely to become strict friends than similar controls.</p>
     </div>
   </div>
-
-</div> <!-- end .chat-thread -->
-
-<div class="chat-thread">
 
   <div class="chat-msg chat-msg-right chat-penny">
     <div class="chat-avatar">
@@ -3826,12 +3819,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
         <p>Not under these definitions, no.</p>
       </div>
     </div>
-
-  </div><!-- end .chat-thread -->
-
-
-
-  <div class="chat-thread">
 
     <div class="chat-msg chat-msg-left chat-raj">
       <div class="chat-avatar">
