@@ -357,20 +357,70 @@ body {
 }
 
 
-/* ---------- FOOTER ---------- */
+/* ---------- FOOTER (TeamCSX-like, sans fond) ---------- */
 
 .page-footer {
-  max-width: var(--max-width);
-  margin: 0 auto 2.5rem;
-  padding: 0 1.5rem;
-  font-size: 0.8rem;
-  color: #666666;
+  background: var(--white);
+  color: var(--black);
+  margin: 0;
+  padding: 3.6rem 1.5rem 3.2rem;
+}
+
+.page-footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.page-footer .mute {
-  opacity: 0.7;
+.page-footer-top {
+  margin-bottom: 1.3rem;
 }
+
+.page-footer-title {
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  line-height: 1.35;
+}
+
+.page-footer-names {
+  font-weight: 650;
+}
+
+.page-footer-divider {
+  width: min(720px, 92%);
+  height: 1px;
+  margin: 1.6rem auto 1.6rem;
+  background: rgba(17, 17, 17, 0.12);
+}
+
+.page-footer-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.page-footer-line {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.page-footer-muted {
+  opacity: 0.65;
+  font-size: 0.9rem;
+}
+
+/* (Optionnel) si tu gardes encore des <span class="mute"> ailleurs */
+.page-footer .mute {
+  opacity: 0.65;
+}
+
+@media (max-width: 640px) {
+  .page-footer {
+    padding: 3.0rem 1.25rem 2.6rem;
+  }
+}
+
 
 /* ---------- RESPONSIVE ---------- */
 
