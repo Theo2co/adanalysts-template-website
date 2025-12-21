@@ -415,49 +415,47 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 <!-- ========================= -->
 <!-- Narrator 1 -->
 <!-- ========================= -->
-<div class="narrator-block narrator-block--clean">
-  <div class="narrator-avatar">
-    <img src="{{ '/assets/img/narrator.png' | relative_url }}" alt="Reddit-style narrator avatar">
-  </div>
+<div class="narrator-body">
+  <div class="narrator-label">Narrator · Data Redditor</div>
 
-  <div class="narrator-body">
-    <div class="narrator-label">Narrator · Data Redditor</div>
+  <p class="narrator-lead">
+    <strong>NARRATOR:</strong> After taking a step back, Raj formulates a simple but powerful score:
+    For each pair, he first computes a reference timescale: the <strong>median interval</strong> between consecutive
+    interactions (it captures the typical pace of interaction).
+    Then, for every sentiment flip, he measures <strong>&Delta;t</strong> — the time elapsed until the next interaction
+    with the opposite sentiment. This delay is converted into a score:
+  </p>
 
-    <p class="narrator-lead">
-      Raj steps back and defines a simple timing score to catch suspicious sentiment flips.
-    </p>
-
-    <div class="narrator-grid">
-      <div class="narrator-card">
-        <div class="narrator-card-title">Reference pace (per pair)</div>
-        <p class="narrator-card-text">
-          Compute the <strong>median interval</strong> between consecutive interactions.
-        </p>
-      </div>
-
-      <div class="narrator-card">
-        <div class="narrator-card-title">Flip delay</div>
-        <p class="narrator-card-text">
-          For each flip, measure <strong>\(\Delta t\)</strong>: time until the next interaction with the opposite sentiment.
-        </p>
-      </div>
+  <div class="narrator-grid">
+    <div class="narrator-card">
+      <div class="narrator-card-title">Reference pace (per pair)</div>
+      <p class="narrator-card-text">
+        Compute the <strong>median interval</strong> between consecutive interactions.
+      </p>
     </div>
 
-    <div class="narrator-math">
-      \[
-        s_{\text{flip}}=\exp\!\left(-\frac{\Delta t}{\text{Median Interval}}\right)
-      \]
+    <div class="narrator-card">
+      <div class="narrator-card-title">Flip delay</div>
+      <p class="narrator-card-text">
+        For each flip, measure <strong>&Delta;t</strong>: time until the next interaction with the opposite sentiment.
+      </p>
     </div>
-
-    <ul class="narrator-points">
-      <li><strong>Fast reversal</strong> ⇒ \(\Delta t\) small ⇒ <strong>\(s_{\text{flip}}\approx 1\)</strong></li>
-      <li><strong>Slow reversal</strong> ⇒ \(\Delta t\) large ⇒ <strong>\(s_{\text{flip}}\to 0\)</strong></li>
-    </ul>
-
-    <p class="narrator-footer">
-      This makes the score comparable across pairs with very different activity rhythms.
-    </p>
   </div>
+
+  <div class="narrator-math">
+    \[
+      s_{\text{flip}}=\exp\!\left(-\frac{\Delta t}{\text{Median Interval}}\right)
+    \]
+  </div>
+
+  <ul class="narrator-points">
+    <li><strong>Fast reversal</strong> ⇒ \(\Delta t\) small ⇒ <strong>\(s_{\text{flip}}\approx 1\)</strong></li>
+    <li><strong>Slow reversal</strong> ⇒ \(\Delta t\) large ⇒ <strong>\(s_{\text{flip}}\to 0\)</strong></li>
+  </ul>
+
+  <p class="narrator-footer">
+    This makes the score comparable across pairs with very different activity rhythms.
+  </p>
 </div>
 
 
