@@ -3545,7 +3545,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <div class="chat-name">SHELDON · THEORIST</div>
       <p>
         Precisely. The point estimate is slightly positive, but <strong>not statistically significant</strong>.
-        With <strong>p = 0.1314</strong>, we <strong>cannot reject</strong> the null that the ATT is ≤ 0.
+        With <strong>p = 0.1314</strong>, we <strong>cannot reject</strong> the null hypothesis that claims that the ATT is ≤ 0.
       </p>
     </div>
   </div>
