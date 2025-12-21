@@ -2621,8 +2621,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
 </div>
 
 
-<div class="chat-thread">
-
   <!-- (show plot) -->
 <div class="viz-embed" style="max-width: 2000px; margin: 0 auto;">
   <iframe
@@ -2634,6 +2632,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   ></iframe>
 </div>
 
+<div class="chat-thread">
 
   <div class="chat-msg chat-msg-left chat-leonard">
     <div class="chat-avatar">
@@ -2869,6 +2868,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
       <p>Excellent Penny! You know you surprise me for a non-STEM! To answer your concerns, we need to perform bootstrap: we repeatedly resample matched pairs many times, and record how ATT varies between the different resamples we get. This allows us to quantify how much the estimated causal effect would vary across different realizations of similar observational samples. In other words, we can get a confidence interval for our originally observed ATT value.</p>
     </div>
   </div>
+</div>
 
   <div class="narrator-block narrator-block--clean">
   <div class="narrator-avatar">
@@ -2892,6 +2892,8 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     loading="lazy"
   ></iframe>
 </div>
+
+<div class="chat-thread">
 
   <div class="chat-msg chat-msg-left chat-raj">
     <div class="chat-avatar">
