@@ -30,12 +30,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   />
 </div>
 
-
-<figure class="scene-figure scene-figure-intro">
-  <img src="{{ '/assets/img/scene-int-4a.png' | relative_url }}"
-       alt="Leonard's whiteboard covered in equations and a huge messy graph, in Apartment 4A at night.">
-</figure>
-
 <div class="chat-thread">
 
   <div class="chat-msg chat-msg-left chat-leonard">
