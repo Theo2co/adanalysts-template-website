@@ -286,7 +286,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   </div>
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
-    <p>The crew quickly bumps into the limits of their sentiment classifier:</p>
+    <p> Indeed, the crew quickly bumps into the limits of their sentiment classifier:</p>
     <ol>
       <li>Accuracy hovers around <strong>0.8</strong>, trained on only 1,020 labelled posts.</li>
       <li>Neutral and positive are merged into one big “non-negative” bucket.</li>
