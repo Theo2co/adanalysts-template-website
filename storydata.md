@@ -257,12 +257,6 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
     </div>
   </div>
 
-
-</div>
-
-
-<div class="chat-thread">
-
   <div class="chat-msg chat-msg-left chat-raj">
     <div class="chat-avatar">
       <img src="{{ '/assets/img/avatar-raj.png' | relative_url }}" alt="Raj">
