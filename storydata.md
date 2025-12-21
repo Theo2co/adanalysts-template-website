@@ -3696,7 +3696,7 @@ hero_subtitle: A sitcom-style journey through alliances and rivalries on Reddit
   <div class="narrator-body">
     <div class="narrator-label">Narrator · Data Redditor</div>
     <p><strong>INT. APARTMENT 4A – LATE EVENING.</strong></p>
-    <p>The room is quiet now. The analysis is finished. Over slices of pizza that Penny definitely did not order, they pause to reflect on what actually changed  -  and what did not.</p>
+    <p>The room is quiet now. The analysis is finished. Over slices of pizza that Penny definitely did not order, they pause to reflect on the various conclusions they reached throughout their study.</p>
   </div>
 </div>
 
